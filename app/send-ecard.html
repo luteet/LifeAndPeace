@@ -1,0 +1,136 @@
+@@include("html/_header.html", {
+	"class": "",
+	"add_block": '<div class="header__row"><div class="page-address section-container"><ul><li><a href="index.html">Main</a></li><li><a>Send Ecard</a></li></ul></div></div>',
+	"about_us": "",
+	"ambasadors": "",
+	"news": "",
+	"get_support": "",
+	"i_want_to_help": "",
+	"contact_us": "",
+})
+
+	<main class="main _overflow-visible">
+		<section class="send-ecard section-container">
+			<form action="#" class="send-ecard__form">
+				<div class="send-ecard__form--bg bg" aria-hidden="true">
+					<img src="img/send-ecard/decor.svg" width="0" height="0" loading="lazy" alt="" class="send-ecard__form--bg-element">
+					<img src="img/send-ecard/decor.svg" width="0" height="0" loading="lazy" alt="" class="send-ecard__form--bg-element">
+				</div>
+				<div class="send-ecard__form--body donation-form">
+					<h3 class="main-title">
+						Send <b>E</b>card
+					</h3>
+					<b class="donation-form__bold-text">Thank you for choosing to send one of our special eCards</b>
+					<a href="#special-greeting-popup" class="donation-form__link open-popup"><b>Preview the eCard template</b></a>
+					<div class="donation-form__column">
+						<label class="donation-form__label">
+							<span>First name</span>
+							<input type="text" name="first-name" placeholder="Name" required class="donation-form__input input">
+						</label>
+						<label class="donation-form__label">
+							<span>Your friend’s name</span>
+							<input type="text" name="last-name" placeholder="Last name" required class="donation-form__input input">
+						</label>
+						<label class="donation-form__label">
+							<span>Your friend’s email address</span>
+							<input type="email" name="email" placeholder="Email" required class="donation-form__input input">
+						</label>
+						<label class="donation-form__label _full">
+							<span>Your personal message</span>
+							<textarea name="description" placeholder="Description" rows="5" class="donation-form__textatea textarea"></textarea>
+						</label>
+					</div>
+					<div class="donation-form__min-text">
+						<p>
+							Médecins Sans Frontières Australia engages Vision6, a third-party Australian-based service, to send our e-cards. Vision6 collect personal information about your use of our supporter communications, for example, click-through rate and unsubscribe rate in order to compile and report statistics back to us. Vision6 uses collected personal information for the sole purpose of preparing reports to help us improve the efficacy of our supporter communications. MSFA takes measures to ensure the privacy of the information included in these reports. Our privacy policy is available at www.msf.org.au/privacy and contains information on how you can access or correct your personal information, who we disclose your personal information to and how you can lodge a complaint.
+						</p>
+					</div>
+					<div class="donation-form__footer _not-reverse">
+						<div class="donation-form__robot">
+							<img src="img/get-support/captcha.png" width="302" height="76" alt="">
+						</div>
+						<button class="donation-form__btn btn" type="submit">
+							Send
+							<svg width="24" height="24">
+								<use xlink:href="img/sprites.svg#btn-arrow"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</form>
+		</section>
+	</main>
+	<div class="special-greeting popup" id="special-greeting-popup">
+		<div class="special-greeting__wrapper popup-wrapper">
+			<div class="special-greeting__bg popup-bg popup-close"></div>
+			<button type="button" class="special-greeting__close-btn popup-close-btn popup-close" title="Close popup">
+				<svg width="16" height="16" viewBox="0 0 16 16">
+					<use xlink:href="img/sprites.svg#close"></use>
+				</svg>
+			</button>
+			<div class="special-greeting__body popup-body">
+				<div class="special-greeting__block">
+					<div class="special-greeting__block--bg bg" aria-hidden="true">
+						<picture>
+							<source srcset="img/paper-texture.webp" type="image/webp">
+							<img src="img/paper-texture.png" alt="" width="0" height="0" loading="lazy">
+						</picture>
+					</div>
+					<div class="special-greeting__logo">
+						<img src="img/logo.svg" width="251" height="65" alt="Logo">
+					</div>
+					<div class="special-greeting__content">
+						<div class="special-greeting__content--wrapper">
+							<div class="special-greeting__content--decor"></div>
+							<img src="img/special-greeting/decor.svg" width="0" height="0" loading="lazy" aria-hidden="true" alt="" class="special-greeting__content--decor-element">
+							<h3 class="special-greeting__content--title">
+								A <mark>special<svg width="0" height="0" preserveAspectRatio="none" viewBox="0 0 106 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M59.1988 0.677221C47.9517 1.04424 36.6091 0.842902 25.406 2.08078C18.4914 2.8448 11.7 5.51036 5.04579 7.95471C3.91152 8.37137 2.04165 10.4798 1.72463 12.0967C1.22323 14.654 1.3103 18.3275 2.41356 20.6063C4.41483 24.7402 8.43821 25.9401 11.6161 27.17C15.8714 28.8169 20.3745 28.7977 24.6761 30.1211C33.1934 32.7416 41.8583 31.5569 50.456 31.6043C56.5101 31.6377 62.5637 32.221 68.6156 32.1056C75.3825 31.9766 82.3009 32.3521 88.8382 29.8186C92.0705 28.5659 95.4559 27.1438 98.5192 25.2366C100.086 24.2608 101.815 23.49 103.235 22.1293C104.553 20.8662 104.544 17.8489 105.167 15.9133C106.144 12.8749 104.4 10.3973 102.531 8.95753C99.96 6.97723 97.208 5.59411 94.4139 4.45044C90.8519 2.99245 87.427 2.82359 83.7544 2.44648C78.4734 1.90423 73.1319 1.45314 67.8461 1.62563C64.1042 1.74774 60.3924 1.82074 56.6826 2.48216C51.7049 3.36966 46.7142 4.30895 41.7136 4.93959" stroke="#94FCC3" stroke-width="1.08497" stroke-linecap="round"/></svg>
+								</mark> greeting from <br> 
+								your name
+							</h3>
+							<div class="special-greeting__content--text">
+								Your text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra sagittis vehicula. Vivamus a risus nec nunc eleifend suscipit. Proin porttitor tortor quis diam interdum,
+							</div>
+							<img src="img/special-greeting/decor-icon.svg" width="29" height="32" loading="lazy" aria-hidden="true" alt="" class="special-greeting__content--decor-icon">
+						</div>
+					</div>
+					<div class="special-greeting__social">
+						<ul>
+							<li>
+								<a href="#" title="Facebook">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#" title="Instagram">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#" title="LinkedIn">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#linkedin"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="special-greeting__footer">
+						UL. ZŁOTA 7 / 18, 00-019 WARSZAWAFUNDACJA LIFE & <br> PEACEKRS0000958332NIP5252900154REGON521496704 Adres siedziby:<br> Solidarności 68/121, 00-240, Warszawa
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <script>
+		window.onload = function () {
+			popup.open('#special-greeting-popup')
+		}
+	</script> -->
+
+@@include("html/_footer.html")

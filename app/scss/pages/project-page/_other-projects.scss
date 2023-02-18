@@ -1,0 +1,36 @@
+.other-projects {
+
+	padding-bottom: 140px; padding-top: 38px;
+
+	@include _768 {
+		padding-bottom: 112px; padding-top: 50px;
+	}
+	
+	@include _992 {
+		padding-bottom: 112px; padding-top: 82px;
+	}
+
+	// .other-projects__header
+
+	&__header {
+	}
+
+	// .other-projects__title
+
+	&__title {
+	}
+
+	// .other-projects__list
+
+	&__list {
+		margin-top: 30px;
+		padding-top: 0;
+		@include _768 {
+			padding-top: 0;
+		}
+		
+		@include _992 {
+			padding-top: 0;
+		}
+	}
+}

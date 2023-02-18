@@ -1,0 +1,496 @@
+@@include("html/_header.html", {
+	"class": " _light",
+	"add_block": '',
+	"about_us": "",
+	"ambasadors": "",
+	"news": "",
+	"get_support": "",
+	"i_want_to_help": "",
+	"contact_us": "",
+})
+
+	<main class="main _large-padding-bottom _none-pt">
+		<section class="main-intro section-container">
+			<div class="main-intro__wrapper">
+				<div class="main-intro__bg"></div>
+				<div class="main-intro__content">
+					<h1 class="main-intro__title main-title">
+						Ukrainian
+						Emergency
+					</h1>
+					<div class="main-intro__text">
+						<p>
+							Our goal is to reinstate people’s belief in simple, genuine human relationships.
+						</p>
+					</div>
+					<a href="#" class="main-intro__link">
+						About us
+						<svg width="24" height="24">
+							<use xlink:href="img/sprites.svg#btn-arrow"></use>
+						</svg>
+					</a>
+					<div class="main-intro__logo">
+						<img src="img/main/intro/logo.svg" width="123" height="124" loading="lazy" alt="">
+					</div>
+					<a href="#" class="main-intro__accent-btn">
+						<svg viewBox="0 0 129 41" width="0" height="0" preserveAspectRatio="none" class="main-intro__accent-btn--bg">
+							<use xlink:href="img/sprites.svg#link-line"></use>
+						</svg>
+						Watch video
+						<svg width="16" height="18" class="main-intro__accent-btn--icon">
+							<use xlink:href="img/sprites.svg#play"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="main-intro__image">
+					<picture>
+						<source srcset="img/main/intro/image.webp" media="(min-width: 992px)" type="image/webp">
+						<source srcset="img/main/intro/image-mob.webp" type="image/webp">
+						<img src="img/main/intro/image.png" width="1440" height="795" alt="" loading="lazy">
+					</picture>
+				</div>
+			</div>
+		</section>
+		<section class="homes">
+			<div class="homes__content section-container">
+				<div class="homes__info">
+					<h1 class="homes__title section-title">
+						Homes for Ukrainian <span data-word="Peolples"><del>refugees</del></span>
+					</h1>
+					<div class="homes__text">
+						<p>
+							The project of the charitable foundation LIFE&PEACE aimed at helping Ukrainian IDPs from the east and south, who were forced to leave their homes and move to safer settlements of Ukraine due to the Russian aggression against Ukraine.
+						</p>
+					</div>
+					<div class="homes__footer">
+						<a href="#" class="homes__btn btn _transform-to-alternative-btn">
+							donate
+							<svg width="24" height="24">
+								<use xlink:href="img/sprites.svg#btn-arrow"></use>
+							</svg>
+						</a>
+						<div class="homes__arrow">
+							<img src="img/main/homes/arrow.svg" width="60" height="48" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="homes__image">
+					<picture>
+						<source srcset="img/main/homes/image.webp" type="image/webp">
+						<img src="img/main/homes/image.png" alt="" width="727" height="555" loading="lazy">
+					</picture>
+				</div>
+			</div>
+			<div class="homes__decor">
+				<picture>
+					<source srcset="img/decor-footer.webp" type="image/webp">
+					<img src="img/decor-footer.png" alt="" width="1440" height="172" loading="lazy">
+				</picture>
+			</div>
+			<div class="homes__video section-container">
+				<div class="homes__video--body video-wrapper">
+					<video src="video/video.mp4" controls preload="auto" width="1308" height="522" class="homes__video--element video-element"></video>
+					<div class="homes__video--preview video-preview">
+						<picture>
+							<source srcset="img/main/homes/video-preview.webp" type="image/webp">
+							<img src="img/main/homes/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+						</picture>
+						<div class="homes__video--controls">
+							<svg width="62" height="70">
+								<use xlink:href="img/sprites.svg#play"></use>
+							</svg>
+							Watch
+						</div>
+					</div>
+					<div class="homes__video--decor">
+						<picture>
+							<source srcset="img/min-decor.webp" type="image/webp">
+							<img src="img/min-decor.png alt="" width="0" height="0" loading="lazy">
+						</picture>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="missions section-container">
+			<h2 class="missions__title section-title">
+				mission
+				<img src="img/main/missions/decor.svg" width="33" alt="">
+			</h2>
+			<ul class="missions__list">
+				@@loop("html/index/_missions-card.html", [
+					{
+						"image": '1', "width": '110', "height": '135',
+						"title": 'Primary care',
+						"text": 'To help vulnerable categories of IDPs (pensioners, people with disabilities, large families, etc.) to settle in a new place of residence',
+					},
+					{
+						"image": '2', "width": '108', "height": '115',
+						"title": 'Accommodation',
+						"text": 'Providing migrants with free accommodation for a short period of time',
+					},
+					{
+						"image": '3', "width": '121', "height": '125',
+						"title": 'Home furnishing',
+						"text": 'Equip a temporary home with everything necessary for comfortable living: household appliances, furniture, dishes, etc.',
+					},
+					{
+						"image": '4', "width": '95', "height": '100',
+						"title": 'Home Improvements',
+						"text": 'To raise funds for the purchase and repair of temporary housing',
+					},
+				])
+			</ul>
+		</section>
+		<section class="what-we-do">
+			<div class="what-we-do__decor" aria-hidden="true">
+				<img src="img/main/what-we-do/decor.svg" width="1440" height="101" loading="lazy" alt="">
+			</div>
+			<div class="what-we-do__wrapper section-container">
+				<div class="what-we-do__header">
+					<div class="what-we-do__header--col">
+						<h2 class="what-we-do__title section-title">
+							What we do
+						</h2>
+						<div class="what-we-do__text">
+							<p>
+								All donated funds will be utilized to help meet the needs of refugees and their children, large families, disabled individuals, elderly citizens, and the military.
+							</p>
+						</div>
+					</div>
+					<div class="what-we-do__header--col">
+						<img src="img/main/what-we-do/arrow.svg" width="60" height="48" alt="" class="what-we-do__min-decor">
+						<a href="our-projects.html" class="what-we-do__link">
+							<svg width="0" height="0" viewBox="0 0 129 41" preserveAspectRatio="none" class="what-we-do__link--line">
+								<use xlink:href="img/sprites.svg#link-line"></use>
+							</svg>
+							See all projects
+						</a>
+					</div>
+				</div>
+				<ul class="what-we-do__list">
+					<li class="what-we-do__item">
+						<a href="project-page.html" class="what-we-do__item--body">
+							<div class="what-we-do__item--image">
+								<div class="what-we-do__item--image-wrapper">
+									<picture>
+										<source srcset="img/main/what-we-do/image.webp" type="image/webp">
+										<img src="img/main/what-we-do/image.jpg" alt="" width="420" height="280" loading="lazy">
+									</picture>
+								</div>
+								<svg width="24" height="24">
+									<use xlink:href="img/sprites.svg#btn-arrow"></use>
+								</svg>
+							</div>
+							<div class="what-we-do__item--info">
+								<h3>Two civilians vehicles to help Ukraine</h3>
+								<time datetime="2022-06-23">Start — 23.06.2022</time>
+							</div>
+						</a>
+					</li>
+					<li class="what-we-do__item">
+						<a href="project-page.html" class="what-we-do__item--body">
+							<div class="what-we-do__item--image">
+								<div class="what-we-do__item--image-wrapper">
+									<picture>
+										<source srcset="img/main/what-we-do/image.webp" type="image/webp">
+										<img src="img/main/what-we-do/image.jpg" alt="" width="420" height="280" loading="lazy">
+									</picture>
+								</div>
+								<svg width="24" height="24">
+									<use xlink:href="img/sprites.svg#btn-arrow"></use>
+								</svg>
+							</div>
+							<div class="what-we-do__item--info">
+								<h3>Two civilians vehicles to help Ukraine</h3>
+								<time datetime="2022-06-23">Start — 23.06.2022</time>
+							</div>
+						</a>
+					</li>
+					<li class="what-we-do__item">
+						<a href="project-page.html" class="what-we-do__item--body">
+							<div class="what-we-do__item--image">
+								<div class="what-we-do__item--image-wrapper">
+									<picture>
+										<source srcset="img/main/what-we-do/image.webp" type="image/webp">
+										<img src="img/main/what-we-do/image.jpg" alt="" width="420" height="280" loading="lazy">
+									</picture>
+								</div>
+								<svg width="24" height="24">
+									<use xlink:href="img/sprites.svg#btn-arrow"></use>
+								</svg>
+							</div>
+							<div class="what-we-do__item--info">
+								<h3>Two civilians vehicles to help Ukraine</h3>
+								<time datetime="2022-06-23">Start — 23.06.2022</time>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="where-donate">
+			<div class="where-donate__bg" aria-hidden="true">
+				<div class="where-donate__bg--element">
+					<img src="img/main/where-donate/decor-1.svg" width="0" height="0" loading="lazy" alt="">
+					<img src="img/main/where-donate/decor-1-mob.svg" width="0" height="0" loading="lazy" alt="">
+				</div>
+				<div class="where-donate__bg--main section-container">
+					<img src="img/main/where-donate/decor-image.svg" width="0" height="0" loading="lazy" alt="">
+				</div>
+				<div class="where-donate__bg--element">
+					<img src="img/main/where-donate/decor-2.svg" width="0" height="0" loading="lazy" alt="">
+					<img src="img/main/where-donate/decor-2-mob.svg" width="0" height="0" loading="lazy" alt="">
+				</div>
+				<div class="where-donate__bg--text">
+					<img src="img/main/where-donate/decor-text.svg" width="0" height="0" loading="lazy" alt="">
+				</div>
+			</div>
+			<div class="where-donate__wrapper section-container">
+				<h2 class="where-donate__title section-title">
+					Where the donate 
+					<mark>
+						<svg width="0" height="0" preserveAspectRatio="none" viewBox="0 0 147 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M79.3653 2.14129C66.8354 2.14129 54.2115 1.47022 41.7533 3.05308C37.9845 3.53192 34.2997 4.69267 30.4883 4.80273C27.2448 4.89639 23.594 6.74384 20.4336 7.90773C17.3692 9.03629 15.2952 9.93911 12.7064 12.8856C9.47034 16.5689 6.32916 21.7249 3.7379 26.5378C1.96506 29.8306 2.00005 33.5317 2.00005 37.6024C2.00005 42.2121 2.15598 44.945 3.95513 48.9135C8.16872 58.2079 13.2993 63.1096 20.0457 66.6811C24.0209 68.7855 28.3759 69.4133 32.4279 71.1168C35.8062 72.537 39.6456 73.5564 43.1498 73.5564C52.9353 73.5564 62.7525 74 72.5225 74C78.8332 74 85.0609 72.6693 91.375 72.6693C94.5436 72.6693 97.5048 71.153 100.592 70.895C103.867 70.6212 107.36 69.7777 110.584 68.7757C115.329 67.3013 120.139 66.4335 124.798 64.2414C128.402 62.5454 132.688 62.0035 136.016 59.1403C138.621 56.8993 141.079 52.7529 142.75 48.9382C143.976 46.1393 145 42.9149 145 39.4999C145 35.5021 143.698 32.5191 142.766 28.8542C141.998 25.8394 140.227 22.3194 138.576 20.4263C136.438 17.9734 133.216 17.5655 130.756 16.3356C127.063 14.4893 122.937 14.1801 119.087 14.1177C112.835 14.0164 106.762 13.3329 100.53 12.442C93.0875 11.3783 85.7036 9.96942 78.3101 8.25273C66.7672 5.57259 55.2714 6.13344 43.6153 6.13344" stroke="#F97C60" stroke-width="3" stroke-linecap="round"/>
+						</svg>
+						goes
+					</mark>
+				</h2>
+				<ul class="where-donate__list">
+					<li class="where-donate__item">
+						<div class="where-donate__item--body">
+							<div class="where-donate__item--number"></div>
+							<div class="where-donate__item--content">
+								<h3>
+									Acceptance of donations
+								</h3>
+								<p>
+									Our foundation accepts donations for purchasing medication and financing humanitarian aid in Europe. All donated funds will be utilized to help meet the needs of refugees and their children, large families, disabled individuals, elderly citizens, and the military.
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="where-donate__item">
+						<div class="where-donate__item--body">
+							<div class="where-donate__item--number"></div>
+							<div class="where-donate__item--content">
+								<h3>
+									Be with us
+								</h3>
+								<p>
+									Anyone willing and in position to help is welcome to do so. Kindness and courage are the virtues much more meaningful today than ever! Let our deepest essence unfold as we unite in supporting and defending each other. Do not stand aside, stand with us, not in word, but in deed!
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="where-donate__item">
+						<div class="where-donate__item--body">
+							<div class="where-donate__item--number"></div>
+							<div class="where-donate__item--content">
+								<h3>
+									Public initiative
+								</h3>
+								<p>
+									Life&peace is a non-profit organization, financed by private donations only. There is someone in need out there right this second, and it is in your hands to help them. Want to do more? Share the link to this website with co-workers, friends, and family to support more initiatives. 
+								</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="where-donate__footer">
+					<a href="#" class="where-donate__link btn _light">
+						donate
+						<svg width="24" height="24">
+							<use xlink:href="img/sprites.svg#btn-arrow"></use>
+						</svg>
+					</a>
+					<img src="img/main/where-donate/arrow.svg" width="75" height="23" loading="lazy" alt="" class="where-donate__footer--arrow">
+				</div>
+			</div>
+		</section>
+		@@include("html/sections/_gallery.html")
+		<section class="partners section-container">
+			<h2 class="partners__title section-title">
+				Partners
+				<img src="img/main/partners/decor.svg" width="27" height="43" loading="lazy" alt="">
+			</h2>
+			<ul class="partners__list">
+				<li class="partners__item">
+					<a href="#" class="partners__item--body">
+						<div class="partners__item--logo">
+							<img src="img/main/partners/logo.svg" width="226" height="52" loading="lazy" alt="">
+						</div>
+						<div class="partners__item--link">
+							<span>unicef.com</span>
+							<svg width="24" height="24">
+								<use xlink:href="img/sprites.svg#btn-arrow"></use>
+							</svg>
+						</div>
+					</a>
+				</li>
+				<li class="partners__item">
+					<a href="#" class="partners__item--body">
+						<div class="partners__item--logo">
+							<img src="img/main/partners/logo.svg" width="226" height="52" loading="lazy" alt="">
+						</div>
+						<div class="partners__item--link">
+							<span>unicef.com</span>
+							<svg width="24" height="24">
+								<use xlink:href="img/sprites.svg#btn-arrow"></use>
+							</svg>
+						</div>
+					</a>
+				</li>
+				<li class="partners__item">
+					<a href="#" class="partners__item--body">
+						<div class="partners__item--logo">
+							<img src="img/main/partners/logo.svg" width="226" height="52" loading="lazy" alt="">
+						</div>
+						<div class="partners__item--link">
+							<span>unicef.com</span>
+							<svg width="24" height="24">
+								<use xlink:href="img/sprites.svg#btn-arrow"></use>
+							</svg>
+						</div>
+					</a>
+				</li>
+				<li class="partners__item">
+					<a href="#" class="partners__item--body">
+						<div class="partners__item--logo">
+							<img src="img/main/partners/logo.svg" width="226" height="52" loading="lazy" alt="">
+						</div>
+						<div class="partners__item--link">
+							<span>unicef.com</span>
+							<svg width="24" height="24">
+								<use xlink:href="img/sprites.svg#btn-arrow"></use>
+							</svg>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<section class="ambasadors section-container">
+			<div class="ambasadors__header section-header">
+				<h2 class="ambasadors__title section-header__title section-title">
+					Ambasadors
+					<img src="img/main/ambasadors/decor.svg" width="47" height="49" loading="lazy" alt="">
+				</h2>
+				<img src="img/min-arrow.svg" width="70" class="ambasadors__decor-arrow section-header__decor-arrow" loading="lazy" alt="">
+				<a href="#" class="ambasadors__link section-header__link">
+					<svg width="0" height="0" viewBox="0 0 129 41" preserveAspectRatio="none" class="ambasadors__link--line section-header__link--line">
+						<use xlink:href="img/sprites.svg#link-line"></use>
+					</svg>
+					See all AMBASADORS
+				</a>
+			</div>
+			<div class="ambasadors__slider swiper">
+				<div class="ambasadors__slider--wrapper swiper-wrapper">
+					@@loop("html/_ambasador-item.html", [
+						{
+							"class": " ambasadors__slider--slide swiper-slide",
+						},
+						{
+							"class": " ambasadors__slider--slide swiper-slide",
+						},
+						{
+							"class": " ambasadors__slider--slide swiper-slide",
+						},
+					])
+				</div>
+				<div class="ambasadors__slider--nav">
+					<div class="ambasadors__slider--pagination swiper-pagination slider-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<section class="together section-container">
+			<div class="together__content">
+				<h2 class="together__title section-title _min-stroke-border _large-word">
+					There is no trouble we can not resolve <span data-word="Together"><del>ourselves!</del></span>
+				</h2>
+				<div class="together__footer">
+					<a href="#" class="together__btn btn _transform-to-alternative-btn">
+						donate
+						<svg width="24" height="24">
+							<use xlink:href="img/sprites.svg#btn-arrow"></use>
+						</svg>
+					</a>
+					<img src="img/min-arrow-2.svg" width="72" height="72" loading="lazy" alt="" class="together__decor-arrow">
+				</div>
+			</div>
+			<div class="together__image">
+				<div class="together__image--body">
+					<picture>
+						<source srcset="img/main/together/image.webp" type="image/webp">
+						<img src="img/main/together/image.png" alt="" width="456" height="505" loading="lazy">
+					</picture>
+				</div>
+			</div>
+		</section>
+		<section class="media section-container">
+			<div class="media__header section-header">
+				<h2 class="media__title section-header__title section-title">
+					Media About Us
+				</h2>
+				<img src="img/min-arrow.svg" width="70" class="media__decor-arrow section-header__decor-arrow" loading="lazy" alt="">
+				<a href="#" class="ambasadors__link section-header__link">
+					<svg width="0" height="0" viewBox="0 0 129 41" preserveAspectRatio="none" class="media__link--line section-header__link--line">
+						<use xlink:href="img/sprites.svg#link-line"></use>
+					</svg>
+					See MORE
+				</a>
+			</div>
+			<ul class="media__list">
+				@@loop("html/_media-item.html", [
+					{
+						"image": '1',
+						"title": 'Business woman',
+						"text": 'Most of the charitable organizations and foundations meet the needs of Ukrainians every day, collecting the necessary ...',
+					},
+					{
+						"image": '2',
+						"title": 'Warsaw Animal Shelter “Na Paluchu”',
+						"text": 'Most of the charitable organizations and foundations meet the needs of Ukrainians every day, collecting the necessary ...',
+					},
+					{
+						"image": '3',
+						"title": 'Disaster Day',
+						"text": 'The most destructive and lethal tsunami happened in the Indian Ocean in 2004.',
+					},
+				])
+			</ul>
+		</section>
+		<section class="media section-container">
+			<div class="media__header section-header">
+				<h2 class="media__title section-header__title section-title">
+					latest updates and news
+				</h2>
+				<img src="img/min-arrow.svg" width="70" class="media__decor-arrow section-header__decor-arrow" loading="lazy" alt="">
+				<a href="#" class="ambasadors__link section-header__link">
+					<svg width="0" height="0" viewBox="0 0 129 41" preserveAspectRatio="none" class="media__link--line section-header__link--line">
+						<use xlink:href="img/sprites.svg#link-line"></use>
+					</svg>
+					See MORE
+				</a>
+			</div>
+			<ul class="media__list">
+				@@loop("html/_media-item.html", [
+					{
+						"image": '1',
+						"title": 'Business woman',
+						"text": 'Most of the charitable organizations and foundations meet the needs of Ukrainians every day, collecting the necessary ...',
+					},
+					{
+						"image": '2',
+						"title": 'Warsaw Animal Shelter “Na Paluchu”',
+						"text": 'Most of the charitable organizations and foundations meet the needs of Ukrainians every day, collecting the necessary ...',
+					},
+					{
+						"image": '3',
+						"title": 'Disaster Day',
+						"text": 'The most destructive and lethal tsunami happened in the Indian Ocean in 2004.',
+					},
+				])
+			</ul>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

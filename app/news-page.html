@@ -1,0 +1,140 @@
+@@include("html/_header.html", {
+	"class": " _absolute",
+	"add_block": '<div class="header__row"><div class="page-address section-container"><ul><li><a href="index.html">Main</a></li><li><a>News page name</a></li></ul></div></div>',
+	"about_us": "",
+	"ambasadors": "",
+	"news": "",
+	"get_support": "",
+	"i_want_to_help": "",
+	"contact_us": "",
+})
+
+	<main class="main _none-pt">
+		<section class="news-page section-start section-container _min-2">
+			<div class="news-page__bg">
+				<img src="img/news-page/decor.svg" width="0" height="0" loading="lazy" class="news-page__bg--element" alt="">
+			</div>
+			<div class="news-page__header">
+				<time class="news-page__time post-time">
+					<mark>13.10.2022</mark>
+					<svg width="16" height="16" viewBox="0 0 16 16">
+						<use xlink:href="img/sprites.svg#clock"></use>
+					</svg>
+					5 minutes read
+				</time>
+				<h2 class="news-page__title main-title">
+					Disaster Day
+					<svg width="0" height="0" viewBox="0 0 491 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M2 9.08572C48.8718 9.08572 95.7107 8.21901 142.533 7.90477C176.124 7.67932 209.681 4.36191 243.308 4.36191C267.055 4.36191 290.813 4.57021 314.559 4.36191C329.384 4.23186 344.129 2 358.91 2C371.42 2 383.929 2 396.438 2C421.632 2 446.826 2 472.019 2C476.94 2 481.861 2 486.781 2C488.112 2 492.391 2 488.553 2C481.769 2 475.045 1.99838 468.28 2.65609C397.131 9.57329 325.559 12.6286 254.068 12.6286C212.557 12.6286 171.305 17.3524 129.805 17.3524C90.6423 17.3524 50.4613 10.9696 11.4476 16.1714" stroke="#F97C60" stroke-width="3" stroke-linecap="round"/>
+					</svg>
+				</h2>
+			</div>
+			<div class="news-page__content">
+				<p>
+					The most destructive and lethal tsunami happened in the Indian Ocean in 2004. The tsunami was the most lethal one in the world, with the death toll reaching a staggering figure of over 230,000… Now let’s fast forward to the reality of 2022 for a moment.
+				</p>
+				<div class="news-page__image">
+					<picture>
+						<source srcset="img/main/media/image-3.webp" type="image/webp">
+						<img src="img/main/media/image-3.jpg" alt="" width="1070" height="542" loading="lazy">
+					</picture>
+				</div>
+				<h3>
+					2601 educational institutions damaged
+				</h3>
+				<p style="columns: 2; max-width: 100%;">
+					We wonder whether we can consider the war on the territory of Ukraine a natural disaster, if during the last 7 months, cities and their objects of cultural heritage were wiped off the map and thousands of civilians were killed. We will tell you the facts of the official source of UNESCO, but you make the conclusions …
+					We wonder whether we can consider the war on the territory of Ukraine a natural disaster, if during the last 7 months, cities and their objects of cultural heritage were wiped off the map and thousands of civilians were killed. We will tell you the 
+				</p>
+				<h3>
+					Educational establishments
+				</h3>
+				<p>
+					Damage to educational institutions on the territory of Ukraine. 2601 educational institutions suffered from bombing and shelling (i.e. 2292 were damaged, 309 were destroyed) Source: Ministry of Education and Science of Ukraine
+				</p>
+				<div class="news-page__image-row">
+					<div class="news-page__image-row--item">
+						<picture>
+							<source srcset="img/news-page/image.webp" type="image/webp">
+							<img src="img/news-page/image.jpg" alt="" width="530" height="340" loading="lazy">
+						</picture>
+					</div>
+					<div class="news-page__image-row--item">
+						<picture>
+							<source srcset="img/news-page/image.webp" type="image/webp">
+							<img src="img/news-page/image.jpg" alt="" width="530" height="340" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<div class="news-page__block">
+					<h3>
+						199 cultural objects were damaged, such as:
+					</h3>
+					<ul class="news-page__list">
+						<li>
+							84 religious institutions
+						</li>
+						<li>
+							37 cultural buildings
+						</li>
+						<li>
+							13 museums
+						</li>
+						<li>
+							18 monuments
+						</li>
+						<li>
+							37 historical buildings
+						</li>
+						<li>
+							10 libraries
+						</li>
+					</ul>
+				</div>
+				<div class="news-page__block">
+					<h3>
+						10 journalists were killed
+					</h3>
+					<p>
+						Murdered journalists
+					</p>
+					<p>
+						In accordance with the mandate of the Organization, the Director-General of UNESCO condemned the killings of 10 journalists and media workers.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="other-news">
+			<div class="other-news__decor">
+				<img src="img/main/what-we-do/decor.svg" width="0" height="0" loading="lazy" alt="">
+			</div>
+			<div class="other-news__wrapper section-container">
+				<div class="other-news__header">
+					<h2 class="other-news__title title _uppercase">
+						Continue reading...
+					</h2>
+				</div>
+				<ul class="other-news__list media__list">
+					@@loop("html/_media-item.html", [
+						{
+							"image": '7',
+							"title": 'Disaster Day',
+							"text": 'The most destructive and lethal tsunami happened in the Indian Ocean in 2004.',
+						},
+						{
+							"image": '8',
+							"title": 'Disaster Day',
+							"text": 'The most destructive and lethal tsunami happened in the Indian Ocean in 2004.',
+						},
+						{
+							"image": '9',
+							"title": 'Disaster Day',
+							"text": 'The most destructive and lethal tsunami happened in the Indian Ocean in 2004.',
+						},
+					])
+				</ul>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

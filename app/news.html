@@ -1,0 +1,165 @@
+@@include("html/_header.html", {
+	"class": " _absolute",
+	"add_block": '<div class="header__row"><div class="page-address section-container"><ul><li><a href="index.html">Main</a></li><li><a>What we do?</a></li></ul></div></div>',
+	"about_us": "",
+	"ambasadors": "",
+	"news": " _current",
+	"get_support": "",
+	"i_want_to_help": "",
+	"contact_us": "",
+})
+
+	<main class="main _none-pt">
+		<section class="news-intro section-container section-start">
+			<div class="news-intro__bg">
+				<div class="news-intro__bg--main">
+					<img src="img/news/intro/decor.svg" width="0" height="0" loading="lazy" alt="" class="news-intro__bg--decor">	
+				</div>
+				<div class="news-intro__bg--footer">
+					<img src="img/project-page/donation/decor.svg" width="0" height="0" loading="lazy" alt="">
+				</div>
+			</div>
+			<div class="news-intro__info">
+				<h1 class="news-intro__title main-title">
+					<mark>Get</mark> the latest updates and news
+				</h1>
+				<div class="news-intro__text">
+					<p>
+						Stay up to date with the latest news and events of our foundation and our partners
+					</p>
+				</div>
+			</div>
+			<a href="#" class="news-intro__post">
+				<div class="news-intro__post--image">
+					<picture>
+						<source srcset="img/main/media/image-3.webp" type="image/webp">
+						<img src="img/main/media/image-3.jpg" alt="" width="654" height="345" loading="lazy">
+					</picture>
+				</div>
+				<time class="news-intro__post--time" datetime="2022-10-13">
+					13.10.2022
+				</time>
+				<div class="news-intro__post--block">
+					<div class="news-intro__post--content">
+						<h3>
+							Disaster Day
+						</h3>
+						<p>
+							The most destructive and lethal tsunami happened in the Indian Ocean in 2004.
+						</p>
+					</div>
+					<img src="img/min-arrow.svg" width="0" height="0" loading="lazy" alt="" class="news-intro__post--decor-element">
+				</div>
+			</a>
+		</section>
+		<section class="media section-container">
+			<div class="media__filter">
+				<div action="#" class="media__categories projects__categories hide-on-mob">
+					<ul class="projects__categories--list">
+						<li class="projects__categories--item">
+							<a href="#" class="projects__categories--btn _current">
+								Category
+							</a>
+						</li>
+						<li class="projects__categories--item">
+							<a href="#" class="projects__categories--btn">
+								Category
+							</a>
+						</li>
+						<li class="projects__categories--item">
+							<a href="#" class="projects__categories--btn">
+								Category
+							</a>
+						</li>
+						<li class="projects__categories--item">
+							<a href="#" class="projects__categories--btn">
+								Category
+							</a>
+						</li>
+						<li class="projects__categories--item">
+							<a href="#" class="projects__categories--btn">
+								Category
+							</a>
+						</li>
+						<li class="projects__categories--item">
+							<a href="#" class="projects__categories--btn">
+								Category
+							</a>
+						</li>
+						<li class="projects__categories--item">
+							<a href="#" class="projects__categories--btn">
+								Category
+							</a>
+						</li>
+						<li class="projects__categories--item">
+							<a href="#" class="projects__categories--btn">
+								Category
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="media__categories-select select visible-on-mob">
+					<select name="categories">
+						<option value="all">All categories</option>
+						<option value="category-1">Category 1</option>
+						<option value="category-2">Category 2</option>
+						<option value="category-3">Category 3</option>
+					</select>
+				</div>
+			</div>
+			<ul class="media__list">
+				@@loop("html/_media-item.html", [
+					{
+						"image": '1',
+						"title": 'Business woman',
+						"text": 'Most of the charitable organizations and foundations meet the needs of Ukrainians every day, collecting the necessary ...',
+					},
+					{
+						"image": '2',
+						"title": 'Warsaw Animal Shelter “Na Paluchu”',
+						"text": 'Most of the charitable organizations and foundations meet the needs of Ukrainians every day, collecting the necessary ...',
+					},
+					{
+						"image": '3',
+						"title": 'Disaster Day',
+						"text": 'The most destructive and lethal tsunami happened in the Indian Ocean in 2004.',
+					},
+					{
+						"image": '4',
+						"title": 'Disaster Day',
+						"text": 'The most destructive and lethal tsunami happened in the Indian Ocean in 2004.',
+					},
+					{
+						"image": '5',
+						"title": 'Disaster Day',
+						"text": 'The most destructive and lethal tsunami happened in the Indian Ocean in 2004.',
+					},
+					{
+						"image": '6',
+						"title": 'Disaster Day',
+						"text": 'The most destructive and lethal tsunami happened in the Indian Ocean in 2004.',
+					},
+					{
+						"image": '7',
+						"title": 'Disaster Day',
+						"text": 'The most destructive and lethal tsunami happened in the Indian Ocean in 2004.',
+					},
+					{
+						"image": '8',
+						"title": 'Disaster Day',
+						"text": 'The most destructive and lethal tsunami happened in the Indian Ocean in 2004.',
+					},
+					{
+						"image": '9',
+						"title": 'Disaster Day',
+						"text": 'The most destructive and lethal tsunami happened in the Indian Ocean in 2004.',
+					},
+				])
+			</ul>
+			<div class="media__footer">
+				@@include("html/_page-pagination.html")
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

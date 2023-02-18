@@ -1,0 +1,96 @@
+@@include("html/_header.html", {
+	"class": " _absolute",
+	"add_block": '<div class="header__row"><div class="page-address section-container"><ul><li><a href="index.html">Main</a></li><li><a>Project</a></li></ul></div></div>',
+    "about_us": "",
+	"ambasadors": "",
+	"news": "",
+	"get_support": "",
+	"i_want_to_help": " _current",
+	"contact_us": "",
+})
+
+	<main class="main _none-pt">
+		<section class="get-support">
+			<div class="get-support__intro section-container section-start">
+				<div class="get-support__bg" aria-hidden="true">
+					<picture>
+						<source srcset="img/get-support/image.webp" type="image/webp">
+						<img src="img/get-support/image.png" alt="" width="1440" height="594" loading="lazy">
+					</picture>
+				</div>
+				<div class="get-support__content">
+					<h1 class="get-support__title main-title _alt-line">
+						I want <mark>help</mark>
+					</h1>
+					<div class="get-support__text">
+						<p>
+							The most destructive and lethal tsunami happened in the Indian Ocean in 2004. The tsunami was the most lethal one in the world, with the death toll reaching a staggering figure of over 230,000… Now let’s fast forward to the reality of 2022 for a moment.
+						</p>
+					</div>
+				</div>
+			</div>
+			<form action="#" class="get-support__form section-container _min-4">
+				<div class="get-support__form--wrapper">
+					<div class="get-support__form--bg" aria-hidden="true">
+						<img src="img/get-support/decor.svg" width="0" height="0" loading="lazy" alt="" class="get-support__form--bg-decor">
+						<img src="img/get-support/decor.svg" width="0" height="0" loading="lazy" alt="" class="get-support__form--bg-decor">
+						<img src="img/get-support/decor.svg" width="0" height="0" loading="lazy" alt="" class="get-support__form--bg-decor">
+						<img src="img/get-support/decor.svg" width="0" height="0" loading="lazy" alt="" class="get-support__form--bg-decor">
+					</div>
+					<div class="get-support__form--body donation-form">
+						<h3 class="donation-form__min-title">
+							Personal info
+						</h3>
+						<div class="donation-form__row">
+							<label class="donation-form__label">
+								<span>First name</span>
+								<input type="text" name="first-name" placeholder="Name" required class="donation-form__input input">
+							</label>
+							<label class="donation-form__label">
+								<span>Last name</span>
+								<input type="text" name="last-name" placeholder="Last name" required class="donation-form__input input">
+							</label>
+                            <label class="donation-form__label">
+								<span>Email</span>
+								<input type="email" name="email" placeholder="Email" required class="donation-form__input input">
+							</label>
+							<label class="donation-form__label">
+								<span>Phone</span>
+								<input type="tel" name="phone" placeholder="Phone" required class="donation-form__input input">
+							</label>
+                            
+							<label class="donation-form__label _full">
+								<span>Country</span>
+								<input type="text" name="country" placeholder="Country" required class="donation-form__input input">
+							</label>
+							<label class="donation-form__label _full">
+								<span>City</span>
+								<input type="text" name="city" placeholder="City" required class="donation-form__input input">
+							</label>
+                            <label class="donation-form__label _full">
+								<span>Company name</span>
+								<input type="text" name="city" placeholder="City" required class="donation-form__input input">
+							</label>
+							<label class="donation-form__label _full">
+								<span>Description</span>
+								<textarea name="description" placeholder="Description" rows="5" class="donation-form__textatea textarea"></textarea>
+							</label>
+						</div>
+						<div class="donation-form__footer _not-reverse">
+							<div class="donation-form__robot">
+								<img src="img/get-support/captcha.png" width="302" height="76" alt="">
+							</div>
+							<button class="donation-form__btn btn" type="submit">
+								donate
+								<svg width="24" height="24">
+									<use xlink:href="img/sprites.svg#btn-arrow"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

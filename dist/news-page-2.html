@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- <link rel="SHORTCUT ICON" href="img/logo.svg" type="image/svg"> -->
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<!-- <div class="event"></div> -->
+	<svg width="0" height="0" viewBox="0 0 60 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<clipPath id="slider-arrow-prev">
+			<path d="M60 0L21.5 6L0 0L3.5 20L0 56L38.5 53.5L60 56L55 37.5L60 0Z" fill="#F97C60"/>
+		</clipPath>
+		<clipPath id="slider-arrow-next">
+			<path d="M0 0L38.5 6L60 0L56.5 20L60 56L21.5 53.5L0 56L5 37.5L0 0Z" fill="#F97C60"/>
+		</clipPath>
+	</svg>
+	<svg viewBox="0 0 53 46" width="0" height="0" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<clipPath id="social-link-1">
+			<path d="M4.95057 5.65779L22.6312 0L47.384 5.65779L52.6882 16.2662L47.384 45.2624L26.8745 42.0798L4.95057 45.2624L0 32.1787L4.95057 5.65779Z" fill="#F97C60"/>
+		</clipPath>
+		<clipPath id="social-link-2">
+			<path d="M5.30799 10.5477L15.5627 0.292969L47.7415 6.65799L53.0456 17.2664L46.6806 37.7759L28.2928 46.2626H5.30799L0.357422 33.1789L5.30799 10.5477Z" fill="#F97C60"/>
+		</clipPath>
+		<clipPath id="social-link-3">
+			<path d="M0.372559 14.4375L14.1634 0.292969L45.2813 2.06103V17.9736L50.5855 37.0686L26.8935 46.2626H3.90868L6.03035 32.8253L0.372559 14.4375Z" fill="#F97C60"/>
+		</clipPath>
+	</svg>	
+	<div class="wrapper">
+		<header class="header _absolute">
+			<div class="header__row section-container">
+				<a href="index.html" class="header__logo">
+					<img src="img/logo.svg" alt="Logo" width="178" height="47" loading="lazy" class="header__logo--img">
+					<img src="img/logo-light.svg" aria-hidden="true" alt="Logo" width="178" height="47" loading="lazy" class="header__logo--img _light">
+				</a>
+				<div class="header__wrapper">
+					<nav class="header__nav">
+						<div class="header__nav--body">
+							<ul class="header__nav--list">
+								<li class="header__nav--item">
+									<div class="header__nav-sub">
+										<ul class="header__nav-sub--list">
+											<li class="header__nav-sub--item">
+												<a href="#" class="header__nav-sub--link">
+													About Life and Peace
+												</a>
+											</li>
+											<li class="header__nav-sub--item">
+												<a href="#" class="header__nav-sub--link">
+													Life and Peace Poland
+												</a>
+											</li>
+											<li class="header__nav-sub--item">
+												<a href="#" class="header__nav-sub--link">
+													News
+												</a>
+											</li>
+											<li class="header__nav-sub--item">
+												<a href="#" class="header__nav-sub--link">
+													Our Finances
+												</a>
+											</li>
+										</ul>
+									</div>
+									<a href="about-us.html" class="header__nav--link">
+										About us
+										<svg width="8" height="5">
+											<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="header__nav--item">
+									<a href="#" class="header__nav--link">
+										What we do?
+									</a>
+								</li>
+								<li class="header__nav--item">
+									<a href="ambasadors.html" class="header__nav--link">
+										Ambassadors
+									</a>
+								</li>
+								<li class="header__nav--item">
+									<a href="news.html" class="header__nav--link">
+										News
+									</a>
+								</li>
+								<li class="header__nav--item">
+									<a href="get-support.html" class="header__nav--link">
+										Get Support
+									</a>
+								</li>
+								<li class="header__nav--item">
+									<a href="i-want-to-help.html" class="header__nav--link">
+										I Want To Help
+									</a>
+								</li>
+								<li class="header__nav--item">
+									<a href="contact-us.html" class="header__nav--link">
+										Contacts
+									</a>
+								</li>
+							</ul>
+							<div class="header__nav--social header__social visible-on-mob">							
+								<ul class="header__social--list">
+									<li class="header__social--item">
+										<a href="#" class="header__social--link" title="Facebook">
+											<svg width="28" height="28">
+												<use xlink:href="img/sprites.svg#facebook"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="header__social--item">
+										<a href="#" class="header__social--link" title="Twitter">
+											<svg width="28" height="28">
+												<use xlink:href="img/sprites.svg#twitter"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="header__social--item">
+										<a href="#" class="header__social--link" title="Instagram">
+											<svg width="28" height="28">
+												<use xlink:href="img/sprites.svg#instagram"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="header__social--item">
+										<a href="#" class="header__social--link" title="LinkedIn">
+											<svg width="28" height="28">
+												<use xlink:href="img/sprites.svg#linkedin"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="header__social--item">
+										<a href="#" class="header__social--link" title="YouTube">
+											<svg width="28" height="28">
+												<use xlink:href="img/sprites.svg#youtube"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+					<ul class="header__nav--list _visible">
+						<li class="header__nav--item">
+							<div class="header__nav-sub">
+								<ul class="header__nav-sub--list">
+									<li class="header__nav-sub--item">
+										<a href="#" class="header__nav-sub--link">
+											En
+										</a>
+									</li>
+									<li class="header__nav-sub--item">
+										<a href="#" class="header__nav-sub--link">
+											En
+										</a>
+									</li>
+									<li class="header__nav-sub--item">
+										<a href="#" class="header__nav-sub--link">
+											En
+										</a>
+									</li>
+									<li class="header__nav-sub--item">
+										<a href="#" class="header__nav-sub--link">
+											En
+										</a>
+									</li>
+								</ul>
+							</div>
+							<a href="#" class="header__nav--link">
+								En
+								<svg width="8" height="5">
+									<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header__nav--accent hide-on-mob">
+					<a href="donation.html" class="header__nav--accent-btn btn">
+						donate
+						<svg width="24" height="24">
+							<use xlink:href="img/sprites.svg#btn-arrow"></use>
+						</svg>
+					</a>
+				</div>
+				<button class="header__burger" aria-label="Menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<div class="header__row"><div class="page-address section-container"><ul><li><a href="index.html">Main</a></li><li><a>News page</a></li></ul></div></div>
+		</header>
+
+		
+
+	<main class="main _none-pt">
+		<section class="alt-news-page section-start">
+			<div class="alt-news-page__bg">
+				<div class="alt-news-page__bg--main">
+					<img src="img/news-page/decor.svg" width="0" height="0" loading="lazy" class="alt-news-page__bg--element" alt="">
+				</div>
+				<div class="alt-news-page__bg--footer">
+					<img src="img/project-page/donation/decor.svg" width="0" height="0" loading="lazy" alt="">
+				</div>
+			</div>
+			<div class="alt-news-page__wrapper section-container _min-2">
+				<div class="alt-news-page__header">
+					<time class="alt-news-page__time post-time">
+						<mark>13.10.2022</mark>
+						<svg width="16" height="16" viewBox="0 0 16 16">
+							<use xlink:href="img/sprites.svg#clock"></use>
+						</svg>
+						5 minutes read
+					</time>
+					<h2 class="alt-news-page__title main-title">
+						Text text
+						<svg width="0" height="0" viewBox="0 0 328 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2 10.3077C33.3046 10.3077 64.5872 9.29152 95.859 8.92308C118.294 8.65876 140.706 4.76923 163.164 4.76923C179.024 4.76923 194.891 5.01345 210.751 4.76923C220.652 4.61676 230.5 2 240.372 2C248.727 2 257.081 2 265.436 2C282.262 2 299.089 2 315.915 2C319.201 2 322.488 2 325.774 2C326.663 2 329.52 2 326.957 2C322.427 2 317.935 1.9981 313.417 2.76923C265.899 10.8793 218.098 14.4615 170.35 14.4615C142.626 14.4615 115.075 20 87.3582 20C61.2021 20 34.3662 12.5165 8.30985 18.6154" stroke="#F97C60" stroke-width="3" stroke-linecap="round"/>
+						</svg>
+					</h2>
+				</div>
+				<div class="alt-news-page__content">
+					<p>
+						The most destructive and lethal tsunami happened in the Indian Ocean in 2004. The tsunami was the most lethal one in the world, with the death toll reaching a staggering figure of over 230,000… Now let’s fast forward to the reality of 2022 for a moment.
+					</p>
+					<h3>
+						Medical attention
+					</h3>
+					<div class="alt-news-page__image">
+						<picture>
+							<source srcset="img/project-page/skill/image.webp" type="image/webp">
+							<img src="img/project-page/skill/image.jpg" alt="" width="417" height="386" loading="lazy">
+						</picture>
+					</div>
+					<p>
+						Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.
+					</p>
+					<p>
+						Without that the child may be facing a serious risk to their health and even life. It is terrifying to watch your sick child suffer, unable to help over the lack of finance. That is why we are asking you to help. Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.
+					</p>
+					<p>
+						<b>
+							Without that the child may be facing a serious risk to their health and even life. It is terrifying to watch your sick child suffer, unable to help over the lack of finance. That is why we are asking you to help.
+						</b>
+					</p>
+					<p>
+						<em>
+							Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.
+						</em>
+					</p>
+					<p>
+						<b>
+							Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.
+						</b>
+					</p>
+					<p>
+						Without that the child may be facing a serious risk to their health and even life. It is terrifying to watch your sick child suffer, unable to help over the lack of finance. That is why we are asking you to help. Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.
+					</p>
+					<div class="alt-news-page__content--footer">
+						<a href="#" class="alt-news-page__btn btn _transform-to-alternative-btn">
+							donate
+							<svg width="24" height="24">
+								<use xlink:href="img/sprites.svg#btn-arrow"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="alt-news-page__block _min">
+						<h3>
+							Medical attention
+						</h3>
+						<p>
+							Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.
+						</p>
+						<p>
+							Without that the child may be facing a serious risk to their health and even life. It is terrifying to watch your sick child suffer, unable to help over the lack of finance. That is why we are asking you to help. Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.
+						</p>
+						<p>
+							<b>
+								Without that the child may be facing a serious risk to their health and even life. It is terrifying to watch your sick child suffer, 
+							</b>
+						</p>
+					</div>
+					<div class="alt-news-page__image _full">
+						<picture>
+							<source srcset="img/ambasador/image.webp" type="image/webp">
+							<img src="img/ambasador/image.jpg" alt="" width="1070" height="542" loading="lazy">
+						</picture>
+					</div>
+				</div>
+			</div>
+			<div class="homes__video section-container">
+				<div class="homes__video--body video-wrapper">
+					<video src="video/video.mp4" controls preload="auto" width="1308" height="522" class="homes__video--element video-element"></video>
+					<div class="homes__video--preview video-preview">
+						<picture>
+							<source srcset="img/main/homes/video-preview.webp" type="image/webp">
+							<img src="img/main/homes/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+						</picture>
+						<div class="homes__video--controls">
+							<svg width="62" height="70">
+								<use xlink:href="img/sprites.svg#play"></use>
+							</svg>
+							Watch
+						</div>
+					</div>
+					<div class="homes__video--decor">
+						<picture>
+							<source srcset="img/min-decor.webp" type="image/webp">
+							<img src="img/min-decor.png alt="" width="0" height="0" loading="lazy">
+						</picture>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="other-news">
+			<div class="other-news__decor">
+				<img src="img/main/what-we-do/decor.svg" width="0" height="0" loading="lazy" alt="">
+			</div>
+			<div class="other-news__wrapper section-container">
+				<div class="other-news__header">
+					<h2 class="other-news__title title _uppercase">
+						Continue reading...
+					</h2>
+				</div>
+				<ul class="other-news__list media__list">
+					<li class="media__item">
+    <a href="news-page.html" class="media__item--link">
+        <div class="media__item--image">
+            <picture>
+                <source srcset="img/main/media/image-7.webp" type="image/webp">
+                <img src="img/main/media/image-7.jpg" alt="" width="410" height="302" loading="lazy">
+            </picture>
+        </div>
+        <time class="media__item--date" datetime="2022-10-24">24.10.2022</time>
+        <div class="media__item--content">
+            <h3>Disaster Day</h3>
+            <p>The most destructive and lethal tsunami happened in the Indian Ocean in 2004.</p>
+        </div>
+    </a>
+</li><li class="media__item">
+    <a href="news-page.html" class="media__item--link">
+        <div class="media__item--image">
+            <picture>
+                <source srcset="img/main/media/image-8.webp" type="image/webp">
+                <img src="img/main/media/image-8.jpg" alt="" width="410" height="302" loading="lazy">
+            </picture>
+        </div>
+        <time class="media__item--date" datetime="2022-10-24">24.10.2022</time>
+        <div class="media__item--content">
+            <h3>Disaster Day</h3>
+            <p>The most destructive and lethal tsunami happened in the Indian Ocean in 2004.</p>
+        </div>
+    </a>
+</li><li class="media__item">
+    <a href="news-page.html" class="media__item--link">
+        <div class="media__item--image">
+            <picture>
+                <source srcset="img/main/media/image-9.webp" type="image/webp">
+                <img src="img/main/media/image-9.jpg" alt="" width="410" height="302" loading="lazy">
+            </picture>
+        </div>
+        <time class="media__item--date" datetime="2022-10-24">24.10.2022</time>
+        <div class="media__item--content">
+            <h3>Disaster Day</h3>
+            <p>The most destructive and lethal tsunami happened in the Indian Ocean in 2004.</p>
+        </div>
+    </a>
+</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+
+		<footer class="footer">
+			<div class="footer__add-section section-container _min">
+				<div class="footer__add-section--bg" aria-hidden="true">
+					<img src="img/footer/decor.svg" width="0" height="0" loading="lazy" alt="">
+					<img src="img/footer/decor.svg" width="0" height="0" loading="lazy" alt="">
+					<img src="img/footer/decor-2.svg" width="0" height="0" loading="lazy" alt="">
+					<img src="img/footer/decor-2.svg" width="0" height="0" loading="lazy" alt="">
+				</div>
+				<h2 class="footer__add-section--title title">
+					The Charity is voluntary and dedicated.
+				</h2>
+				<a href="#" class="footer__add-section--btn btn">
+					donate
+					<svg width="24" height="24">
+						<use xlink:href="img/sprites.svg#btn-arrow"></use>
+					</svg>
+				</a>
+			</div>
+			<div class="footer__row section-container">
+				<div class="footer__col">
+					<a href="#" class="footer__logo">
+						<img src="img/logo.svg" width="209" height="54" loading="lazy" alt="Logo" class="footer__logo--img">
+					</a>
+					<div class="footer__email">
+						<svg width="16" height="16" viewBox="0 0 16 16">
+							<use xlink:href="img/sprites.svg#email"></use>
+						</svg>
+						Email for <del data-word="help">questions:</del>
+						<a href="mailto:fundacja.lifepeace@gmail.com">fundacja.lifepeace@gmail.com</a>
+					</div>
+					<div class="footer__info">
+						<h3 class="footer__info--title title">
+							Visit Us <mark>Now</mark>
+						</h3>
+						<ul>
+							<li>
+								<address>
+									Adres siedziby: Złota 7 / 18, 00-019
+									Warszawa, Polska
+								</address>
+							</li>
+							<li>
+								Monday - Saturday: 09:00-19:00 Sunday is a day off
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__col">
+					<nav class="footer__nav">
+						<div class="footer__nav--block">
+							<h3>OUR WORK</h3>
+							<ul>
+								<li>
+									<a href="#">
+										What we do?
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Where we work
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										How we work
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Our medical approach
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Reports & Publications
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Get Support
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										I Want To Help
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__nav--block">
+							<h3>ABOUT US</h3>
+							<ul>
+								<li>
+									<a href="#">
+										About Life and Peace
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Life and Peace Poland
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										News
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Our Finances
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__nav--block">
+							<h3>NEWS & STORIES</h3>
+							<ul>
+								<li>
+									<a href="#">
+										Stories from our partners and staff
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										News from our projects
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Statements & Opinion
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Media coverage
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__nav--block">
+							<h3>GET INVOLVED</h3>
+							<ul>
+								<li>
+									<a href="#">
+										Fundraise for us
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Social media
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Attend an event
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Send an eCard
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Workplace Giving
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__nav--block">
+							<h3>TEAM</h3>
+							<ul>
+								<li>
+									<a href="#">
+										Join our team
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Work in our office
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Volunteer in our office
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Send an eCard
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Ambassadors
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__nav--block">
+							<h3>DONATE</h3>
+							<ul>
+								<li>
+									<a href="#">
+										Donate Now
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Major Donors
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Other ways to donate
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Impact of your donation
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Supporter promise
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										FAQs
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<div class="footer__col _full">
+					<div class="footer__copy">
+						<span>© 2023 Life & Peace | Returning hope to the future</span>
+						<div class="footer__social">
+							<ul>
+								<li>
+									<a href="#" title="">
+										<svg width="24" height="24">
+											<use xlink:href="img/sprites.svg#facebook-2"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="">
+										<svg width="24" height="24">
+											<use xlink:href="img/sprites.svg#linkedin-2"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="">
+										<svg width="24" height="24">
+											<use xlink:href="img/sprites.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+</html>

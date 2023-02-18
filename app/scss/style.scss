@@ -1,0 +1,63 @@
+@import 'mixin';
+@import 'null';
+@import 'libs';
+@import 'vars';
+@import 'global';
+@import 'font';
+@import 'form';
+@import 'popup';
+
+@import 'main-sections/header';
+
+
+@import 'pages/index/intro';
+@import 'pages/index/homes';
+@import 'pages/index/missions';
+@import 'pages/index/what-we-do';
+@import 'pages/index/where-donate';
+@import 'pages/index/gallery';
+@import 'pages/index/partners';
+@import 'pages/index/ambasador';
+@import 'pages/index/together';
+@import 'pages/index/media';
+
+@import 'pages/ambasadors/main';
+
+@import 'pages/about-us/intro';
+@import 'pages/about-us/quantity';
+@import 'pages/about-us/project-video';
+@import 'pages/about-us/volunteer';
+@import 'pages/about-us/documents';
+
+@import 'pages/donation/main';
+
+@import 'pages/project-page/intro';
+@import 'pages/project-page/donation';
+@import 'pages/project-page/fact';
+@import 'pages/project-page/skill';
+@import 'pages/project-page/attention';
+@import 'pages/project-page/other-projects';
+
+@import 'pages/our-projects/intro';
+@import 'pages/our-projects/projects';
+
+@import 'pages/news/intro';
+
+@import 'pages/news-page/main';
+@import 'pages/news-page/other';
+
+@import 'pages/ambasador/main';
+
+@import 'pages/alt-news-page/main';
+
+@import 'pages/get-support/main';
+
+@import 'pages/contact-us/main';
+
+@import 'pages/faq/main';
+
+@import 'pages/send-ecard/main';
+
+
+@import 'main-sections/footer';
+

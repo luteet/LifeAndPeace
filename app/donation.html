@@ -1,0 +1,147 @@
+@@include("html/_header.html", {
+	"class": "",
+	"add_block": '<div class="header__row"><div class="page-address section-container"><ul><li><a href="index.html">Main</a></li><li><a href="about-us.html">About Us</a></li><li><a>Donation</a></li></ul></div></div>',
+	"about_us": "",
+	"ambasadors": "",
+	"news": "",
+	"get_support": "",
+	"i_want_to_help": "",
+	"contact_us": "",
+})
+
+	<main class="main _overflow-visible">
+		<section class="donation section-container">
+			<div class="donation__body">
+				<div class="donation__bg">
+					<img src="img/donation/decor.svg" width="0" height="0" loading="lazy" alt="" class="donation__bg--decor">
+					<img src="img/donation/decor.svg" width="0" height="0" loading="lazy" alt="" class="donation__bg--decor">
+				</div>
+				<form action="#" class="donation__form donation-form">
+					<h2 class="donation-form__title section-title">
+						Donation
+					</h2>
+					<div class="donation-form__radio-row radio-row _min-gap">
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="amount" required value="$10.00" class="radio-input">
+							<span class="donation-form__radio-row--element radio-btn">$10.00</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="amount" required value="$25.00" class="radio-input">
+							<span class="donation-form__radio-row--element radio-btn">$25.00</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="amount" required value="$50.00" class="radio-input">
+							<span class="donation-form__radio-row--element radio-btn">$50.00</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="amount" required value="$100.00" class="radio-input">
+							<span class="donation-form__radio-row--element radio-btn">$100.00</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="amount" required value="$250.00" class="radio-input">
+							<span class="donation-form__radio-row--element radio-btn">$250.00</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="amount" checked required value="custom" data-id="custom-amount-block" class="radio-input">
+							<span class="donation-form__radio-row--element radio-btn">Custom</span>
+						</label>
+					</div>
+					<div class="donation-form__block _hidden" id="custom-amount-block">
+						<label class="donation-form__label">
+							<span>Custom</span>
+							<input type="text" name="custom-amount" placeholder="$100.00" required class="donation-form__input input">
+						</label>
+					</div>
+					<div class="donation-form__radio-row radio-row">
+						<h3 class="donation-form__radio-row--title">Select payment method</h3>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="payment-method" required value="credit-card" class="radio-input">
+							<span class="donation-form__radio-row--element radio-element"></span>
+							<span class="donation-form__radio-row--text">Credit card</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="payment-method" required value="credit-card" class="radio-input">
+							<span class="donation-form__radio-row--element radio-element"></span>
+							<span class="donation-form__radio-row--text">Pay pal</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="payment-method" required value="credit-card" class="radio-input">
+							<span class="donation-form__radio-row--element radio-element"></span>
+							<span class="donation-form__radio-row--text">Bank account</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="payment-method" checked required value="credit-card" data-id="crypto-block" class="radio-input">
+							<span class="donation-form__radio-row--element radio-element"></span>
+							<span class="donation-form__radio-row--text">Crypto</span>
+						</label>
+					</div>
+					<div class="donation-form__block _hidden" id="crypto-block">
+						<div class="donation-form__select select">
+							<select name="crypto" required>
+								<option value="trc20-1" selected>TRC20</option>
+								<option value="trc20-2">TRC20</option>
+								<option value="trc20-3">TRC20</option>
+							</select>
+						</div>
+						<div class="donation-form__crypto">
+							<img src="img/donation/qr-code.svg" width="87" height="87" alt="" class="donation-form__crypto--img">
+							<textarea id="crypto-address" readonly rows="2" class="donation-form__crypto--address">JFMV4594934NFVFVJDF9439390fKSKjfmeo3229JFD</textarea>
+							<button class="donation-form__crypto--copy-btn copy-btn" type="button" data-clipboard-target="#crypto-address">
+								<svg width="14" height="14">
+									<use xlink:href="img/sprites.svg#copy"></use>
+								</svg>
+								Copy
+							</button>
+						</div>
+					</div>
+					<div class="donation-form__decor-line"></div>
+					<div class="donation-form__radio-row radio-row">
+						<h3 class="donation-form__radio-row--title">Select payment method</h3>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="type-donation" required value="anonymous" class="radio-input">
+							<span class="donation-form__radio-row--element radio-element"></span>
+							<span class="donation-form__radio-row--text">Anonymous donation</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="type-donation" required value="public" checked class="radio-input" data-id="public-form">
+							<span class="donation-form__radio-row--element radio-element"></span>
+							<span class="donation-form__radio-row--text">Public donation</span>
+						</label>
+					</div>
+					<div class="donation-form__block _hidden" id="public-form">
+						<label class="donation-form__label">
+							<span>First name</span>
+							<input type="text" name="first-name" placeholder="Name" required class="donation-form__input input">
+						</label>
+						<label class="donation-form__label">
+							<span>Last name</span>
+							<input type="text" name="last-name" placeholder="Last name" required class="donation-form__input input">
+						</label>
+						<label class="donation-form__label">
+							<span>Email</span>
+							<input type="email" name="email" placeholder="Email" required class="donation-form__input input">
+						</label>
+						<label class="donation-form__label">
+							<span>Phone</span>
+							<input type="tel" name="phone" placeholder="Phone" required class="donation-form__input input">
+						</label>
+					</div>
+					<div class="donation-form__footer">
+						<button class="donation-form__btn btn" type="submit">
+							donate
+							<svg width="24" height="24">
+								<use xlink:href="img/sprites.svg#btn-arrow"></use>
+							</svg>
+						</button>
+						<div class="donation-form__total">
+							<b>
+								Donation total <mark>$10.00</mark>
+							</b>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

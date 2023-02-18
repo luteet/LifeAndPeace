@@ -1,0 +1,141 @@
+.project-video {
+
+	margin: 64px -20px 41px -20px;
+	@include _992 {
+		margin: 0;
+	}
+
+	// .project-video__body
+
+	&__body {
+		max-width: 1127px;
+		margin: 70px auto;
+		padding: 13px;
+
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0; top: -5px;
+			width: 100%; height: calc(100% + 15px);
+			@include _992 {
+				width: 51%;
+				top: 0;
+				height: 100%;
+			}
+			z-index: -1;
+			transform: rotate(4.73deg);
+			background: var(--light-green);
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0; top: -10px;
+			width: 100%; height: calc(100% + 20px);
+			background: var(--accent);
+			transform: rotate(-4deg);
+			@include _992 {
+				top: 0;
+				height: 100%;
+				transform: rotate(-2.17deg);
+			}
+			z-index: -1;
+		}
+
+		background: var(--black-2);
+		color: var(--white);
+	}
+
+	// .project-video__block
+
+	&__block {
+
+		height: 307px;
+		width: 100%; position: relative;
+
+		// .project-video__block--element
+
+		&--element {
+			height: 307px;
+			width: 100%;
+		}
+
+		// .project-video__block--preview
+
+		&--preview {
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			user-select: none;
+			& img {
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&--preview:hover &--play-icon {
+			transform: scale(1.1);
+		}
+
+		&--preview:active &--play-icon {
+			transform: scale(1.05);
+		}
+
+		// .project-video__block--play-icon
+
+		&--play-icon {
+			position: relative;
+			z-index: 2;
+			width: 62px; height: 70px;
+			transition: transform .2s ease-in-out;
+		}
+	}
+
+	// .project-video__info
+
+	&__info {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		padding: 0 7px 34px 7px;
+		@include _992 {
+			padding: 0 38px 17px 17px;
+		}
+	}
+
+	// .project-video__title
+
+	&__title {
+		flex: 1 1 100%;
+		transform: rotate(-2.89deg);
+		margin-top: -35px;
+	}
+
+	// .project-video__text
+
+	&__text {
+		padding-top: 5px;
+		@include _992 {
+			padding-top: 25px;
+		}
+		max-width: 391px;
+	}
+
+	// .project-video__btn
+
+	&__btn {
+		margin-top: 25px;
+		flex: 1 1 auto;
+		justify-content: center;
+		@media (min-width: 450px) {
+			flex: 0 1 auto;
+		}
+	}
+}

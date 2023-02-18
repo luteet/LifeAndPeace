@@ -1,0 +1,58 @@
+@use 'sass:math';
+
+$container: math.div(1309, 2);
+$containerMin: math.div(572, 2);
+$containerMin2: math.div(1125, 2);
+$containerMin3: math.div(1066, 2);
+$containerMin4: math.div(618, 2);
+
+:root {
+	--title-font: 'KyivType Sans', sans-serif;
+	--main-font: 'KyivType Sans', sans-serif;
+	--decor-font: 'Mateur';
+	
+	--accent: #F97C60;
+	--accent-dark: #E15B3D;
+	--accent-dark-2: #be462a;
+	--accent-light: #FFF3F2;
+	--accent-light-2: #ffe8e6;
+	--accent-light-3: #ffd4d1;
+
+	--white: #FFF;
+	--black: #000;
+	--black-2: #1A1A1A;
+	--text: #333;
+	--dark-gray: #555555;
+	--light-gray: #C9C9C9;
+	--light-green: #8CE5B5;
+	--green-hover: #6FD89F;
+	--green-active: #51be82;
+	--dark-blue: #1A3764;
+	--dark-blue-2: #043565;
+	--dark: #383838;
+	--dark-2: #4A4A4A;
+	--light: #DEDEDE;
+	--light-2: #EAEAEA;
+
+	--container-padding: 20px;
+}
+
+@font-face {
+	@include font-include('KyivType Sans', 400, swap, normal, 'KyivTypeSans-Regular');
+}
+
+@font-face {
+	@include font-include('KyivType Sans', 300, swap, normal, 'KyivTypeSans-Light');
+}
+
+@font-face {
+	@include font-include('KyivType Sans', 500, swap, normal, 'KyivTypeSans-Medium');
+}
+
+@font-face {
+	@include font-include('KyivType Sans', 700, swap, normal, 'KyivTypeSans-Bold');
+}
+
+@font-face {
+	@include font-include('Mateur', 500, swap, normal, 'Mateur');
+}

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- <link rel="SHORTCUT ICON" href="img/logo.svg" type="image/svg"> -->
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<!-- <div class="event"></div> -->
+	<svg width="0" height="0" viewBox="0 0 60 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<clipPath id="slider-arrow-prev">
+			<path d="M60 0L21.5 6L0 0L3.5 20L0 56L38.5 53.5L60 56L55 37.5L60 0Z" fill="#F97C60"/>
+		</clipPath>
+		<clipPath id="slider-arrow-next">
+			<path d="M0 0L38.5 6L60 0L56.5 20L60 56L21.5 53.5L0 56L5 37.5L0 0Z" fill="#F97C60"/>
+		</clipPath>
+	</svg>
+	<svg viewBox="0 0 53 46" width="0" height="0" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<clipPath id="social-link-1">
+			<path d="M4.95057 5.65779L22.6312 0L47.384 5.65779L52.6882 16.2662L47.384 45.2624L26.8745 42.0798L4.95057 45.2624L0 32.1787L4.95057 5.65779Z" fill="#F97C60"/>
+		</clipPath>
+		<clipPath id="social-link-2">
+			<path d="M5.30799 10.5477L15.5627 0.292969L47.7415 6.65799L53.0456 17.2664L46.6806 37.7759L28.2928 46.2626H5.30799L0.357422 33.1789L5.30799 10.5477Z" fill="#F97C60"/>
+		</clipPath>
+		<clipPath id="social-link-3">
+			<path d="M0.372559 14.4375L14.1634 0.292969L45.2813 2.06103V17.9736L50.5855 37.0686L26.8935 46.2626H3.90868L6.03035 32.8253L0.372559 14.4375Z" fill="#F97C60"/>
+		</clipPath>
+	</svg>	
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__row section-container">
+				<a href="index.html" class="header__logo">
+					<img src="img/logo.svg" alt="Logo" width="178" height="47" loading="lazy" class="header__logo--img">
+					<img src="img/logo-light.svg" aria-hidden="true" alt="Logo" width="178" height="47" loading="lazy" class="header__logo--img _light">
+				</a>
+				<div class="header__wrapper">
+					<nav class="header__nav">
+						<div class="header__nav--body">
+							<ul class="header__nav--list">
+								<li class="header__nav--item">
+									<div class="header__nav-sub">
+										<ul class="header__nav-sub--list">
+											<li class="header__nav-sub--item">
+												<a href="#" class="header__nav-sub--link">
+													About Life and Peace
+												</a>
+											</li>
+											<li class="header__nav-sub--item">
+												<a href="#" class="header__nav-sub--link">
+													Life and Peace Poland
+												</a>
+											</li>
+											<li class="header__nav-sub--item">
+												<a href="#" class="header__nav-sub--link">
+													News
+												</a>
+											</li>
+											<li class="header__nav-sub--item">
+												<a href="#" class="header__nav-sub--link">
+													Our Finances
+												</a>
+											</li>
+										</ul>
+									</div>
+									<a href="about-us.html" class="header__nav--link">
+										About us
+										<svg width="8" height="5">
+											<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="header__nav--item">
+									<a href="#" class="header__nav--link">
+										What we do?
+									</a>
+								</li>
+								<li class="header__nav--item">
+									<a href="ambasadors.html" class="header__nav--link">
+										Ambassadors
+									</a>
+								</li>
+								<li class="header__nav--item">
+									<a href="news.html" class="header__nav--link">
+										News
+									</a>
+								</li>
+								<li class="header__nav--item">
+									<a href="get-support.html" class="header__nav--link">
+										Get Support
+									</a>
+								</li>
+								<li class="header__nav--item">
+									<a href="i-want-to-help.html" class="header__nav--link">
+										I Want To Help
+									</a>
+								</li>
+								<li class="header__nav--item">
+									<a href="contact-us.html" class="header__nav--link">
+										Contacts
+									</a>
+								</li>
+							</ul>
+							<div class="header__nav--social header__social visible-on-mob">							
+								<ul class="header__social--list">
+									<li class="header__social--item">
+										<a href="#" class="header__social--link" title="Facebook">
+											<svg width="28" height="28">
+												<use xlink:href="img/sprites.svg#facebook"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="header__social--item">
+										<a href="#" class="header__social--link" title="Twitter">
+											<svg width="28" height="28">
+												<use xlink:href="img/sprites.svg#twitter"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="header__social--item">
+										<a href="#" class="header__social--link" title="Instagram">
+											<svg width="28" height="28">
+												<use xlink:href="img/sprites.svg#instagram"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="header__social--item">
+										<a href="#" class="header__social--link" title="LinkedIn">
+											<svg width="28" height="28">
+												<use xlink:href="img/sprites.svg#linkedin"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="header__social--item">
+										<a href="#" class="header__social--link" title="YouTube">
+											<svg width="28" height="28">
+												<use xlink:href="img/sprites.svg#youtube"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+					<ul class="header__nav--list _visible">
+						<li class="header__nav--item">
+							<div class="header__nav-sub">
+								<ul class="header__nav-sub--list">
+									<li class="header__nav-sub--item">
+										<a href="#" class="header__nav-sub--link">
+											En
+										</a>
+									</li>
+									<li class="header__nav-sub--item">
+										<a href="#" class="header__nav-sub--link">
+											En
+										</a>
+									</li>
+									<li class="header__nav-sub--item">
+										<a href="#" class="header__nav-sub--link">
+											En
+										</a>
+									</li>
+									<li class="header__nav-sub--item">
+										<a href="#" class="header__nav-sub--link">
+											En
+										</a>
+									</li>
+								</ul>
+							</div>
+							<a href="#" class="header__nav--link">
+								En
+								<svg width="8" height="5">
+									<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header__nav--accent hide-on-mob">
+					<a href="donation.html" class="header__nav--accent-btn btn">
+						donate
+						<svg width="24" height="24">
+							<use xlink:href="img/sprites.svg#btn-arrow"></use>
+						</svg>
+					</a>
+				</div>
+				<button class="header__burger" aria-label="Menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<div class="header__row"><div class="page-address section-container"><ul><li><a href="index.html">Main</a></li><li><a>FAQ</a></li></ul></div></div>
+		</header>
+
+		
+
+	<main class="main">
+		<section class="faq section-container">
+			<div class="faq__body">
+				<h2 class="faq__title main-title">
+					FAQ
+				</h2>
+				<ul class="faq__list">
+					<li class="faq__item">
+						<div class="faq__item--body">
+							<div class="faq__item--placeholder">
+								Many desktop publishing packages and web page editors now use Lo
+							</div>
+							<div class="faq__item--content">
+								<h3>
+									WHAT IS AN NFT?
+								</h3>
+								<p>
+									NFT stands for Non-Fungible Token, a one-of-a-kind digital asset that is not interchangeable with another similar item. This means that each of the 10,000 Bohemian Bulldogs has its own set of metadata proving its uniqueness and ownership, which is encrypted on the blockchain. It is a unique digital item that users can buy, own and trade. <br>
+									BB's NFTs are created uniquely and exclusively by our artists, all hand-drawn and then registered on the Ethereum blockchain. The NFT contract governing ownership is a standard ERC-721 that works with any compatible service or exchange. 
+								</p>
+							</div>
+							
+						</div>
+					</li>
+					<li class="faq__item">
+						<div class="faq__item--body">
+							<div class="faq__item--placeholder">
+								Many desktop publishing packages and web page editors now use Lo
+							</div>
+							<div class="faq__item--content">
+								<h3>
+									WHAT IS AN NFT?
+								</h3>
+								<p>
+									NFT stands for Non-Fungible Token, a one-of-a-kind digital asset that is not interchangeable with another similar item. This means that each of the 10,000 Bohemian Bulldogs has its own set of metadata proving its uniqueness and ownership, which is encrypted on the blockchain. It is a unique digital item that users can buy, own and trade. <br>
+									BB's NFTs are created uniquely and exclusively by our artists, all hand-drawn and then registered on the Ethereum blockchain. The NFT contract governing ownership is a standard ERC-721 that works with any compatible service or exchange. 
+								</p>
+							</div>
+							
+						</div>
+					</li>
+					<li class="faq__item">
+						<div class="faq__item--body">
+							<div class="faq__item--placeholder">
+								Packages and web page editors now use Lorem Ipsum as their
+							</div>
+							<div class="faq__item--content">
+								<h3>
+									WHAT IS AN NFT?
+								</h3>
+								<p>
+									NFT stands for Non-Fungible Token, a one-of-a-kind digital asset that is not interchangeable with another similar item. This means that each of the 10,000 Bohemian Bulldogs has its own set of metadata proving its uniqueness and ownership, which is encrypted on the blockchain. It is a unique digital item that users can buy, own and trade. <br>
+									BB's NFTs are created uniquely and exclusively by our artists, all hand-drawn and then registered on the Ethereum blockchain. The NFT contract governing ownership is a standard ERC-721 that works with any compatible service or exchange. 
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="faq__item">
+						<div class="faq__item--body">
+							<div class="faq__item--placeholder">
+								Many desktop publishing packages and web page editors now use Lorem Ip
+							</div>
+							<div class="faq__item--content">
+								<h3>
+									WHAT IS AN NFT?
+								</h3>
+								<p>
+									NFT stands for Non-Fungible Token, a one-of-a-kind digital asset that is not interchangeable with another similar item. This means that each of the 10,000 Bohemian Bulldogs has its own set of metadata proving its uniqueness and ownership, which is encrypted on the blockchain. It is a unique digital item that users can buy, own and trade. <br>
+									BB's NFTs are created uniquely and exclusively by our artists, all hand-drawn and then registered on the Ethereum blockchain. The NFT contract governing ownership is a standard ERC-721 that works with any compatible service or exchange. 
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="faq__item">
+						<div class="faq__item--body">
+							<div class="faq__item--placeholder">
+								Drs now use Lorem Ipsum as their
+							</div>
+							<div class="faq__item--content">
+								<h3>
+									WHAT IS AN NFT?
+								</h3>
+								<p>
+									NFT stands for Non-Fungible Token, a one-of-a-kind digital asset that is not interchangeable with another similar item. This means that each of the 10,000 Bohemian Bulldogs has its own set of metadata proving its uniqueness and ownership, which is encrypted on the blockchain. It is a unique digital item that users can buy, own and trade. <br>
+									BB's NFTs are created uniquely and exclusively by our artists, all hand-drawn and then registered on the Ethereum blockchain. The NFT contract governing ownership is a standard ERC-721 that works with any compatible service or exchange. 
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="faq__item">
+						<div class="faq__item--body">
+							<div class="faq__item--placeholder">
+								Drs now usDrs now use Lorem Ipsum as theire Lorem Ipsum as their
+							</div>
+							<div class="faq__item--content">
+								<h3>
+									WHAT IS AN NFT?
+								</h3>
+								<p>
+									NFT stands for Non-Fungible Token, a one-of-a-kind digital asset that is not interchangeable with another similar item. This means that each of the 10,000 Bohemian Bulldogs has its own set of metadata proving its uniqueness and ownership, which is encrypted on the blockchain. It is a unique digital item that users can buy, own and trade. <br>
+									BB's NFTs are created uniquely and exclusively by our artists, all hand-drawn and then registered on the Ethereum blockchain. The NFT contract governing ownership is a standard ERC-721 that works with any compatible service or exchange. 
+								</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+
+		<footer class="footer">
+			<div class="footer__add-section section-container _min">
+				<div class="footer__add-section--bg" aria-hidden="true">
+					<img src="img/footer/decor.svg" width="0" height="0" loading="lazy" alt="">
+					<img src="img/footer/decor.svg" width="0" height="0" loading="lazy" alt="">
+					<img src="img/footer/decor-2.svg" width="0" height="0" loading="lazy" alt="">
+					<img src="img/footer/decor-2.svg" width="0" height="0" loading="lazy" alt="">
+				</div>
+				<h2 class="footer__add-section--title title">
+					The Charity is voluntary and dedicated.
+				</h2>
+				<a href="#" class="footer__add-section--btn btn">
+					donate
+					<svg width="24" height="24">
+						<use xlink:href="img/sprites.svg#btn-arrow"></use>
+					</svg>
+				</a>
+			</div>
+			<div class="footer__row section-container">
+				<div class="footer__col">
+					<a href="#" class="footer__logo">
+						<img src="img/logo.svg" width="209" height="54" loading="lazy" alt="Logo" class="footer__logo--img">
+					</a>
+					<div class="footer__email">
+						<svg width="16" height="16" viewBox="0 0 16 16">
+							<use xlink:href="img/sprites.svg#email"></use>
+						</svg>
+						Email for <del data-word="help">questions:</del>
+						<a href="mailto:fundacja.lifepeace@gmail.com">fundacja.lifepeace@gmail.com</a>
+					</div>
+					<div class="footer__info">
+						<h3 class="footer__info--title title">
+							Visit Us <mark>Now</mark>
+						</h3>
+						<ul>
+							<li>
+								<address>
+									Adres siedziby: Złota 7 / 18, 00-019
+									Warszawa, Polska
+								</address>
+							</li>
+							<li>
+								Monday - Saturday: 09:00-19:00 Sunday is a day off
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__col">
+					<nav class="footer__nav">
+						<div class="footer__nav--block">
+							<h3>OUR WORK</h3>
+							<ul>
+								<li>
+									<a href="#">
+										What we do?
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Where we work
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										How we work
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Our medical approach
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Reports & Publications
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Get Support
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										I Want To Help
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__nav--block">
+							<h3>ABOUT US</h3>
+							<ul>
+								<li>
+									<a href="#">
+										About Life and Peace
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Life and Peace Poland
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										News
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Our Finances
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__nav--block">
+							<h3>NEWS & STORIES</h3>
+							<ul>
+								<li>
+									<a href="#">
+										Stories from our partners and staff
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										News from our projects
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Statements & Opinion
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Media coverage
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__nav--block">
+							<h3>GET INVOLVED</h3>
+							<ul>
+								<li>
+									<a href="#">
+										Fundraise for us
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Social media
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Attend an event
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Send an eCard
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Workplace Giving
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__nav--block">
+							<h3>TEAM</h3>
+							<ul>
+								<li>
+									<a href="#">
+										Join our team
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Work in our office
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Volunteer in our office
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Send an eCard
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Ambassadors
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__nav--block">
+							<h3>DONATE</h3>
+							<ul>
+								<li>
+									<a href="#">
+										Donate Now
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Major Donors
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Other ways to donate
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Impact of your donation
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Supporter promise
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										FAQs
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<div class="footer__col _full">
+					<div class="footer__copy">
+						<span>© 2023 Life & Peace | Returning hope to the future</span>
+						<div class="footer__social">
+							<ul>
+								<li>
+									<a href="#" title="">
+										<svg width="24" height="24">
+											<use xlink:href="img/sprites.svg#facebook-2"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="">
+										<svg width="24" height="24">
+											<use xlink:href="img/sprites.svg#linkedin-2"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="">
+										<svg width="24" height="24">
+											<use xlink:href="img/sprites.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+</html>

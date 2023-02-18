@@ -1,0 +1,63 @@
+@@include("html/_header.html", {
+	"class": "",
+	"add_block": '<div class="header__row"><div class="page-address section-container"><ul><li><a href="index.html">Main</a></li><li><a>Ambasadors</a></li></ul></div></div>',
+	"about_us": "",
+	"ambasadors": " _current",
+	"news": "",
+	"get_support": "",
+	"i_want_to_help": "",
+	"contact_us": "",
+})
+
+	<main class="main">
+		<section class="ambasadors-page section-container">
+			<div class="ambasadors-page__header section-header">
+				<h2 class="ambasadors-page__title section-header__title section-title">
+					Ambasadors
+					<img src="img/main/ambasadors/decor.svg" width="30" height="56" loading="lazy" alt="">
+				</h2>
+				<a href="#" class="ambasadors-page__link section-header__link">
+					<svg width="0" height="0" viewBox="0 0 129 41" preserveAspectRatio="none" class="ambasadors-page__link--line section-header__link--line">
+						<use xlink:href="img/sprites.svg#link-line"></use>
+					</svg>
+					become an ambassador
+				</a>
+			</div>
+			<div class="ambasadors-page__list">
+				@@loop("html/_ambasador-item.html", [
+					{
+						"class": " ambasadors-page__item",
+					},
+					{
+						"class": " ambasadors-page__item",
+					},
+					{
+						"class": " ambasadors-page__item",
+					},
+					{
+						"class": " ambasadors-page__item",
+					},
+					{
+						"class": " ambasadors-page__item",
+					},
+					{
+						"class": " ambasadors-page__item",
+					},
+					{
+						"class": " ambasadors-page__item",
+					},
+					{
+						"class": " ambasadors-page__item",
+					},
+					{
+						"class": " ambasadors-page__item",
+					},
+				])
+			</div>
+			<div class="ambasadors-page__footer">
+				@@include("html/_page-pagination.html")
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

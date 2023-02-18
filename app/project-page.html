@@ -1,0 +1,394 @@
+@@include("html/_header.html", {
+	"class": " _absolute",
+	"add_block": '<div class="header__row"><div class="page-address section-container"><ul><li><a href="index.html">Main</a></li><li><a>Project</a></li></ul></div></div>',
+	"about_us": "",
+	"ambasadors": "",
+	"news": "",
+	"get_support": "",
+	"i_want_to_help": "",
+	"contact_us": "",
+})
+
+	<main class="main _none-pt">
+		<section class="project-page-intro section-container _min-3">
+			<div class="project-page-intro__content">
+				<div class="project-page-intro__bg">
+					<picture>
+						<source srcset="img/project-page/intro/intro.webp" type="image/webp">
+						<img src="img/project-page/intro/intro.jpg" alt="" width="1440" height="594" loading="lazy">
+					</picture>
+				</div>
+				<h1 class="project-page-intro__title main-title">
+					Cerebral Palsy (CP) Fundraiser
+				</h1>
+				<div class="project-page-intro__text">
+					<p>
+						Unfortunately, CP is incurable, however, some of the symptoms can be managed to ensure better quality of life. Time is very important when it comes to the treatment, the earlier it is started, the better of success it has.
+					</p>
+				</div>
+				<div class="project-page-intro__content--footer">
+					<a href="#" class="project-page-intro__btn btn">
+						donate
+						<svg width="24" height="24">
+							<use xlink:href="img/sprites.svg#btn-arrow"></use>
+						</svg>
+					</a>
+					<a href="#" class="project-page-intro__btn btn _dark _decor-reverse">
+						Share
+						<svg width="24" height="24">
+							<use xlink:href="img/sprites.svg#btn-arrow"></use>
+						</svg>
+					</a>
+					<a href="#" class="project-page-intro__btn btn _transparent">
+						Report pdf
+						<svg width="24" height="24">
+							<use xlink:href="img/sprites.svg#btn-arrow"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="project-page-intro__block">
+				<img aria-hidden="true" src="img/project-page/intro/decor.svg" width="0" height="0" loading="lazy" alt="" class="project-page-intro__block--decor">
+				<div class="project-page-intro__block--body">
+					<div class="project-page-intro__block--header">
+						<h2 class="project-page-intro__block--title">
+							Project
+						</h2>
+						<div class="project-page-intro__block--status">
+							Completed
+							<svg width="16" height="16" viewBox="0 0 16 16">
+								<use xlink:href="img/sprites.svg#check"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="project-page-intro__block--main">
+						<div class="project-page-intro__block--info">
+							<small>Country</small>
+							<span>
+								Ukraine
+								<img src="img/project-page/intro/flag.svg" width="22" height="16" alt="">
+							</span>
+						</div>
+						<div class="project-page-intro__block--info">
+							<small>Deadline</small>
+							<span>Jan 13, 2023</span>
+						</div>
+						<div class="project-page-intro__block--info">
+							<small>Amount</small>
+							<span>$ 80,000.00 / <mark>$ 100,000.00</mark></span>
+						</div>
+						<div class="project-page-intro__block--progress" data-value="80%" style="--value: 80%;">
+							<div class="project-page-intro__block--progress-line"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="project-page-donation section-container">
+			<div class="project-page-donation__bg">
+				<div class="project-page-donation__bg--item"></div>
+				<div class="project-page-donation__bg--decor">
+					<img src="img/project-page/donation/decor.svg" width="0" height="0" loading="lazy" alt="">
+				</div>
+			</div>
+			<div class="project-page-donation__body">
+				<div class="project-page-donation__body--bg" aria-hidden="true">
+					<img src="img/project-page/donation/decor-min.svg" width="0" height="0" loading="lazy" alt="">
+					<img src="img/project-page/donation/decor-min.svg" width="0" height="0" loading="lazy" alt="">
+				</div>
+				<form action="#" class="project-page-donation__form donation-form">
+					<div class="donation-form__radio-row radio-row _min-gap">
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="amount" required value="$10.00" class="radio-input">
+							<span class="donation-form__radio-row--element radio-btn">$10.00</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="amount" required value="$25.00" class="radio-input">
+							<span class="donation-form__radio-row--element radio-btn">$25.00</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="amount" required value="$50.00" class="radio-input">
+							<span class="donation-form__radio-row--element radio-btn">$50.00</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="amount" required value="$100.00" class="radio-input">
+							<span class="donation-form__radio-row--element radio-btn">$100.00</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="amount" required value="$250.00" class="radio-input">
+							<span class="donation-form__radio-row--element radio-btn">$250.00</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="amount" checked required value="custom" data-id="custom-amount-block" class="radio-input">
+							<span class="donation-form__radio-row--element radio-btn">Custom</span>
+						</label>
+					</div>
+					<div class="donation-form__block _hidden" id="custom-amount-block">
+						<label class="donation-form__label">
+							<span>Custom</span>
+							<input type="text" name="custom-amount" placeholder="$100.00" required class="donation-form__input input">
+						</label>
+					</div>
+					<div class="donation-form__radio-row radio-row">
+						<h3 class="donation-form__radio-row--title">Select payment method</h3>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="payment-method" required value="credit-card" class="radio-input">
+							<span class="donation-form__radio-row--element radio-element"></span>
+							<span class="donation-form__radio-row--text">Credit card</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="payment-method" required value="credit-card" class="radio-input">
+							<span class="donation-form__radio-row--element radio-element"></span>
+							<span class="donation-form__radio-row--text">Pay pal</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="payment-method" required value="credit-card" class="radio-input">
+							<span class="donation-form__radio-row--element radio-element"></span>
+							<span class="donation-form__radio-row--text">Bank account</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="payment-method" checked required value="credit-card" data-id="crypto-block" class="radio-input">
+							<span class="donation-form__radio-row--element radio-element"></span>
+							<span class="donation-form__radio-row--text">Crypto</span>
+						</label>
+					</div>
+					<div class="donation-form__block _hidden" id="crypto-block">
+						<div class="donation-form__select select">
+							<select name="crypto" required>
+								<option value="trc20-1" selected>TRC20</option>
+								<option value="trc20-2">TRC20</option>
+								<option value="trc20-3">TRC20</option>
+							</select>
+						</div>
+						<div class="donation-form__crypto">
+							<img src="img/donation/qr-code.svg" width="87" height="87" alt="" class="donation-form__crypto--img">
+							<textarea id="crypto-address" readonly rows="2" class="donation-form__crypto--address">JFMV4594934NFVFVJDF9439390fKSKjfmeo3229JFD</textarea>
+							<button class="donation-form__crypto--copy-btn copy-btn" type="button" data-clipboard-target="#crypto-address">
+								<svg width="14" height="14">
+									<use xlink:href="img/sprites.svg#copy"></use>
+								</svg>
+								Copy
+							</button>
+						</div>
+					</div>
+					<div class="donation-form__decor-line"></div>
+					<div class="donation-form__radio-row radio-row">
+						<h3 class="donation-form__radio-row--title">Select payment method</h3>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="type-donation" required value="anonymous" class="radio-input">
+							<span class="donation-form__radio-row--element radio-element"></span>
+							<span class="donation-form__radio-row--text">Anonymous donation</span>
+						</label>
+						<label class="donation-form__radio-row--item">
+							<input type="radio" name="type-donation" required value="public" checked class="radio-input" data-id="public-form">
+							<span class="donation-form__radio-row--element radio-element"></span>
+							<span class="donation-form__radio-row--text">Public donation</span>
+						</label>
+					</div>
+					<div class="donation-form__block _hidden" id="public-form">
+						<label class="donation-form__label">
+							<span>First name</span>
+							<input type="text" name="first-name" placeholder="Name" required class="donation-form__input input">
+						</label>
+						<label class="donation-form__label">
+							<span>Last name</span>
+							<input type="text" name="last-name" placeholder="Last name" required class="donation-form__input input">
+						</label>
+						<label class="donation-form__label">
+							<span>Email</span>
+							<input type="email" name="email" placeholder="Email" required class="donation-form__input input">
+						</label>
+						<label class="donation-form__label">
+							<span>Phone</span>
+							<input type="tel" name="phone" placeholder="Phone" required class="donation-form__input input">
+						</label>
+					</div>
+					<div class="donation-form__footer">
+						<button class="donation-form__btn btn" type="submit">
+							donate
+							<svg width="24" height="24">
+								<use xlink:href="img/sprites.svg#btn-arrow"></use>
+							</svg>
+						</button>
+						<div class="donation-form__total">
+							<b>
+								Donation total <mark>$10.00</mark>
+							</b>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="fact section-container _min-2">
+			<div class="fact__bg" aria-hidden="true">
+				<img src="img/project-page/fact/decor.svg" width="0" height="0" loading="lazy" alt="">
+			</div>
+			<div class="fact__body">
+				Cerebral palsy remains one of the most <mark>common disabilities among <del class="del-word-on-dark _bottom" data-word="children">Peolples.</del></mark>
+			</div>
+		</section>
+		@@include("html/sections/_gallery.html")
+		<section class="skill section-container">
+			<div class="skill__bg">
+				<img src="img/project-page/skill/decor-text.svg" width="0" height="0" loading="lazy" alt="" class="skill__bg--text">
+			</div>
+			<div class="skill__content">
+				<h2 class="skill__title title _alt-line">
+					<mark>New skill</mark>
+				</h2>
+				<div class="skill__text">
+					<p>
+						As of today, we are collecting funds for children with CP. Every donation is a new skill for a child and a sigh of relief for the parents. We urge you to support children with CP on their developmental journey!
+					</p>
+				</div>
+				<div class="skill__quote">
+					<svg width="64" height="42" viewBox="0 0 64 42">
+						<use xlink:href="img/sprites.svg#quote"></use>
+					</svg>
+					<b>Join us and help this world!</b>
+					<span>Life&Peace</span>
+				</div>
+				<a href="#" class="skill__btn btn _alt">
+					donate
+					<svg width="24" height="24">
+						<use xlink:href="img/sprites.svg#btn-arrow"></use>
+					</svg>
+				</a>
+			</div>
+			<div class="skill__image">
+				<figure class="skill__image--figure">
+					<picture>
+						<source srcset="img/project-page/skill/image.webp" type="image/webp">
+						<img src="img/project-page/skill/image.jpg" alt="" width="447" height="386" loading="lazy">
+					</picture>
+					<figcaption>Volonters from ucraine</figcaption>
+				</figure>
+				<div class="skill__image--decor-wrapper">
+					<img src="img/project-page/skill/decor.svg" class="skill__image--decor" width="0" height="0" loading="lazy" alt="" aria-hidden="true">
+					<img src="img/project-page/skill/decor.svg" class="skill__image--decor" width="0" height="0" loading="lazy" alt="" aria-hidden="true">
+					<img src="img/project-page/skill/decor.svg" class="skill__image--decor" width="0" height="0" loading="lazy" alt="" aria-hidden="true">
+				</div>
+			</div>
+		</section>
+		@@include("html/sections/_project-video.html")
+		<section class="attention section-container _min-2">
+			<div class="attention__content">
+				<h2>
+					Medical attention
+					<svg width="169" height="13" viewBox="0 0 169 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3.6507 4.61874C21.3804 4.61874 39.1101 4.61874 56.8398 4.61874C64.1457 4.61874 71.4516 4.61874 78.7574 4.61874C87.72 4.61874 96.6286 3.79339 105.581 3.79339C118.535 3.79339 131.488 3.79339 144.441 3.79339C151.343 3.79339 157.99 1.92525 164.823 1.73002C165.33 1.71553 168.285 1.56701 166.611 1.75295C163.617 2.08559 160.563 3.07303 157.624 3.70169C151.85 4.93696 146.071 5.53779 140.223 6.29236C114.544 9.60582 88.916 9.57083 63.0758 9.57083C55.5697 9.57083 48.0984 9.49233 40.608 9.98351C34.4366 10.3882 28.1983 11.2215 22.0147 11.2215C15.3431 11.2215 8.67157 11.2215 2 11.2215" stroke="#F97C60" stroke-width="2.14214" stroke-linecap="round"/>
+					</svg>						
+				</h2>
+				<p>
+					Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.
+				</p>
+				<p>
+					Without that the child may be facing a serious risk to their health and even life. It is terrifying to watch your sick child suffer, unable to help over the lack of finance. That is why we are asking you to help. Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.
+				</p>
+				<p>
+					<b>
+						Without that the child may be facing a serious risk to their health and even life. It is terrifying to watch your sick child suffer, unable to help over the lack of finance. That is why we are asking you to help.
+					</b>
+				</p>
+				<p>
+					<em>
+						Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.
+					</em>
+				</p>
+				<p>
+					<b>
+						Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.
+					</b>
+				</p>
+				<p>
+					Without that the child may be facing a serious risk to their health and even life. It is terrifying to watch your sick child suffer, unable to help over the lack of finance. That is why we are asking you to help. Medical attention and physical therapy are required as often as three times a month in order to keep the affliction from progressing further.					
+				</p>
+				<a href="#" class="attention__content--btn btn">
+					donate
+					<svg width="24" height="24">
+						<use xlink:href="img/sprites.svg#btn-arrow"></use>
+					</svg>
+				</a>
+			</div>
+			<div class="attention__image">
+				<figure class="attention__image--figure">
+					<picture>
+						<source srcset="img/project-page/skill/image.webp" type="image/webp">
+						<img src="img/project-page/skill/image.jpg" alt="" width="447" height="386" loading="lazy">
+					</picture>
+					<figcaption>Volonters from ucraine</figcaption>
+				</figure>
+				<div class="attention__image--decor-wrapper">
+					<img src="img/project-page/attention/decor.svg" class="attention__image--decor" width="0" height="0" loading="lazy" alt="" aria-hidden="true">
+				</div>
+			</div>
+		</section>
+		<section class="other-projects section-container">
+			<div class="other-projects__header">
+				<h2 class="other-projects__title title _uppercase">
+					Other projects
+				</h2>
+			</div>
+			<ul class="other-projects__list what-we-do__list">
+				<li class="what-we-do__item">
+					<a href="#" class="what-we-do__item--body">
+						<div class="what-we-do__item--image">
+							<div class="what-we-do__item--image-wrapper">
+								<picture>
+									<source srcset="img/main/what-we-do/image.webp" type="image/webp">
+									<img src="img/main/what-we-do/image.jpg" alt="" width="420" height="280" loading="lazy">
+								</picture>
+							</div>
+							<svg width="24" height="24">
+								<use xlink:href="img/sprites.svg#btn-arrow"></use>
+							</svg>
+						</div>
+						<div class="what-we-do__item--info">
+							<h3>Two civilians vehicles to help Ukraine</h3>
+							<time datetime="2022-06-23">Start — 23.06.2022</time>
+						</div>
+					</a>
+				</li>
+				<li class="what-we-do__item">
+					<a href="#" class="what-we-do__item--body">
+						<div class="what-we-do__item--image">
+							<div class="what-we-do__item--image-wrapper">
+								<picture>
+									<source srcset="img/main/what-we-do/image.webp" type="image/webp">
+									<img src="img/main/what-we-do/image.jpg" alt="" width="420" height="280" loading="lazy">
+								</picture>
+							</div>
+							<svg width="24" height="24">
+								<use xlink:href="img/sprites.svg#btn-arrow"></use>
+							</svg>
+						</div>
+						<div class="what-we-do__item--info">
+							<h3>Two civilians vehicles to help Ukraine</h3>
+							<time datetime="2022-06-23">Start — 23.06.2022</time>
+						</div>
+					</a>
+				</li>
+				<li class="what-we-do__item">
+					<a href="#" class="what-we-do__item--body">
+						<div class="what-we-do__item--image">
+							<div class="what-we-do__item--image-wrapper">
+								<picture>
+									<source srcset="img/main/what-we-do/image.webp" type="image/webp">
+									<img src="img/main/what-we-do/image.jpg" alt="" width="420" height="280" loading="lazy">
+								</picture>
+							</div>
+							<svg width="24" height="24">
+								<use xlink:href="img/sprites.svg#btn-arrow"></use>
+							</svg>
+						</div>
+						<div class="what-we-do__item--info">
+							<h3>Two civilians vehicles to help Ukraine</h3>
+							<time datetime="2022-06-23">Start — 23.06.2022</time>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

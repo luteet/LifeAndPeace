@@ -1,0 +1,57 @@
+.send-ecard {
+
+	padding-bottom: 95px;
+
+	@include _768 {
+		padding-bottom: 120px;
+	}
+	
+	@include _992 {
+		padding-bottom: 160px;
+	}
+
+	// .send-ecard__form
+
+	&__form {
+
+		max-width: 618px;
+		margin: 0 auto;
+		position: relative;
+
+		// .send-ecard__form--bg
+
+		&--bg {
+
+		}
+
+		// .send-ecard__form--bg-element
+
+		&--bg-element {
+			position: absolute;
+			@include _768 {
+				&:nth-child(1) {
+					right: 0; top: 0;
+					width: 250px; height: auto;
+					transform: translate(50%,-50%);
+				}
+	
+				&:nth-child(2) {
+					left: 0; bottom: 0;
+					width: 350px; height: auto;
+					transform: translate(-50%,30%) scale(-1);
+				}
+			}
+		}
+
+		// .send-ecard__form--body
+
+		&--body {
+			padding: 22px 16px;
+			@include _768 {
+				padding: 47px 60px;
+			}
+			border-radius: 8px;
+			background: var(--white);
+		}
+	}
+}
