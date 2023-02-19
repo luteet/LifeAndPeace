@@ -4,6 +4,7 @@
 	// .what-we-do__decor
 
 	&__decor {
+		user-select: none;
 		width: 100%; padding-top: 7.014%;
 		position: relative;
 		min-height: 101px;
@@ -78,6 +79,7 @@
 	// .what-we-do__min-decor
 
 	&__min-decor {
+		user-select: none;
 		display: none;
 		@include _768 {
 			display: block;

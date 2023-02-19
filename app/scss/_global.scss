@@ -453,6 +453,7 @@ section {
 
 	&__decor-arrow {
 		display: none;
+		user-select: none;
 		@include _768 {
 			display: block;
 			margin-right: 20px;

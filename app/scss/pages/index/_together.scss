@@ -56,6 +56,7 @@
 	// .together__decor-arrow
 
 	&__decor-arrow {
+		user-select: none;
 		display: none;
 		@include _768 {
 			margin-left: 24px;

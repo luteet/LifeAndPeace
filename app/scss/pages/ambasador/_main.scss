@@ -16,6 +16,7 @@
 		left: 0; top: 0;
 		z-index: -1;
 		width: 100%; height: 100%;
+		user-select: none; pointer-events: none;
 
 		// .ambasador__bg--main
 
@@ -69,7 +70,7 @@
 	// .ambasador__title
 
 	&__title {
-		margin-top: 8px;
+		margin-top: 13px;
 		position: relative;
 		display: inline-block;
 		padding-bottom: 15px;

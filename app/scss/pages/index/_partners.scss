@@ -39,6 +39,14 @@
 		&--body {
 		}
 
+		&--body:hover &--link span {
+			color: var(--accent);
+		}
+
+		&--body:active &--link span {
+			color: var(--accent-dark);
+		}
+
 		// .partners__item--logo
 
 		&--logo {
@@ -58,12 +66,26 @@
 			align-items: center;
 			justify-content: space-between;
 
+			
+			/* &:hover span {
+				color: var(--accent)
+			}
+			
+			&:active span {
+				color: var(--accent-dark)
+			} */
+
 			& span {
 				font-weight: 500;
+				transition: color .2s ease-in-out;
 				color: var(--dark-gray);
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 
 			& svg {
+				flex: 0 0 29px;
 				stroke: var(--light-gray);
 				fill: none;
 				margin-right: 5px;
