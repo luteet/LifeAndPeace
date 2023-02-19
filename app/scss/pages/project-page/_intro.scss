@@ -1,7 +1,9 @@
 .project-page-intro {
 
-	padding-top: calc(var(--height-header, 145px) - 0px); padding-bottom: 20px;
+	//padding-top: calc(var(--height-header, 145px) - 0px); 
+	padding-bottom: 20px;
 	@include _768 {
+		padding-top: calc(var(--height-header, 145px) - 0px); 
 		padding-bottom: 60px;
 	}
 
@@ -50,12 +52,12 @@
 	&__content {
 		width: 100%;
 		position: relative;
-		padding-bottom: 20px;
+		padding-bottom: 20px; padding-top: calc(var(--height-header, 145px) - 0px); 
 		@include _768 {
 			width: auto;
 			position: static;
 			max-width: 60%;
-			padding-bottom: 0;
+			padding-bottom: 0; padding-top: 0;
 		}
 		// .project-page-intro__content--footer
 
@@ -196,10 +198,10 @@
 				& mark {
 					background: transparent;
 					color: var(--accent);
-					&::before {
+					/* &::before {
 						content: '';
 						margin-left: 5px;
-					}
+					} */
 				}
 			}
 		}

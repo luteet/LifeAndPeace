@@ -379,19 +379,9 @@ let gallerySlider = new Swiper('.gallery__slider', {
 	loop: true,
 	speed: 500,
 	pagination: {
-		el: '.swiper-pagination',
+		el: '.gallery__slider--pagination.swiper-pagination',
 		clickable: true,
 	},
-	/* on: {
-		touchMove: function() {
-			eventElement.textContent = 'Active';
-			body.classList.add('_active');
-		},
-		touchEnd: function() {
-			eventElement.textContent = 'End';
-			body.classList.remove('_active');
-		},
-	}, */
 	breakpoints: {
 		992: {
 			navigation: {

@@ -136,6 +136,7 @@
 			text-decoration: none;
 			display: inline-block;
 			position: relative;
+			padding-right: 20px;
 			&::before {
 				content: '';
 				position: absolute;
@@ -151,7 +152,6 @@
 		&::after {
 			content: " " attr(data-word);
 			font-family: 'Mateur';
-			padding-left: 20px;
 			font-size: 2.15rem;
 			@include _768 {
 				font-size: 2.3rem;
