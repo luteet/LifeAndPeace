@@ -8,7 +8,7 @@
 
 		&--element {
 			position: absolute;
-			top: var(--height-header); right: calc(50% - #{$container}px);
+			top: var(--height-header, 145px); right: calc(50% - #{$container}px);
 			transform: translate(0,35%);
 			width: 173px; height: auto;
 		}
@@ -31,7 +31,7 @@
 	// .news-page__title
 
 	&__title {
-		margin-top: 8px;
+		margin-top: 13px;
 		position: relative;
 		display: inline-block;
 		padding-bottom: 15px;

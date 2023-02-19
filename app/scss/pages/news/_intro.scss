@@ -26,7 +26,7 @@
 				position: absolute;
 				left: auto; right: 30px; top: 30%;
 				@include _992 {
-					left: calc(50% - 350px); right: auto; top: var(--height-header);
+					left: calc(50% - 350px); right: auto; top: var(--height-header, 145px);
 				}
 				width: min(30%,238px); height: auto;
 			}
@@ -94,7 +94,13 @@
 			flex: 0 1 50%;
 		}
 
+		&:hover &--content h3 {
+			color: var(--accent)
+		}
 		
+		&:active &--content h3  {
+			color: var(--accent-dark)
+		}
 
 		// .news-intro__post--image
 
@@ -139,6 +145,7 @@
 				font-weight: 700;
 				color: var(--black-2);
 				padding-bottom: 6px;
+				transition: color .2s ease-in-out;
 			}
 			& p {
 				padding-top: 6px;

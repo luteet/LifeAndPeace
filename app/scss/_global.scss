@@ -39,19 +39,19 @@ section {
 }
 
 .main {
-	padding-top: var(--height-header);	
+	padding-top: var(--height-header, 145px);	
 	&._overflow-visible {
 		margin-top: -80px;
 		@include _992 {
 			margin-top: -240px;
 		}
-		padding-top: calc(var(--height-header) + 92px);	
+		padding-top: calc(var(--height-header, 145px) + 92px);	
 	}
 	&._none-pt {
 		padding-top: 0;
 	}
 	/* &._pt {
-		padding-top: var(--height-header);
+		padding-top: var(--height-header, 145px);
 	} */
 	@include _992 {
 		padding-top: 0;
@@ -83,7 +83,7 @@ section {
 }
 
 .section-start {
-	padding-top: var(--height-header);
+	padding-top: var(--height-header, 145px);
 }
 
 .section-container {

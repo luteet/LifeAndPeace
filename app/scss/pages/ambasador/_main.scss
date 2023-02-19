@@ -28,7 +28,7 @@
 				position: absolute;
 				right: 30px; top: 30%;
 				@include _992 {
-					right: calc(50% - 320px); top: calc(var(--height-header) + 20px);
+					right: calc(50% - 320px); top: calc(var(--height-header, 145px) + 20px);
 				}
 				width: min(20%,120px); height: auto;
 			}

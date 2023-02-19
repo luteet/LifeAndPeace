@@ -42,12 +42,6 @@ document.querySelectorAll('select').forEach(select => {
 })
 
 
-  /* let el = document.querySelector('#selectElement')
-  el.slim.open() */
-  //select.enable()
-  //console.log(test.settings)
-
-
 body.addEventListener('click', function (event) {
 
 	function $(elem) {
@@ -110,6 +104,8 @@ body.addEventListener('click', function (event) {
 
 
 
+	// =-=-=-=-=-=-=-=-=-=- <open gallery> -=-=-=-=-=-=-=-=-=-=-
+
 	const gridGalleryImage = $('.grid-gallery__image');
 	if(gridGalleryImage) {
 		const index = gridGalleryImage.dataset.gridGalleryIndex ? Number(gridGalleryImage.dataset.gridGalleryIndex) : false;
@@ -127,6 +123,7 @@ body.addEventListener('click', function (event) {
 		}
 	}
 
+	// =-=-=-=-=-=-=-=-=-=- </open gallery> -=-=-=-=-=-=-=-=-=-=-
 
 
 	// =-=-=-=-=-=-=-=-=-=- <FAQ> -=-=-=-=-=-=-=-=-=-=-
@@ -292,14 +289,18 @@ let gridGalleryPopupSlider = new Swiper('.grid-gallery-popup__slider', {
 	}
 })
 
-
-
-
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
 
+// =-=-=-=-=-=-=-=-=-=-=-=- <copy from input> -=-=-=-=-=-=-=-=-=-=-=-=
+
 var clipboard = new ClipboardJS('.copy-btn');
+
+// =-=-=-=-=-=-=-=-=-=-=-=- </copy from input> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+// =-=-=-=-=-=-=-=-=-=-=-=- <hide and visible blocks in form> -=-=-=-=-=-=-=-=-=-=-=-=
 
 const radioInputs = document.querySelectorAll('.radio-input');
 function radioInputsChange(radioInput) {
@@ -326,6 +327,8 @@ radioInputs.forEach(radioInput => {
 		radioInputsChange(radioInput);
 	})
 })
+
+// =-=-=-=-=-=-=-=-=-=-=-=- </hide and visible blocks in form> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
 const inputs = document.querySelectorAll('.input, .textarea');
@@ -482,13 +485,13 @@ const popup = new Popup();
 popup.init()
 
 
-/* 
+
 // =-=-=-=-=-=-=-=-=-=-=-=- <Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
 
 AOS.init({
-	//disable: "mobile",
+	disable: "mobile",
 });
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
 
-*/
+

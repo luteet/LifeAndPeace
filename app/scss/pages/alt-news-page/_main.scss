@@ -24,7 +24,7 @@
 			}
 			& img {
 				position: absolute;
-				top: calc(var(--height-header) + 50px); right: calc(50% - 530px);
+				top: calc(var(--height-header, 145px) + 50px); right: calc(50% - 530px);
 				transform: translate(0,85%);
 				width: 173px; height: auto;
 			}
@@ -70,7 +70,7 @@
 	// .alt-news-page__title
 
 	&__title {
-		margin-top: 8px;
+		margin-top: 13px;
 		position: relative;
 		display: inline-block;
 		padding-bottom: 20px;
