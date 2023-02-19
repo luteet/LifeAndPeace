@@ -403,12 +403,6 @@ section {
 	transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
 }
 
-.event {
-	position: fixed;
-	left: 0; top: 0;
-	z-index: 100;
-}
-
 .slider-pagination {
 	display: flex;
 	justify-content: center;
@@ -639,4 +633,3 @@ section {
 		clip-path: url(#slider-arrow-next);
 	}
 }
-

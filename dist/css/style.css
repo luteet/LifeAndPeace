@@ -553,6 +553,10 @@ summary {
     content: "next"
 }
 
+.btn::after,.btn::before,.main-title mark::before,.section-title span del::before,.ss-main .ss-multi-selected .ss-add .ss-plus:after,.swiper-cube .swiper-cube-shadow:before,.title mark::before {
+    content: ""
+}
+
 .swiper-button-lock {
     display: none
 }
@@ -894,7 +898,6 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-cube .swiper-cube-shadow:before {
-    content: "";
     background: #000;
     position: absolute;
     left: 0;
@@ -903,12 +906,6 @@ button.swiper-pagination-bullet {
     right: 0;
     -webkit-filter: blur(50px);
     filter: blur(50px)
-}
-
-.ss-main .ss-multi-selected,.ss-main .ss-single-selected {
-    cursor: pointer;
-    background-color: #fff;
-    box-sizing: border-box
 }
 
 .swiper-flip .swiper-slide {
@@ -941,6 +938,14 @@ button.swiper-pagination-bullet {
     transition-property: transform,opacity,height,-webkit-transform
 }
 
+.ss-main .ss-multi-selected,.ss-main .ss-single-selected {
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: background-color .2s;
+    outline: 0;
+    cursor: pointer
+}
+
 .swiper-cards {
     overflow: visible
 }
@@ -967,9 +972,7 @@ button.swiper-pagination-bullet {
 .ss-main .ss-single-selected {
     display: flex;
     width: 100%;
-    padding: 6px;
-    outline: 0;
-    transition: background-color .2s
+    padding: 6px
 }
 
 .ss-main .ss-single-selected.ss-disabled {
@@ -1063,9 +1066,7 @@ button.swiper-pagination-bullet {
     width: 100%;
     padding: 0 0 0 3px;
     border: 1px solid #dcdee2;
-    border-radius: 4px;
-    outline: 0;
-    transition: background-color .2s
+    border-radius: 4px
 }
 
 .ss-main .ss-multi-selected.ss-disabled {
@@ -1226,7 +1227,6 @@ button.swiper-pagination-bullet {
 
 .ss-main .ss-multi-selected .ss-add .ss-plus:after {
     background: #666;
-    content: "";
     position: absolute;
     height: 2px;
     width: 10px;
@@ -1382,7 +1382,8 @@ button.swiper-pagination-bullet {
 }
 
 .bg,.homes__decor,.homes__video--preview img,.section-header__decor-arrow,.section-title img {
-    -webkit-user-select: none
+    -webkit-user-select: none;
+    -ms-user-select: none
 }
 
 .ss-content .ss-list .ss-option * {
@@ -2490,7 +2491,6 @@ section {
     height: 100%;
     z-index: -1;
     -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
 }
 
@@ -2499,11 +2499,6 @@ section {
     font-weight: 500;
     text-transform: uppercase;
     text-align: center
-}
-
-.homes__decor,.homes__video--preview img,.section-title img {
-    -ms-user-select: none;
-    -moz-user-select: none
 }
 
 .page-address {
@@ -2525,10 +2520,6 @@ section {
     content: "•";
     font-size: 1.25rem;
     color: #191919
-}
-
-.btn::after,.btn::before,.main-title mark::before,.section-title span del::before,.title mark::before {
-    content: ""
 }
 
 .page-address ul li a {
@@ -2696,11 +2687,6 @@ section {
     transition: background .2s ease-in-out
 }
 
-.event,.popup {
-    position: fixed;
-    z-index: 100
-}
-
 .main-title mark::before,.pagination__link--current-line {
     -webkit-transform: translate(-50%,-50%);
     position: absolute
@@ -2745,11 +2731,6 @@ section {
     visibility: hidden
 }
 
-.event {
-    left: 0;
-    top: 0
-}
-
 .slider-pagination {
     display: flex;
     justify-content: center;
@@ -2791,7 +2772,6 @@ section {
 .section-header__decor-arrow {
     display: none;
     -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
 }
 
@@ -3085,6 +3065,7 @@ section {
 }
 
 .section-title img {
+    -moz-user-select: none;
     user-select: none;
     margin-left: 10px
 }
@@ -3341,11 +3322,13 @@ section {
 }
 
 .popup {
+    position: fixed;
     left: 0;
     width: 100%;
     display: flex;
     align-items: center;
     padding: 10px;
+    z-index: 100;
     opacity: 0;
     visibility: hidden;
     transition: opacity .4s ease,visibility .4s ease;
@@ -4267,6 +4250,7 @@ section {
     min-height: 76px;
     margin: -50px 0 0;
     pointer-events: none;
+    -moz-user-select: none;
     user-select: none
 }
 
@@ -4336,6 +4320,7 @@ section {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+    -moz-user-select: none;
     user-select: none
 }
 
