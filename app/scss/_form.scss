@@ -2,7 +2,7 @@
 	padding: 6px 0;
 	border-radius: 0;
 	background: transparent;
-	color: var(--light-gray);
+	color: var(--dark);
 	border-bottom: 1px solid var(--light-gray);
 	&::placeholder {
 		opacity: 1;
@@ -11,7 +11,7 @@
 	}
 	transition: color .2s ease-in-out, border-color .2s ease-in-out;
 	&:focus {
-		color: var(--dark);
+		color: var(--accent);
 		&::placeholder {
 			opacity: 0;
 		}
