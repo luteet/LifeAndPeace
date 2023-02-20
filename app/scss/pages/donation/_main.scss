@@ -1,6 +1,10 @@
 .donation {
 
 	padding-bottom: 158px; padding-top: 30px;
+	margin-top: -40px;
+	@include _992 {
+		margin-top: -70px;
+	}
 	z-index: auto;
 
 	// .donation__body

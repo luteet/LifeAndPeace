@@ -211,6 +211,9 @@ body.addEventListener('click', function (event) {
 	if ($('.header__burger')) {
 		menu.forEach(element => {
 			element.classList.toggle('_active')
+			window.scroll({
+				top: 0, left: 0
+			})
 		})
 	}
 
@@ -498,6 +501,7 @@ inputs.forEach(input => {
 
 AOS.init({
 	disable: "mobile",
+	once: true,
 });
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </animation> -=-=-=-=-=-=-=-=-=-=-=-=

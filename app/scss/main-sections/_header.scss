@@ -23,15 +23,22 @@
 
 	z-index: 99;
 
+	//transition: background .1s ease-in-out;
+
 	&__row {
 		display: flex;
 		justify-content: space-between;
 		//flex-wrap: wrap;
 		align-items: center;
+		transform: none;
 		/* &:nth-child(2) {
 			position: relative;
 		} */
 	}
+
+	/* &._active {
+		background: var(--white);
+	} */
 
 	&._light-2 {
 		background: var(--white);
@@ -217,7 +224,6 @@
 				&._visible {
 					padding-right: 5px;
 				}
-				
 			}
 
 			&._visible {
@@ -247,28 +253,20 @@
 				}
 			}
 			
-			&._sub-active .hover-line {
+			/* &._sub-active .hover-line {
 				stroke-dashoffset: 0;
-			}
+			} */
 
 			@media (any-hover: hover) {
 				&:hover .header__nav-sub {
 					opacity: 1; visibility: visible;
 					transform: translate3d(-50%,0px,0);
 				}
-
-				/* &:hover .hover-line {
-					stroke-dashoffset: 0;
-				} */
 			}
 
 			&._current .hover-line {
 				stroke-dashoffset: 0;
 			}
-
-			/* & .hover-line {
-				animation: dashOut .4s linear forwards;
-			} */
 
 			& .hover-line {
 				position: absolute;
@@ -285,10 +283,7 @@
 
 				transition: stroke-dashoffset .4s ease-in-out;
 			}
-
-			/* &._blur .hover-line {
-				
-			} */
+			
 		}
 
 		&--link {
