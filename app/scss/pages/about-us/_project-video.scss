@@ -80,11 +80,11 @@
 		}
 
 		&--preview:hover &--play-icon {
-			transform: scale(1.1);
+			transform: scale(1.5);
 		}
 
 		&--preview:active &--play-icon {
-			transform: scale(1.05);
+			transform: scale(1.4);
 		}
 
 		// .project-video__block--play-icon
@@ -92,8 +92,9 @@
 		&--play-icon {
 			position: relative;
 			z-index: 2;
-			width: 62px; height: 70px;
+			width: 42px; height: 50px;
 			transition: transform .2s ease-in-out;
+			fill: var(--white);
 		}
 	}
 
