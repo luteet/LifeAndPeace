@@ -5533,6 +5533,7 @@ section {
 }
 
 .ambasadors-page {
+    padding-top: 5px;
     padding-bottom: 62px
 }
 
@@ -9652,6 +9653,7 @@ section {
     }
 
     .ambasadors-page {
+        padding-top: 15px;
         padding-bottom: 44px
     }
 
