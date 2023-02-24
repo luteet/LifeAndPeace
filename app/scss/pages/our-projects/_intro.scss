@@ -52,6 +52,10 @@
 	// .our-projects-intro__title
 
 	&__title {
+		margin-top: 9px;
+		@include _992 {
+			margin-top: 18px;
+		}
 		display: inline-block;
 		position: relative;
 		padding-bottom: 20px;
