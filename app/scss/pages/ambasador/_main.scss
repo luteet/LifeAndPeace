@@ -152,12 +152,27 @@
 			align-items: center;
 			justify-content: center;
 
-			
+			transition: background .3s ease-in-out;
 
 			& svg {
 				fill: var(--white);
 				width: 40%; height: 100%;
-				transition: fill .2s ease-in-out;
+				transition: fill .3s ease-in-out;
+			}
+
+			&:hover {
+				& svg {
+					fill: var(--black-2);
+				}
+				transition: background .2s ease-in-out;
+				background: var(--light-green)
+			}
+			
+			&:active {
+				background: var(--green-active);
+				& svg {
+					transition: fill .2s ease-in-out;
+				}
 			}
 		}
 	}
