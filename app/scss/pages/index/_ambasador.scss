@@ -72,11 +72,20 @@
 		// .ambasadors__item--image
 
 		&--image {
+			display: block;
 			& img {
 				clip-path: polygon(27% 3%, 57% 0, 81% 3%, 100% 0, 100% 100%, 0 100%, 0 29%, 0 0);
 				max-width: 100%;
 				object-fit: cover;
 			}
+		}
+
+		&--image:hover + &--content h3, &--content h3:hover {
+			color: var(--accent);
+		}
+
+		&--image:active + &--content h3, &--content h3:active {
+			color: var(--accent-dark);
 		}
 
 		// .ambasadors__item--content
@@ -92,6 +101,7 @@
 				font-size: 1.25rem;
 				line-height: 100%;
 				color: var(--dark-gray);
+				transition: color .2s ease-in-out;
 			}
 			& p {
 				padding-top: 6px;

@@ -28,6 +28,10 @@ body {
 	
 }
 
+a {
+	color: var(--accent);
+}
+
 section {
 	position: relative;
 	z-index: 2;
@@ -43,11 +47,11 @@ section {
 .main {
 	padding-top: var(--height-header, 145px);	
 	&._overflow-visible {
-		margin-top: -80px;
+		margin-top: calc(0px - var(--height-header, 145px));
 		@include _992 {
-			margin-top: -240px;
+			margin-top: calc(0px - (var(--height-header, 145px) + 92px));
 		}
-		padding-top: calc(var(--height-header, 145px) + 92px);	
+		padding-top: calc(var(--height-header, 145px) + 92px);
 	}
 	&._none-pt {
 		padding-top: 0;
@@ -121,25 +125,27 @@ section {
 }
 
 .page-address {
-	padding-top: 33px;
+	margin-top: 0px;
 	@include _992 {
-		padding-top: 24px;
+		margin-top: -10px;
 	}
 	& ul {
 		display: flex;
 		flex-wrap: wrap;
 		margin-left: -6px;
 		& li {
+			opacity: .7;
 			display: flex;
 			align-items: center;
 			&:not(:first-child)::before {
 				content: '•';
-				font-size: 1.25rem;
+				font-size: 1.125rem;
 				color: #191919;
 			}
 			& a {
 				color: #191919;
 				padding: 0 6px;
+				font-size: 14px;
 				transition: color .2s ease-in-out;
 				&[href] {
 					&:hover {
@@ -191,15 +197,16 @@ section {
 		& svg {
 			stroke: var(--black-2);
 		}
+
 		&::before, &::after {
 			background: var(--light-green);
 		}
 
 		&:hover {
 			background: var(--green-hover);
-			color: var(--white);
+			color: var(--black-2);
 			& svg {
-				stroke: var(--white);
+				stroke: var(--black-2);
 			}
 			&::before, &::after {
 				background: var(--green-hover);
@@ -208,7 +215,7 @@ section {
 		
 		&:active {
 			background: var(--green-active);
-			color: var(--white);
+			color: var(--black-2);
 			&::before, &::after {
 				background: var(--green-active);
 			}
@@ -249,6 +256,10 @@ section {
 		}
 		&:hover {
 			background: var(--dark);
+			color: var(--white);
+			& svg {
+				stroke: var(--white);
+			}
 			&::before, &::after {
 				background: var(--dark);
 			}
@@ -256,6 +267,7 @@ section {
 		
 		&:active {
 			background: var(--text);
+			color: var(--white);
 			&::before, &::after {
 				background: var(--text);
 			}
@@ -267,16 +279,20 @@ section {
 				background: var(--accent);
 			}
 			&:hover {
-				background: var(--accent-dark);
+				color: var(--dark);
+				& svg {
+					stroke: var(--dark);
+				}
+				background: var(--light-green);
 				&::before, &::after {
-					background: var(--accent-dark);
+					background: var(--light-green);
 				}
 			}
 			
 			&:active {
-				background: var(--accent-dark-2);
+				background: var(--green-active);
 				&::before, &::after {
-					background: var(--accent-dark-2);
+					background: var(--green-active);
 				}
 			}
 		}
@@ -318,6 +334,10 @@ section {
 		}
 		&:hover {
 			background: var(--dark-gray);
+			color: var(--white);
+			& svg {
+				stroke: var(--white);
+			}
 			&::before, &::after {
 				background: var(--dark-gray);
 			}
@@ -341,6 +361,29 @@ section {
 		}
 	}
 
+	&._alt-hover {
+		& svg {
+			stroke: var(--white)
+		}
+		&:hover {
+			color: var(--white);
+			& svg {
+				stroke: var(--white);
+			}
+			background: var(--accent-dark);
+			&::before, &::after {
+				background: var(--accent-dark);
+			}
+		}
+		
+		&:active {
+			background: var(--accent-dark-2);
+			&::before, &::after {
+				background: var(--accent-dark-2);
+			}
+		}
+	}
+
 	position: relative;
 	&::before, &::after {
 		content: '';
@@ -350,39 +393,51 @@ section {
 		top: 50%;
 		transform: translate(0,-50%);
 		
-		transition: background .2s ease-in-out;
+		transition: background .3s ease-in-out;
 	}
+
 	&::before {
 		left: -12px;
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 36% 34%);
 	}
+	
 	&::after {
 		right: -10px;
 		clip-path: polygon(0 0, 100% 0, 58% 60%, 100% 100%, 0 100%);
 	}
 
-	transition: background .2s ease-in-out, color .2s ease-in-out;
+	transition: background .3s ease-in-out, color .3s ease-in-out;
 
 	& svg {
 		margin-left: 8px;
 		stroke: var(--white);
-		transition: stroke .2s ease-in-out;
+		transition: stroke .3s ease-in-out;
 	}
 
-
 	&:hover {
-		background: var(--accent-dark);
+		color: var(--dark);
+		& svg {
+			stroke: var(--dark);
+		}
+		background: var(--light-green);
 		&::before, &::after {
-			background: var(--accent-dark);
+			background: var(--light-green);
 		}
 	}
 	
 	&:active {
-		background: var(--accent-dark-2);
+		background: var(--green-active);
+		transition: background .2s ease-in-out, color .2s ease-in-out;
 		&::before, &::after {
-			background: var(--accent-dark-2);
+			background: var(--green-active);
+			transition: background .2s ease-in-out;
 		}
 	}
+}
+
+.swiper-lazy-preloader {
+	border-color: var(--white);
+	border-top-color: transparent;
 }
 
 .hide-on-mob {
@@ -602,7 +657,9 @@ section {
 .slider-arrow {
 	display: none;
 	@include _992 {
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	top: calc(50% - 15px);
 	
@@ -611,18 +668,23 @@ section {
 	width: 60px; height: 56px;
 	transition: background .2s ease-in-out, opacity .2s ease-in-out;
 	&:hover {
-		background: var(--accent-dark);
+		background: var(--light-green);
+		& svg {
+			stroke: var(--light-green)
+		}
 	}
 	
 	&:active {
-		background: var(--accent-dark-2);
+		background: var(--green-active);
 	}
 	&::after {
 		display: none;
 	}
+	
 	& svg {
 		stroke: var(--white);
 		fill: none;
+		transition: stroke .2s ease-in-out;
 	}
 
 	&.swiper-button-prev {

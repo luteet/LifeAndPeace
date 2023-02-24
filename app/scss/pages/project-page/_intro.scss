@@ -8,7 +8,7 @@
 	}
 
 	@include _992 {
-		padding-top: calc(var(--height-header, 145px) - 30px);
+		padding-top: calc(var(--height-header, 145px) + 0px);
 		padding-bottom: 106px;
 	}
 

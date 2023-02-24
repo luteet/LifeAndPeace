@@ -1,13 +1,13 @@
 .send-ecard {
 
-	padding-bottom: 95px;
+	padding-bottom: 95px; padding-top: 9px;
 
 	@include _768 {
 		padding-bottom: 120px;
 	}
 	
 	@include _992 {
-		padding-bottom: 160px;
+		padding-bottom: 160px; padding-top: 30px;
 	}
 
 	// .send-ecard__form

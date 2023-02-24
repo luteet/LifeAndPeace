@@ -59,13 +59,13 @@
 			}
 
 			&:hover {
-				color: var(--accent-dark);
-				stroke: var(--accent-dark);
+				color: var(--light-green);
+				stroke: var(--light-green);
 			}
 			
 			&:active {
-				color: var(--accent-dark-2);
-				stroke: var(--accent-dark-2);
+				color: var(--green-active);
+				stroke: var(--green-active);
 			}
 		}
 	}

@@ -1,12 +1,12 @@
 .faq {
 
-	padding-bottom: 111px;
+	padding-top: 11px; padding-bottom: 111px;
 	@include _768 {
 		padding-bottom: 121px;
 	}
 	
 	@include _992 {
-		padding-bottom: 131px;
+		padding-bottom: 131px; padding-top: 30px;
 	}
 
 	// .faq__body
@@ -49,6 +49,10 @@
 
 		&._active &--placeholder, &._active._animating &--placeholder {
 			opacity: 0; visibility: hidden;
+		}
+
+		&._active &--content {
+			display: block;
 		}
 
 		&._animating &--placeholder {

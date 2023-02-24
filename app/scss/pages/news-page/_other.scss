@@ -20,6 +20,7 @@
 		width: 100%; padding-top: 7.014%;
 		position: relative;
 		min-height: 101px;
+		user-select: none; pointer-events: none;
 		& img {
 			position: absolute;
 			left: 50%; top: 0;

@@ -70,10 +70,13 @@
 
 	&__text {
 		margin-top: 27px;
-		opacity: .7;
+		& p {
+			opacity: .7;
+		}
 		color: var(--white);
 		grid-column: 1/3;
 		max-width: 85%;
+		//opacity: 0.7;
 		@include _992 {
 			grid-row: 2;
 			max-width: 100%;
@@ -83,12 +86,15 @@
 
 	// .main-intro__link
 
-	&__link {
+	&__link-block {
 		margin-top: 12px;
 		@include _992 {
 			margin-top: 32px;
-			
+			grid-row: 3;
 		}
+	}
+
+	&__link {
 
 		font-weight: 500;
 		line-height: 118.75%;
@@ -97,6 +103,7 @@
 		text-transform: uppercase;
 		color: var(--white);
 		transition: color .2s ease-in-out;
+		
 		& svg {
 			stroke: var(--white);
 			margin-left: 8px;
@@ -116,31 +123,68 @@
 				stroke: var(--accent-dark)
 			}
 		}
-
-		@include _992 {
-			grid-row: 3;
-		}
 	}
 
 	// .main-intro__logo
 
-	&__logo {
-		width: 69px; height: 69px;
+	@keyframes round {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	&__logo-block {
 		margin-top: 10px;
 		justify-self: end;
 		@include _992 {
 			grid-column: 4;
-			width: 123px; height: 123px;
 			margin-top: 0;
 		}
+	}
+
+	&__logo {
+		width: 69px; height: 69px;
+		
+		@include _992 {
+			width: 123px; height: 123px;
+		}
+
+		display: grid;
+		transition: transform .2s ease;
+		& > * {
+			grid-area: 1/1;
+			justify-self: center; align-self: center;
+		}
+		& svg {
+			width: 100%; height: 100%;
+			animation: round 30s linear 0s infinite normal forwards;
+			& path {
+				fill: none;
+			}
+		}
+		& svg textPath {
+			font-size: 6px;
+			text-transform: uppercase;
+			fill: var(--white);
+			font-family: var(--main-font);
+		}
 		& img {
-			width: 100%; height: auto;
+			width: 40px; height: 40px;
+			margin-right: 2px; margin-bottom: 2px;
+			@include _992 {
+				width: 70px; height: 70px;
+				//margin-right: 0; margin-bottom: 0;
+			}
+		}
+
+		&:hover {
+			transform: scale(1.1);
 		}
 	}
 
 	// .main-intro__accent-btn
 
-	&__accent-btn {
+	&__accent-btn-block {
 		grid-column: 1/3;
 		margin-top: 16px;
 		@media (min-width: 500px) {
@@ -151,7 +195,14 @@
 			justify-self: end;
 			margin-top: 0;
 		}
+	}
 
+	&__accent-btn {
+
+		width: 100%;
+		@include _500 {
+			width: auto;
+		}
 		position: relative;
 
 		display: inline-flex;
@@ -165,6 +216,23 @@
 		padding: 23px 40px;
 
 		color: var(--white);
+		transition: color .2s ease-in-out;
+
+		&:hover {
+			color: var(--accent);
+		}
+
+		&:hover &--icon {
+			fill: var(--accent);
+		}
+		
+		&:active {
+			color: var(--accent-dark)
+		}
+
+		&:active &--icon {
+			fill: var(--accent-dark)
+		}
 
 		// .main-intro__accent-btn--bg
 
@@ -179,6 +247,8 @@
 
 		&--icon {
 			margin-left: 8px;
+			fill: var(--white);
+			transition: fill .2s ease-in-out;
 		}
 	}
 
@@ -186,21 +256,93 @@
 
 	&__image {
 		position: relative;
-		width: calc(100% + 40px); padding-top: 108%;
+		width: 100%; padding-top: 108%;
 		
-		margin-left: -20px; margin-right: -20px;
 		margin-top: 50px;
 		@include _992 {
 			width: 100%;
 			padding-top: 55.25%;
 			margin-top: -103px;
-			margin-left: 0; margin-right: 0;
 		}
 		& img {
 			position: absolute;
+			left: -20px; top: 0;
+			width: calc(100% + 40px); height: 100%;
+			@include _992 {
+				left: 0; width: 100%;
+			}
+			object-fit: cover; object-position: top;
+			
+		}
+		
+	}
+
+	&__gallery {
+		opacity: 0; visibility: hidden;
+		transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+		overflow: hidden;
+		margin: 0 20px;
+		&._active {
+			opacity: 1; visibility: visible;
+		}
+
+		&--decor {
+			position: absolute;
+			left: 20px; bottom: 0px;
+			z-index: 2;
+
+			user-select: none; pointer-events: none;
+
+			width: calc(100% - 40px);
+
+			&-wrapper {
+				width: 100%;
+				position: relative; padding-top: 108%;
+				@include _992 {
+					padding-top: 55.25%;
+				}
+			}
+		
+			margin-left: -0px; margin-right: -0px;
+			margin-top: 0px; margin-bottom: -0px;
+			@include _992 {
+				left: 0;
+				width: 100%;
+				margin-top: -103px;
+				margin-left: 0; margin-right: 0;
+				margin-bottom: 0;
+			}
+			& img {
+				position: absolute;
+				left: -20px; top: 0;
+				object-fit: cover; object-position: top;
+				width: calc(100% + 40px); height: 100%;
+				@include _992 {
+					left: 0;
+					width: 100%;
+				}
+			}
+		}
+		&--slider {
+			position: absolute;
 			left: 0; top: 0;
 			width: 100%; height: 100%;
-			object-fit: cover;
+
+			user-select: none; pointer-events: none;
+		}
+
+		&--wrapper {
+			
+		}
+
+		&--slide {
+			position: relative;
+			& img {
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 }

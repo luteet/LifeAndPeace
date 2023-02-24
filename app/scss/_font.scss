@@ -136,7 +136,8 @@
 			text-decoration: none;
 			display: inline-block;
 			position: relative;
-			padding-right: 20px;
+			user-select: none;
+			padding-right: 20px; margin-right: 10px;
 			&::before {
 				content: '';
 				position: absolute;
@@ -149,8 +150,7 @@
 				center / contain no-repeat;
 			}
 		}
-		&::after {
-			content: " " attr(data-word);
+		& mark {
 			font-family: 'Mateur';
 			font-size: 2.15rem;
 			@include _768 {
@@ -164,6 +164,12 @@
 			margin: -5px 0;
 			-webkit-text-stroke-width: 2px;
 			-webkit-text-stroke-color: var(--accent);
+			background: transparent;
+			
+		}
+		&::after {
+			content: " " attr(data-word);
+			
 		}
 	}
 

@@ -1,8 +1,7 @@
 .alt-news-page {
 
-	@include _992 {
-		margin-top: -20px;
-	}
+	margin-bottom: -50px;
+	z-index: 3;
 
 	// .alt-news-page__bg
 
@@ -49,6 +48,10 @@
 	// .alt-news-page__header
 
 	&__header {
+		margin-top: 9px;
+		@include _992 {
+			margin-top: 18px;
+		}
 	}
 
 	// .alt-news-page__time
@@ -94,7 +97,7 @@
 			line-height: 150%;
 			color: var(--dark-gray);
 			@include _768 {
-				padding-top: 20px;
+				padding-top: 30px;
 			}
 		}
 		& b {

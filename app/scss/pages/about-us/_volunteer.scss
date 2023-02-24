@@ -47,12 +47,16 @@
 			display: grid;
 			grid-template-columns: 60px auto;
 
+			color: #000;
+
 			& b {
 				grid-column: 2; grid-row: 1;
+				font-weight: 500;
 			}
 
 			& span {
 				grid-column: 2; grid-row: 2;
+				color: var(--dark-2);
 			}
 		}
 

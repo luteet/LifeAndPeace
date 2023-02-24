@@ -74,6 +74,7 @@
 		font-weight: 500;
 		line-height: 150%;
 		font-size: 0.875rem;
+		color: var(--dark-gray);
 	}
 
 	// .what-we-do__min-decor
@@ -171,8 +172,6 @@
 			transition: filter .2s ease-in-out;
 		}
 
-		
-
 		// .what-we-do__item--body
 
 		&--body {
@@ -221,7 +220,7 @@
 				position: absolute;
 				right: 0; bottom: 0;
 				width: 17%; height: 70px;
-				background: var(--light-green);
+				background: var(--light);
 				z-index: 3;
 			}
 			& img {

@@ -23,31 +23,78 @@
 							Our goal is to reinstate people’s belief in simple, genuine human relationships.
 						</p>
 					</div>
-					<a href="#" class="main-intro__link" data-aos="fade-up" data-aos-delay="700">
-						About us
-						<svg width="24" height="24">
-							<use xlink:href="img/sprites.svg#btn-arrow"></use>
-						</svg>
-					</a>
-					<div class="main-intro__logo" data-aos="fade-in" data-aos-delay="750">
-						<img src="img/main/intro/logo.svg" width="123" height="124" loading="lazy" alt="">
+					<div class="main-intro__link-block" data-aos="fade-up" data-aos-delay="700">
+						<a href="#" class="main-intro__link">
+							About us
+							<svg width="24" height="24">
+								<use xlink:href="img/sprites.svg#btn-arrow"></use>
+							</svg>
+						</a>
 					</div>
-					<a href="#" class="main-intro__accent-btn" data-aos="fade-in" data-aos-delay="800">
-						<svg viewBox="0 0 129 41" width="0" height="0" preserveAspectRatio="none" class="main-intro__accent-btn--bg">
-							<use xlink:href="img/sprites.svg#link-line"></use>
-						</svg>
-						Watch video
-						<svg width="16" height="18" class="main-intro__accent-btn--icon">
-							<use xlink:href="img/sprites.svg#play"></use>
-						</svg>
-					</a>
+					<div class="main-intro__logo-block" data-aos="fade-in" data-aos-delay="800">
+						<div class="main-intro__logo">
+							<img src="img/main/intro/logo.svg" width="123" height="124" loading="lazy" alt="">
+							<svg viewBox="0 0 100 100">
+								<path d="M 10,50 a 40,40 0 1,1 0,1 z" id="circle"></path>
+								<text>
+									<textPath xlink:href="#circle" startOffset="13%">
+										Hold to see more about us
+									</textPath>
+									<textPath xlink:href="#circle" startOffset="63%">
+										Hold to see more about us
+									</textPath>
+								</text>
+							</svg>
+						</div>
+					</div>
+					<div class="main-intro__accent-btn-block" data-aos="fade-in" data-aos-delay="700">
+						<a href="#intro-video" class="main-intro__accent-btn open-popup">
+							<svg viewBox="0 0 129 41" width="0" height="0" preserveAspectRatio="none" class="main-intro__accent-btn--bg">
+								<use xlink:href="img/sprites.svg#link-line"></use>
+							</svg>
+							Watch video
+							<svg width="16" height="18" class="main-intro__accent-btn--icon">
+								<use xlink:href="img/sprites.svg#play"></use>
+							</svg>
+						</a>
+					</div>
 				</div>
 				<div class="main-intro__image" data-aos="fade-in" data-aos-delay="200">
 					<picture>
 						<source srcset="img/main/intro/image.webp" media="(min-width: 992px)" type="image/webp">
 						<source srcset="img/main/intro/image-mob.webp" type="image/webp">
-						<img src="img/main/intro/image.png" width="1440" height="795" alt="" loading="lazy">
+						<img src="img/main/intro/image.png" class="main-intro__image--img" width="1440" height="795" alt="" loading="lazy">
 					</picture>
+				</div>
+				<div class="main-intro__gallery">
+					<div class="main-intro__gallery--slider swiper">
+						<div class="main-intro__gallery--wrapper swiper-wrapper">
+							<div class="main-intro__gallery--slide swiper-slide">
+								<img src="img/main/intro/slide-1.jpg" loading="lazy" alt="">
+							</div>
+							<div class="main-intro__gallery--slide swiper-slide">
+								<img src="img/main/intro/slide-2.jpg" loading="lazy" alt="">
+							</div>
+							<div class="main-intro__gallery--slide swiper-slide">
+								<img src="img/main/intro/slide-3.jpg" loading="lazy" alt="">
+							</div>
+							<div class="main-intro__gallery--slide swiper-slide">
+								<img src="img/main/intro/slide-4.jpg" loading="lazy" alt="">
+							</div>
+							<div class="main-intro__gallery--slide swiper-slide">
+								<img src="img/main/intro/slide-5.jpg" loading="lazy" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="main-intro__gallery--decor">
+						<div class="main-intro__gallery--decor-wrapper">
+							<picture>
+								<source srcset="img/main/intro/decor.webp" media="(min-width: 992px)" type="image/webp">
+								<source srcset="img/main/intro/decor-mob.webp" type="image/webp">
+								<img src="img/main/intro/decor.png" alt="" width="0" height="0" loading="lazy">
+							</picture>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -55,7 +102,7 @@
 			<div class="homes__content section-container">
 				<div class="homes__info">
 					<h1 class="homes__title section-title" data-aos="fade-up" data-aos-delay="200">
-						Homes for Ukrainian <span data-word="Peolples"><del>refugees</del></span>
+						Homes for Ukrainian <span><del>refugees</del><mark>peoples</mark></span>
 					</h1>
 					<div class="homes__text" data-aos="fade-up" data-aos-delay="300">
 						<p>
@@ -411,7 +458,7 @@
 		<section class="together section-container">
 			<div class="together__content">
 				<h2 class="together__title section-title _min-stroke-border _large-word" data-aos="fade-up" data-aos-delay="300">
-					There is no trouble we can not resolve <span data-word="Together"><del>ourselves!</del></span>
+					There is no trouble we can not resolve <span><del>ourselves!</del><mark>Together</mark></span>
 				</h2>
 				<div class="together__footer" data-aos="fade-up" data-aos-delay="400">
 					<a href="#" class="together__btn btn _transform-to-alternative-btn">
@@ -499,5 +546,20 @@
 			</ul>
 		</section>
 	</main>
+	<div class="intro-video popup" id="intro-video">
+		<div class="intro-video__wrapper popup-wrapper">
+			<div class="intro-video__bg popup-bg popup-close"></div>
+			<button type="button" class="intro-video__close-btn popup-close-btn popup-close" title="Close popup">
+				<svg width="16" height="16" viewBox="0 0 16 16">
+					<use xlink:href="img/sprites.svg#close"></use>
+				</svg>
+			</button>
+			<div class="intro-video__body popup-body">
+				<div class="intro-video__element popup-video" data-src="https://player.vimeo.com/video/" data-id="347119375?h=1699409fe2&color=ef2200&byline=0&portrait=0">
+					<span class="loader"></span>
+				</div>
+			</div>
+		</div>
+	</div>
 
 @@include("html/_footer.html")

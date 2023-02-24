@@ -1,8 +1,9 @@
 .ambasador {
 
 	margin-bottom: 100px;
+	margin-top: 9px;
 	@include _992 {
-		margin-top: -20px; 
+		margin-top: 18px;
 	}
 
 	// .ambasador__bg
@@ -178,7 +179,7 @@
 		& h3 {
 			padding-top: 43px;
 			@include _992 {
-				padding-top: 27px;
+				padding-top: 37px;
 			}
 
 			color: var(--black);
@@ -229,7 +230,7 @@
 	&__image {
 		margin-top: 48px; margin-bottom: 25px;
 		@include _992 {
-			margin-top: 68px; margin-bottom: 51px;
+			margin-top: 68px; margin-bottom: 39px;
 		}
 		width: 100%; padding-top: 50.654206%;
 		position: relative;

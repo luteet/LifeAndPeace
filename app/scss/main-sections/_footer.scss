@@ -166,26 +166,37 @@
 			color: var(--dark-gray);
 		}
 
+		& span {
+			display: inline-block;
+			position: relative;
+		}
+
+		& mark {
+			display: inline-block;
+
+			position: absolute;
+			left: 50%; bottom: 100%;
+			transform: translate(-50%,15%) rotate(-6.37deg);
+
+			font-family: var(--decor-font);
+			color: var(--accent);
+			font-weight: 500;
+			font-size: 1.25rem;
+			line-height: 100%;
+			text-transform: uppercase;
+			-webkit-text-stroke-width: 1px;
+			background: transparent;
+		}
+
 		& del {
 			display: inline-block;
 			position: relative;
 			text-decoration: none;
-			&::before {
+			user-select: none;
+			/* &::before {
 				content: attr(data-word);
-				display: inline-block;
-
-				position: absolute;
-				left: 50%; bottom: 100%;
-				transform: translate(-50%,15%) rotate(-6.37deg);
-
-				font-family: var(--decor-font);
-				color: var(--accent);
-				font-weight: 500;
-				font-size: 1.25rem;
-				line-height: 100%;
-				text-transform: uppercase;
-				-webkit-text-stroke-width: 1px;
-			}
+				
+			} */
 			&::after {
 				content: '';
 				position: absolute;

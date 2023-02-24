@@ -33,6 +33,14 @@ function Popup(arg) {
 
 			if (popup) {
 
+				const popupVideo = popup.querySelector('.popup-video');
+				if(popupVideo) {
+					if(!popupVideo.querySelector('iframe')) {
+						popupVideo.insertAdjacentHTML("beforeend", 
+						`<iframe src="${popupVideo.dataset.src}${popupVideo.dataset.id}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`)
+					}
+				}
+
 				body.classList.remove('_popup-active');
 				html.style.setProperty('--popup-padding', window.innerWidth - body.offsetWidth + 'px');
 				body.classList.add('_popup-active');
@@ -168,17 +176,9 @@ const headerNavItem = document.querySelectorAll('.header__nav--item');
 
 headerNavItem.forEach(headerNavItem => {
 	headerNavItem.insertAdjacentHTML('beforeend',
-		`<svg viewBox="0 0 129 41" width="0" height="0" preserveAspectRatio="none" class="hover-line">
-			<use xlink:href="img/sprites.svg#link-line"></use>
-		</svg>`)
-
-	/* headerNavItem.addEventListener('mouseenter', function () {
-		headerNavItem.classList.add('_hover')
-	})
-
-	headerNavItem.addEventListener('mouseleave', function () {
-		headerNavItem.classList.remove('_hover')
-	}) */
+	`<svg viewBox="0 0 129 41" width="0" height="0" preserveAspectRatio="none" class="hover-line">
+		<use xlink:href="img/sprites.svg#link-line"></use>
+	</svg>`)
 })
 
 // =-=-=-=-=-=-=-=-=-=- </add decor line in header item> -=-=-=-=-=-=-=-=-=-=-
@@ -300,6 +300,7 @@ body.addEventListener('click', function (event) {
 			if(faqItem.classList.contains('_active')) {
 
 				faqItemContent.style.transitionProperty = 'height';
+				faqItemContent.style.display = 'block';
 				const height = faqItemContent.offsetHeight;
 				faqItemContent.style.height = height + 'px';
 
@@ -351,6 +352,10 @@ body.addEventListener('click', function (event) {
 })
 
 // =-=-=-=-=-=-=-=-=-=- </click events> -=-=-=-=-=-=-=-=-=-=-
+
+
+
+
 
 
 
@@ -420,6 +425,7 @@ let gridGalleryPopupList = new Swiper('.grid-gallery-popup__list', {
 })
 
 let gridGalleryPopupSlider = new Swiper('.grid-gallery-popup__slider', {
+	//lazy: true,
 	slidesPerView: 1,
 	spaceBetween: 30,
 	autoHeight: true,
@@ -437,6 +443,35 @@ let gridGalleryPopupSlider = new Swiper('.grid-gallery-popup__slider', {
 			},
 		},
 	}
+})
+
+
+const mainIntroLogo = document.querySelectorAll('.main-intro__logo');
+mainIntroLogo.forEach(mainIntroLogo => {
+	let gallery, galleryElements = document.querySelectorAll('.main-intro__gallery');
+	mainIntroLogo.addEventListener('mouseenter', function () {
+		galleryElements.forEach(galleryElement => {
+			galleryElement.classList.add('_active');
+		})
+
+		gallery = new Swiper('.main-intro__gallery--slider', {
+			effect: "fade",
+			autoplay: {
+				delay: 200
+			},
+			speed: 200,
+			loop: true,
+			slidesPerView: 1,
+		})
+	})
+	mainIntroLogo.addEventListener('mouseleave', function () {
+		galleryElements.forEach(galleryElement => {
+			galleryElement.classList.remove('_active');
+		})
+		setTimeout(() => {
+			if(gallery) gallery.destroy(true, true);
+		},200)
+	})
 })
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
