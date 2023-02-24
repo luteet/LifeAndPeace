@@ -194,8 +194,7 @@
 		background: url("data:image/svg+xml,%3Csvg viewBox='0 0 149 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.44957 4.78488C19.019 4.78488 34.5884 4.78488 50.1578 4.78488C56.5735 4.78488 62.9892 4.78488 69.4048 4.78488C77.2753 4.78488 85.0984 4.00799 92.9603 4.00799C104.335 4.00799 115.71 4.00799 127.085 4.00799C133.146 4.00799 138.983 2.24953 144.984 2.06576C145.429 2.05212 148.023 1.91232 146.554 2.08734C143.925 2.40045 141.242 3.32992 138.662 3.92167C133.591 5.08441 128.516 5.64997 123.381 6.36024C100.831 9.47916 78.3256 9.44622 55.6339 9.44622C49.0425 9.44622 42.4815 9.37233 35.9037 9.83466C30.4843 10.2156 25.0061 11 19.576 11C13.7173 11 7.85866 11 2 11' stroke='white' stroke-width='2.14214' stroke-linecap='round'/%3E%3C/svg%3E%0A")
 		center / contain no-repeat;
 	}
-	&::after {
-		content: attr(data-word);
+	& b {
 		position: absolute;
 		left: 50%; bottom: 80%;
 		transform: translate(-50%,0);
@@ -207,8 +206,9 @@
 		text-transform: uppercase;
 		color: #FFFFFF;
 		-webkit-text-stroke-width: 1px;
+		background: transparent;
 	}
-	&._bottom::after {
+	&._bottom b {
 		bottom: auto; top: 100%;
 	}
 }

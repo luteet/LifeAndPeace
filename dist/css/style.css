@@ -1299,10 +1299,6 @@ button.swiper-pagination-bullet {
     -webkit-appearance: textfield
 }
 
-.header,body {
-    min-width: 320px
-}
-
 .ss-content .ss-search input::-webkit-input-placeholder {
     color: #8a8a8a;
     vertical-align: middle
@@ -2416,6 +2412,7 @@ body {
     font-family: var(--main-font);
     font-weight: 400;
     line-height: 150%;
+    min-width: 320px;
     display: flex;
     padding-right: var(--popup-padding);
     background: #f5f6f8
@@ -2719,6 +2716,10 @@ section {
     background: var(--light-green)
 }
 
+.main-title mark::before,.pagination__link--current-line,.title mark::before {
+    -webkit-transform: translate(-50%,-50%)
+}
+
 .btn::before {
     left: -12px;
     -webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 100%,36% 34%);
@@ -2901,7 +2902,6 @@ section {
     top: 50%;
     width: 100%;
     height: 100%;
-    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%)
 }
 
@@ -2962,11 +2962,6 @@ section {
     clip-path: url(#slider-arrow-prev)
 }
 
-.main-title mark::before,.title mark::before {
-    left: 50%;
-    content: ""
-}
-
 .slider-arrow.swiper-button-next {
     right: 0;
     -webkit-clip-path: url(#slider-arrow-next);
@@ -2992,15 +2987,19 @@ section {
     background: rgba(0,0,0,0)
 }
 
-.main-title mark::before {
+.main-title mark::before,.title mark::before {
     position: absolute;
+    left: 50%;
+    content: "";
     top: 50%;
-    -webkit-transform: translate(-50%,-50%);
+    pointer-events: none
+}
+
+.main-title mark::before {
     transform: translate(-50%,-50%);
     width: 140%;
     height: 140%;
-    background: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 143 63' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M68.8526 4.88746C54.1536 6.12355 38.4882 5.2724 24.595 11.7408C16.5533 15.4849 5.06414 22.3608 2.19092 35.1046C0.384456 43.117 4.06027 50.3531 9.2658 52.4169C16.3555 55.2277 23.5375 56.6036 30.7419 58.109C42.1421 60.491 53.3463 59.8654 64.7421 60.8072C77.1984 61.8366 89.3932 61.2573 101.799 60.8225C110.206 60.5278 119.49 60.8096 127.612 58.2989C134.935 56.0353 141.586 53.2064 140.54 40.7601C139.937 33.5968 136.659 29.5451 132.496 25.6464C125.827 19.4001 119.15 14.4206 111.752 10.7187C97.545 3.61021 82.6353 0.552768 68.0589 1.77855' stroke='%23F97C60' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A") center/contain no-repeat;
-    pointer-events: none
+    background: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 143 63' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M68.8526 4.88746C54.1536 6.12355 38.4882 5.2724 24.595 11.7408C16.5533 15.4849 5.06414 22.3608 2.19092 35.1046C0.384456 43.117 4.06027 50.3531 9.2658 52.4169C16.3555 55.2277 23.5375 56.6036 30.7419 58.109C42.1421 60.491 53.3463 59.8654 64.7421 60.8072C77.1984 61.8366 89.3932 61.2573 101.799 60.8225C110.206 60.5278 119.49 60.8096 127.612 58.2989C134.935 56.0353 141.586 53.2064 140.54 40.7601C139.937 33.5968 136.659 29.5451 132.496 25.6464C125.827 19.4001 119.15 14.4206 111.752 10.7187C97.545 3.61021 82.6353 0.552768 68.0589 1.77855' stroke='%23F97C60' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A") center/contain no-repeat
 }
 
 .main-title._alt-line mark::before {
@@ -3016,6 +3015,10 @@ section {
     font-size: 1.5rem
 }
 
+.decor-title,.title._min {
+    font-size: 1.25rem
+}
+
 .title._uppercase {
     text-transform: uppercase
 }
@@ -3026,13 +3029,9 @@ section {
 }
 
 .title mark::before {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     width: 130%;
     height: 150%;
-    pointer-events: none;
     background: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 93 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42.5874 2C38.2087 2 33.83 2 29.4512 2C25.56 2 21.4919 3.17945 17.7236 5.57697C13.4411 8.30166 8.95938 11.5155 4.98549 16.402C3.57609 18.1351 0.568634 24.0253 2.79612 28.0177C5.06761 32.0891 7.95253 33.9446 10.6503 35.3976C16.466 38.53 22.401 39.8375 28.3412 40.4618C31.7348 40.8185 35.142 40.6313 38.5379 40.6313C42.904 40.6313 47.2627 40.9701 51.6281 40.9701C57.3465 40.9701 63.0649 40.9701 68.7832 40.9701C72.6602 40.9701 76.5462 41.2753 80.396 39.9347C82.7607 39.1113 85.4927 38.06 87.6684 35.4917C88.448 34.5714 89.7604 33.533 90.3324 31.8018C90.6115 30.957 91.3082 28.8173 90.8453 27.6789C87.4026 19.2123 82.4922 16.7 77.9158 13.8416C75.4356 12.2926 72.9593 10.4878 70.4214 9.62459C67.817 8.73878 65.2153 8.0124 62.5902 7.59137C58.6186 6.95436 54.659 6.66222 50.7018 5.53932C46.8404 4.44357 43.0326 3.23403 39.1426 3.01661' stroke='%23F97C60' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A") center/contain no-repeat
 }
 
@@ -3040,12 +3039,7 @@ section {
     background: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 170 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M89.1151 3.89886C89.0269 3.19475 85.089 3.58239 84.3541 3.58239C81.8607 3.58239 79.3534 3.08028 76.86 2.79119C71.9318 2.21982 66.7099 2.63295 61.7482 2.63295C55.6219 2.63295 49.6215 2.80023 43.5154 3.19558C31.9144 3.9467 19.2362 5.4568 9.30671 11.7932C7.22227 13.1234 5.4561 14.8414 3.73458 16.5579C2.37998 17.9086 2.5375 20.2569 2.21812 22.0084C1.90918 23.7026 1.96304 26.0442 2.16522 27.7577C2.47957 30.4219 5.59478 32.7808 7.40231 34.4389C12.3479 38.9756 18.3016 42.5294 24.8946 43.775C36.8311 46.0301 49.1273 47.7629 61.2898 47.8892C74.1965 48.0232 87.1202 48.8386 100.03 48.8386C111.972 48.8386 124.279 49.6663 136.09 47.5727C145.919 45.8304 156.19 44.191 164.268 37.9377C167.011 35.8151 167.83 34.2968 167.83 30.9577C167.83 29.2262 168.302 26.58 167.672 24.9446C165.745 19.9488 161.684 17.1483 157.462 14.1316C151.615 9.95333 144.935 8.53152 137.995 7.06363C128.155 4.98252 118.266 4.24998 108.3 3.33624C101.091 2.67524 93.7695 2.89658 86.5759 2' stroke='%23F97C60' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A") center/contain no-repeat
 }
 
-.title._min {
-    font-size: 1.25rem
-}
-
 .decor-title {
-    font-size: 1.25rem;
     font-family: Mateur
 }
 
@@ -3126,12 +3120,16 @@ section {
     background: rgba(0,0,0,0)
 }
 
-.del-word-on-dark::after,.footer__email mark,.projects__categories--btn._current,.where-donate__item--number::before {
+.del-word-on-dark b,.footer__email mark,.projects__categories--btn._current,.where-donate__item--number::before {
     -webkit-text-stroke-width: 1px
 }
 
 .section-title span::after {
     content: " " attr(data-word)
+}
+
+.del-word-on-dark::before,.grid-gallery-popup__list--item::after,.radio-element::before,.select::after {
+    content: ""
 }
 
 .section-title img {
@@ -3143,7 +3141,6 @@ section {
 }
 
 .del-word-on-dark::before {
-    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -3152,8 +3149,7 @@ section {
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 149 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.44957 4.78488C19.019 4.78488 34.5884 4.78488 50.1578 4.78488C56.5735 4.78488 62.9892 4.78488 69.4048 4.78488C77.2753 4.78488 85.0984 4.00799 92.9603 4.00799C104.335 4.00799 115.71 4.00799 127.085 4.00799C133.146 4.00799 138.983 2.24953 144.984 2.06576C145.429 2.05212 148.023 1.91232 146.554 2.08734C143.925 2.40045 141.242 3.32992 138.662 3.92167C133.591 5.08441 128.516 5.64997 123.381 6.36024C100.831 9.47916 78.3256 9.44622 55.6339 9.44622C49.0425 9.44622 42.4815 9.37233 35.9037 9.83466C30.4843 10.2156 25.0061 11 19.576 11C13.7173 11 7.85866 11 2 11' stroke='white' stroke-width='2.14214' stroke-linecap='round'/%3E%3C/svg%3E%0A") center/contain no-repeat
 }
 
-.del-word-on-dark::after {
-    content: attr(data-word);
+.del-word-on-dark b {
     position: absolute;
     left: 50%;
     bottom: 80%;
@@ -3164,18 +3160,15 @@ section {
     font-size: 1.2592rem;
     line-height: 153.87059%;
     text-transform: uppercase;
-    color: #fff
-}
-
-.grid-gallery-popup__list--item::after,.radio-element::before,.select::after {
-    content: ""
+    color: #fff;
+    background: rgba(0,0,0,0)
 }
 
 .popup-close-btn,.ss-main .ss-single-selected .placeholder,.ss-main .ss-single-selected .placeholder * {
     line-height: 100%
 }
 
-.del-word-on-dark._bottom::after {
+.del-word-on-dark._bottom b {
     bottom: auto;
     top: 100%
 }
@@ -3818,6 +3811,7 @@ section {
 
 .header {
     position: absolute;
+    min-width: 320px;
     left: 0;
     top: 0;
     width: 100%;
