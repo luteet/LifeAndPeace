@@ -321,6 +321,34 @@ body.addEventListener('click', function (event) {
 
 			} else {
 
+				const faqItemActive = document.querySelector('.faq__item._active');
+
+				if(faqItemActive) {
+					const faqItemActiveContent = faqItemActive.querySelector('.faq__item--content');
+					
+					faqItemActiveContent.style.transitionProperty = 'height';
+					faqItemActiveContent.style.display = 'block';
+					const heightActive = faqItemActiveContent.offsetHeight;
+					faqItemActiveContent.style.height = heightActive + 'px';
+	
+					function hidden() {
+						faqItemActiveContent.style.removeProperty('transition-property')
+						faqItemActiveContent.style.display = 'none';
+						faqItemActiveContent.style.removeProperty('height')
+						faqItemActive.classList.remove('_animating');
+						faqItemActiveContent.removeEventListener('transitionend', hidden)
+					}
+	
+					faqItemActiveContent.addEventListener('transitionend', hidden)
+	
+					setTimeout(() => {
+						faqItemActiveContent.style.height = 0;
+						faqItemActive.classList.remove('_active')
+					},0)
+				}
+				
+				
+
 				faqItem.classList.add('_active');
 				faqItemContent.style.removeProperty('height');
 				faqItemContent.style.display = 'block';

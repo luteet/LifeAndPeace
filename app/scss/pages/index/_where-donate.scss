@@ -200,6 +200,7 @@
 
 		&--content {
 			padding-top: 16px;
+			font-weight: 300;
 			@include _768 {
 				padding-top: 20px;
 			}

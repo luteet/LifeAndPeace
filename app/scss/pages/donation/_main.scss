@@ -249,6 +249,14 @@
 	&__link {
 		display: inline-block;
 		color: var(--accent);
+		transition: color .2s ease-in-out;
+		&:hover {
+			color: var(--light-green)
+		}
+		
+		&:active {
+			color: var(--green-active)
+		}
 		& b {
 			font-weight: 500;
 			text-decoration: underline;

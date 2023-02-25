@@ -218,6 +218,7 @@
 			padding-top: 15px;
 			line-height: 150%;
 			max-width: 802px;
+			color: var(--dark-gray);
 
 			@media (max-width: 550px) {
 				columns: auto !important;
@@ -229,6 +230,7 @@
 			& li {
 				display: flex;
 				padding: 6px;
+				color: var(--dark-gray);
 				&::before {
 					content: '–';
 					margin-right: 5px;

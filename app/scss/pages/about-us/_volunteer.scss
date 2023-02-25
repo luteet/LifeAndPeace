@@ -21,8 +21,6 @@
 
 	background: var(--white);
 	
-
-
 	// .volunteer__info
 
 	&__info {
@@ -94,6 +92,7 @@
 
 			& figcaption {
 				margin-top: 25px; padding-top: 15px;
+				opacity: .7;
 				position: relative;
 				font-size: 0.75rem;
 				line-height: 100%;

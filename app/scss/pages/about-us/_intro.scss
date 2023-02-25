@@ -26,6 +26,9 @@
 			max-width: min(50%, 626px);
 		}
 		padding-top: 20px;
+		& > * {
+			opacity: .7;
+		}
 		line-height: 150%;
 	}
 
