@@ -2,7 +2,7 @@ body,html {
     -webkit-text-size-adjust: 100%
 }
 
-.swiper-cube,.swiper-flip,button,hr,input {
+button,hr,input {
     overflow: visible
 }
 
@@ -585,6 +585,10 @@ summary {
     font-size: 0
 }
 
+.swiper-cube,.swiper-flip {
+    overflow: visible
+}
+
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
     -webkit-transform: scale(.33);
     transform: scale(.33);
@@ -633,6 +637,10 @@ button.swiper-pagination-bullet {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none
+}
+
+.swiper-scrollbar,.swiper-scrollbar-drag {
+    border-radius: var(--swiper-scrollbar-border-radius,10px)
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
@@ -738,7 +746,6 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-scrollbar {
-    border-radius: var(--swiper-scrollbar-border-radius,10px);
     position: relative;
     -ms-touch-action: none;
     background: var(--swiper-scrollbar-bg-color,rgba(0,0,0,.1))
@@ -773,7 +780,6 @@ button.swiper-pagination-bullet {
     width: 100%;
     position: relative;
     background: var(--swiper-scrollbar-drag-bg-color,rgba(0,0,0,.5));
-    border-radius: var(--swiper-scrollbar-border-radius,10px);
     left: 0;
     top: 0
 }
@@ -900,13 +906,6 @@ button.swiper-pagination-bullet {
     filter: blur(50px)
 }
 
-.ss-main .ss-multi-selected,.ss-main .ss-single-selected {
-    cursor: pointer;
-    background-color: #fff;
-    box-sizing: border-box;
-    outline: 0
-}
-
 .swiper-flip .swiper-slide {
     pointer-events: none;
     -webkit-backface-visibility: hidden;
@@ -962,8 +961,12 @@ button.swiper-pagination-bullet {
 
 .ss-main .ss-single-selected {
     display: flex;
+    cursor: pointer;
     width: 100%;
     padding: 6px;
+    background-color: #fff;
+    outline: 0;
+    box-sizing: border-box;
     transition: background-color .2s
 }
 
@@ -1054,11 +1057,15 @@ button.swiper-pagination-bullet {
 .ss-main .ss-multi-selected {
     display: flex;
     flex-direction: row;
+    cursor: pointer;
     min-height: 30px;
     width: 100%;
     padding: 0 0 0 3px;
     border: 1px solid #dcdee2;
     border-radius: 4px;
+    background-color: #fff;
+    outline: 0;
+    box-sizing: border-box;
     transition: background-color .2s
 }
 
@@ -1383,7 +1390,8 @@ button.swiper-pagination-bullet {
     user-select: none
 }
 
-.bg,.section-header__decor-arrow,.section-title img,.section-title span del {
+.bg,.section-header__decor-arrow,.section-title img {
+    -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none
 }
@@ -2377,6 +2385,10 @@ button.swiper-pagination-bullet {
     transform: perspective(2500px) rotateX(0)
 }
 
+.btn::after,.btn::before,.header__nav--item .hover-line,.section-title span del::before,.select::after {
+    -webkit-transform: translate(0,-50%)
+}
+
 @font-face {
     font-weight:400;font-family:"KyivType Sans";font-display:swap;font-style:normal;src:url(KyivTypeSans-Regular.woff) format("woff"),url(KyivTypeSans-Regular.woff2) format("woff2")
 }
@@ -2487,7 +2499,6 @@ section {
     width: 100%;
     height: 100%;
     z-index: -1;
-    -webkit-user-select: none;
     user-select: none
 }
 
@@ -2501,10 +2512,13 @@ section {
     margin-left: -6px
 }
 
+.btn,.page-address ul li,.pagination {
+    align-items: center
+}
+
 .page-address ul li {
     opacity: .7;
-    display: flex;
-    align-items: center
+    display: flex
 }
 
 .page-address ul li:not(:first-child)::before {
@@ -2538,7 +2552,6 @@ section {
 
 .btn {
     display: inline-flex;
-    align-items: center;
     text-align: center;
     justify-content: center;
     padding: 16px 15px;
@@ -2715,7 +2728,6 @@ section {
     width: 20px;
     height: 56px;
     top: 50%;
-    -webkit-transform: translate(0,-50%);
     transform: translate(0,-50%);
     transition: background .3s ease-in-out
 }
@@ -2789,7 +2801,7 @@ section {
     transition: background .2s ease-in-out
 }
 
-.radio-element::before,.slider-arrow,.slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: var(--accent)
 }
 
@@ -2812,7 +2824,6 @@ section {
 
 .section-header__decor-arrow {
     display: none;
-    -webkit-user-select: none;
     user-select: none
 }
 
@@ -2850,10 +2861,6 @@ section {
     transform: scale(1.05)
 }
 
-.main-title mark::before,.pagination__link--current-line,.title mark::before {
-    -webkit-transform: translate(-50%,-50%)
-}
-
 .section-header__link--line {
     position: absolute;
     left: 0;
@@ -2866,7 +2873,6 @@ section {
 
 .pagination {
     display: flex;
-    align-items: center;
     justify-content: center;
     padding-bottom: 11px
 }
@@ -2916,11 +2922,6 @@ section {
     transition: color .2s ease-in-out
 }
 
-.post-time,.radio-element {
-    display: flex;
-    align-items: center
-}
-
 .pagination__link:hover {
     color: var(--accent)
 }
@@ -2940,10 +2941,13 @@ section {
     top: 50%;
     width: 100%;
     height: 100%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%)
 }
 
 .post-time {
+    display: flex;
+    align-items: center;
     color: var(--dark-2)
 }
 
@@ -2960,6 +2964,7 @@ section {
     display: none;
     top: calc(50% - 15px);
     margin: 0;
+    background: var(--accent);
     width: 60px;
     height: 56px;
     transition: background .2s ease-in-out,opacity .2s ease-in-out
@@ -2979,10 +2984,6 @@ section {
 
 .slider-arrow::after {
     display: none
-}
-
-.main-title mark,.section-title span,.section-title span del,.title mark {
-    display: inline-block
 }
 
 .slider-arrow svg {
@@ -3018,23 +3019,30 @@ section {
 }
 
 .main-title mark {
+    display: inline-block;
     position: relative;
     background: rgba(0,0,0,0)
 }
 
-.main-title mark::before,.title mark::before {
-    position: absolute;
-    left: 50%;
+.main-title mark::before,.section-title span del::before,.title mark::before {
     content: "";
+    position: absolute;
+    top: 50%;
     pointer-events: none
 }
 
 .main-title mark::before {
-    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     width: 140%;
     height: 140%;
     background: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 143 63' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M68.8526 4.88746C54.1536 6.12355 38.4882 5.2724 24.595 11.7408C16.5533 15.4849 5.06414 22.3608 2.19092 35.1046C0.384456 43.117 4.06027 50.3531 9.2658 52.4169C16.3555 55.2277 23.5375 56.6036 30.7419 58.109C42.1421 60.491 53.3463 59.8654 64.7421 60.8072C77.1984 61.8366 89.3932 61.2573 101.799 60.8225C110.206 60.5278 119.49 60.8096 127.612 58.2989C134.935 56.0353 141.586 53.2064 140.54 40.7601C139.937 33.5968 136.659 29.5451 132.496 25.6464C125.827 19.4001 119.15 14.4206 111.752 10.7187C97.545 3.61021 82.6353 0.552768 68.0589 1.77855' stroke='%23F97C60' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A") center/contain no-repeat
+}
+
+.section-title span del,.title mark {
+    display: inline-block;
+    position: relative
 }
 
 .main-title._alt-line mark::before {
@@ -3050,6 +3058,10 @@ section {
     font-size: 1.5rem
 }
 
+.decor-title,.homes__video--controls,.section-title span mark {
+    font-family: Mateur
+}
+
 .decor-title,.title._min {
     font-size: 1.25rem
 }
@@ -3059,12 +3071,12 @@ section {
 }
 
 .title mark {
-    background: rgba(0,0,0,0);
-    position: relative
+    background: rgba(0,0,0,0)
 }
 
 .title mark::before {
-    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     width: 130%;
     height: 150%;
@@ -3073,10 +3085,6 @@ section {
 
 .title._alt-line mark::before {
     background: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 170 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M89.1151 3.89886C89.0269 3.19475 85.089 3.58239 84.3541 3.58239C81.8607 3.58239 79.3534 3.08028 76.86 2.79119C71.9318 2.21982 66.7099 2.63295 61.7482 2.63295C55.6219 2.63295 49.6215 2.80023 43.5154 3.19558C31.9144 3.9467 19.2362 5.4568 9.30671 11.7932C7.22227 13.1234 5.4561 14.8414 3.73458 16.5579C2.37998 17.9086 2.5375 20.2569 2.21812 22.0084C1.90918 23.7026 1.96304 26.0442 2.16522 27.7577C2.47957 30.4219 5.59478 32.7808 7.40231 34.4389C12.3479 38.9756 18.3016 42.5294 24.8946 43.775C36.8311 46.0301 49.1273 47.7629 61.2898 47.8892C74.1965 48.0232 87.1202 48.8386 100.03 48.8386C111.972 48.8386 124.279 49.6663 136.09 47.5727C145.919 45.8304 156.19 44.191 164.268 37.9377C167.011 35.8151 167.83 34.2968 167.83 30.9577C167.83 29.2262 168.302 26.58 167.672 24.9446C165.745 19.9488 161.684 17.1483 157.462 14.1316C151.615 9.95333 144.935 8.53152 137.995 7.06363C128.155 4.98252 118.266 4.24998 108.3 3.33624C101.091 2.67524 93.7695 2.89658 86.5759 2' stroke='%23F97C60' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A") center/contain no-repeat
-}
-
-.decor-title {
-    font-family: Mateur
 }
 
 .decor-title._large {
@@ -3097,32 +3105,12 @@ section {
     text-transform: uppercase
 }
 
-.homes__video--controls,.section-title span mark {
-    font-family: Mateur;
-    text-transform: uppercase
-}
-
 .section-title._min-stroke-border span::after {
     -webkit-text-stroke-width: 0
 }
 
 .section-title img {
-    -webkit-user-select: none;
     user-select: none
-}
-
-.section-title._large-word span::after {
-    font-size: 2.0625rem;
-    padding-left: 0
-}
-
-.section-title span del {
-    text-decoration: none;
-    position: relative;
-    -webkit-user-select: none;
-    user-select: none;
-    padding-right: 20px;
-    margin-right: 10px
 }
 
 .del-word-on-dark del,.main-intro__gallery--decor,.main-intro__gallery--slider {
@@ -3130,16 +3118,30 @@ section {
     -ms-user-select: none
 }
 
+.section-title._large-word span::after {
+    font-size: 2.0625rem;
+    padding-left: 0
+}
+
+.section-title span {
+    display: inline-block
+}
+
+.section-title span del {
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-right: 20px;
+    margin-right: 10px
+}
+
 .section-title span del::before {
-    content: "";
-    position: absolute;
     left: 0;
-    top: 50%;
-    -webkit-transform: translate(0,-50%);
     transform: translate(0,-50%);
     width: 100%;
     height: 48%;
-    pointer-events: none;
     background: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 232 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.02085 5.96086C38.8495 5.96086 68.8099 4.75802 98.6143 6.25132C114.783 7.06144 130.984 8.26219 147.121 5.92455C159.636 4.11175 171.662 2.03953 184.279 2.03953C192.299 2.03953 200.322 1.95059 208.342 2.03953C213.278 2.09427 218.166 3.34664 223.101 3.34664C225.256 3.34664 231.72 3.2102 229.567 3.34664C226.397 3.54754 223.275 4.66251 220.127 5.16207C212.344 6.39753 204.441 6.88223 196.611 7.12273C173.468 7.83348 150.298 7.04431 127.151 7.30427C106.316 7.53827 85.545 9.72243 64.7303 10.681C47.5292 11.4731 30.4207 10.5357 13.2495 10.5357C9.16635 10.5357 1 10.5357 1 10.5357C1 10.5357 7.94543 11.3806 11.3398 12.3875C24.734 16.3607 37.9231 19.8914 51.635 21.4646C74.415 24.0782 97.553 23.1573 120.276 20.1938C136.723 18.0488 153.059 15.7642 169.602 15.7642' stroke='%23F97C60' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A") center/contain no-repeat
 }
 
@@ -3148,8 +3150,15 @@ section {
     display: inline-block
 }
 
+.del-word-on-dark del::before,.popup,.popup-bg {
+    top: 0;
+    height: 100%;
+    left: 0
+}
+
 .section-title span mark {
     font-size: 2.15rem;
+    text-transform: uppercase;
     color: var(--accent);
     margin: -5px 0;
     -webkit-text-stroke-width: 2px;
@@ -3185,10 +3194,7 @@ section {
 
 .del-word-on-dark del::before {
     position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
-    height: 100%;
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 149 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.44957 4.78488C19.019 4.78488 34.5884 4.78488 50.1578 4.78488C56.5735 4.78488 62.9892 4.78488 69.4048 4.78488C77.2753 4.78488 85.0984 4.00799 92.9603 4.00799C104.335 4.00799 115.71 4.00799 127.085 4.00799C133.146 4.00799 138.983 2.24953 144.984 2.06576C145.429 2.05212 148.023 1.91232 146.554 2.08734C143.925 2.40045 141.242 3.32992 138.662 3.92167C133.591 5.08441 128.516 5.64997 123.381 6.36024C100.831 9.47916 78.3256 9.44622 55.6339 9.44622C49.0425 9.44622 42.4815 9.37233 35.9037 9.83466C30.4843 10.2156 25.0061 11 19.576 11C13.7173 11 7.85866 11 2 11' stroke='white' stroke-width='2.14214' stroke-linecap='round'/%3E%3C/svg%3E%0A") center/contain no-repeat
 }
 
@@ -3296,7 +3302,6 @@ section {
     position: absolute;
     right: 15px;
     top: 50%;
-    -webkit-transform: translate(0,-50%);
     transform: translate(0,-50%);
     width: 8px;
     height: 8px;
@@ -3393,6 +3398,8 @@ section {
     border-radius: 50%;
     border: 1px solid var(--light-gray);
     position: relative;
+    display: flex;
+    align-items: center;
     justify-content: center;
     margin-right: 4px;
     transition: border-color .2s ease-in-out
@@ -3402,16 +3409,11 @@ section {
     width: 7px;
     height: 7px;
     border-radius: 50%;
+    background: var(--accent);
     display: block;
     transition: opacity .2s ease-in-out,visibility .2s ease-in-out;
     opacity: 0;
     visibility: hidden
-}
-
-.popup,.popup-bg {
-    top: 0;
-    height: 100%;
-    width: 100%
 }
 
 .radio-btn {
@@ -3433,7 +3435,7 @@ section {
 
 .popup {
     position: fixed;
-    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -3466,7 +3468,7 @@ section {
 
 .popup-bg {
     position: absolute;
-    left: 0;
+    width: 100%;
     background: rgba(0,0,0,.74)
 }
 
@@ -3998,7 +4000,6 @@ section {
     position: absolute;
     left: 0;
     top: 50%;
-    -webkit-transform: translate(0,-50%);
     transform: translate(0,-50%);
     height: 50px;
     width: 100%;
@@ -4013,7 +4014,7 @@ section {
 .header__nav--link {
     display: inline-block;
     width: 100%;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 150%;
     color: var(--dark);
     padding: 10px;
@@ -4679,6 +4680,7 @@ section {
     font-weight: 500;
     font-size: .875rem;
     line-height: 153.198269%;
+    text-transform: uppercase;
     color: var(--white);
     -webkit-transform: rotate(-2.89deg);
     transform: rotate(-2.89deg)

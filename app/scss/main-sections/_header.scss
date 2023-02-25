@@ -262,10 +262,6 @@
 					transform: translate3d(-50%,0px,0);
 				}
 			}
-			
-			/* &._sub-active .hover-line {
-				stroke-dashoffset: 0;
-			} */
 
 			@media (any-hover: hover) {
 				&:hover .header__nav-sub {
@@ -299,7 +295,7 @@
 		&--link {
 			display: inline-block;
 			width: 100%;
-			font-weight: 500;
+			font-weight: 400;
 			line-height: 150%;
 			color: var(--dark);
 
