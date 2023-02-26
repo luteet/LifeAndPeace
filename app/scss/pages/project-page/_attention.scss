@@ -2,9 +2,9 @@
 
 	display: flex;
 	flex-wrap: wrap;
-	padding-top: 90px; padding-bottom: 38px;
+	padding-top: 0px; padding-bottom: 38px;
 	@include _768 {
-		padding-top: 90px; padding-bottom: 50px;
+		padding-top: 50px; padding-bottom: 50px;
 	}
 	
 	@include _992 {

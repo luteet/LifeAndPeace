@@ -6907,7 +6907,7 @@ section {
 .attention {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 90px;
+    padding-top: 0;
     padding-bottom: 38px
 }
 
@@ -9280,7 +9280,7 @@ section {
     }
 
     .attention {
-        padding-top: 90px;
+        padding-top: 50px;
         padding-bottom: 50px
     }
 
