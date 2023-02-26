@@ -34,12 +34,11 @@
 	left: 0; top: 0;
 	width: 100%;
 
-	font-weight: 400;
-	
+	font-weight: 400; 
 
 	//transform: translate(0, var(--pos));
 	opacity: var(--opacity);
-	transition: opacity .2s ease-in-out;
+	transition: opacity .2s ease;
 
 	z-index: 99;
 

@@ -200,10 +200,19 @@ document.querySelectorAll('select').forEach(select => {
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <resize> -=-=-=-=-=-=-=-=-=-=-=-=
 
+let resizeCheck = [0,0];
+
 function resize() {
 
+	resizeCheck[0] = window.innerWidth;
+
+	if(resizeCheck[0] != resizeCheck[1]) {
+		resizeCheck[1] = window.innerWidth;
+		html.style.setProperty("--height-header", header.offsetHeight + "px")
+	}
+
 	html.style.setProperty("--height-screen", window.innerHeight + "px")
-	html.style.setProperty("--height-header", header.offsetHeight + "px")
+	
 
 }
 
@@ -653,6 +662,7 @@ inputs.forEach(input => {
 let scrollProgress = [0, false];
 
 function scroll() {
+	
 	scrollProgress[0] = Math.abs(body.getBoundingClientRect().y);
 
 	if(scrollProgress[0] >= (header.offsetHeight * 1.5) && scrollProgress[1] == false) {
@@ -665,7 +675,9 @@ function scroll() {
 			//wrapper.style.paddingTop = header.offsetHeight + 'px';
 			header.classList.add('_fixed');
 			//header.style.setProperty('--pos', '0%');
-			header.style.setProperty('--opacity', '1');
+			setTimeout(() => {
+				header.style.setProperty('--opacity', '1');
+			},100)
 		},200);
 
 	} else if(scrollProgress[0] <= (header.offsetHeight * 1.5) && scrollProgress[1] == true) {

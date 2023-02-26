@@ -3866,7 +3866,7 @@ section {
     width: 100%;
     font-weight: 400;
     opacity: var(--opacity);
-    transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease;
     z-index: 99
 }
 
