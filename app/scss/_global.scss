@@ -7,7 +7,7 @@ body {
 
 	font-family: var(--main-font);
 	
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 150%;
 
 	min-width: 320px;
@@ -45,7 +45,7 @@ section {
 }
 
 .main {
-	padding-top: var(--height-header, 145px);	
+	//padding-top: var(--height-header, 145px);	
 	&._overflow-visible {
 		margin-top: calc(0px - var(--height-header, 145px));
 		@include _992 {
@@ -53,9 +53,9 @@ section {
 		}
 		padding-top: calc(var(--height-header, 145px) + 92px);
 	}
-	&._none-pt {
+	/* &._none-pt {
 		padding-top: 0;
-	}
+	} */
 	/* &._pt {
 		padding-top: var(--height-header, 145px);
 	} */

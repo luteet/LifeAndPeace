@@ -1,6 +1,6 @@
 .ambasadors-page {
 
-	padding-top: 5px;
+	
 	padding-bottom: 62px;
 
 	@include _768 {
@@ -8,13 +8,18 @@
 	}
 	
 	@include _992 {
-		padding-top: 15px;
+		
 		padding-bottom: 44px;
 	}
 
 	// .ambasadors-page__header
 
 	&__header {
+		padding-top: 5px;
+		
+		@include _992 {
+			padding-top: 15px;
+		}
 	}
 
 	// .ambasadors-page__title

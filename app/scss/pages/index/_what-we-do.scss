@@ -71,7 +71,7 @@
 	&__text {
 		padding-top: 12px;
 
-		font-weight: 500;
+		font-weight: 300;
 		line-height: 150%;
 		font-size: 0.875rem;
 		color: var(--dark-gray);
@@ -111,6 +111,16 @@
 		position: relative;
 		display: inline-block;
 		padding: 22px 31px;
+
+		transition: transform .3s ease;
+		&:hover {
+			transform: scale(1.1);
+		}
+		
+		&:active {
+			transition: transform .2s ease;
+			transform: scale(1.05);
+		}
 
 		// .what-we-do__link--line
 
@@ -237,7 +247,6 @@
 		&--info {
 			padding-top: 28px;
 			color: var(--text);
-			
 
 			& h3 {
 				font-weight: 700;

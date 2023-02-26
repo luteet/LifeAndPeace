@@ -1,22 +1,26 @@
 .faq {
 
-	padding-top: 11px; padding-bottom: 111px;
+	padding-bottom: 111px;
 	@include _768 {
 		padding-bottom: 121px;
 	}
 	
 	@include _992 {
-		padding-bottom: 131px; padding-top: 30px;
+		padding-bottom: 131px; 
 	}
 
 	// .faq__body
 
 	&__body {
 		max-width: 782px;
-		margin: 0 auto;
+		margin-left: auto; margin-right: auto;
+		margin-top: 11px; 
 		padding: 32px 16px;
 		@include _768 {
 			padding: 47px 57px;
+		}
+		@include _992 {
+			margin-top: 30px;
 		}
 		background: #FFFFFF;
 		border-radius: 8px;

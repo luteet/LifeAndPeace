@@ -104,6 +104,7 @@
 			margin-right: 16px;
 			width: 87px; height: 57px;
 			align-self: center;
+			fill: var(--light-green);
 			@include _768 {
 				width: 64px; height: 42px;
 			}

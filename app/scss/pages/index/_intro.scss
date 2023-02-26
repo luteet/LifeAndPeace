@@ -1,14 +1,20 @@
 .main-intro {
 
-	background: var(--dark-blue-2);
+	background: var(--dark-blue-gradient-2);
+	@include _992 {
+		background: var(--dark-blue-gradient);
+	}
 	overflow: hidden;
-
 	
 
 	&__wrapper {
-		padding-top: 75px;
+		padding-top: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		@include _992 {
 			position: relative;
+			padding-top: 75px;
 		}
 	}
 
@@ -21,26 +27,21 @@
 		z-index: -1;
 		
 		overflow: hidden;
-
-		
 	}
 
 	// .main-intro__content
 
 	&__content {
+		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		@include _992 {
 			grid-template-columns: 45% auto auto 175px;
-			padding: 0 20px 0 40px;
+			//padding: 0 20px 0 40px;
 		}
 		& > * {
 			align-self: center;
 		}
-
-		max-width: 1193px;
-		margin: 0 auto;
-		
 		
 		position: relative;
 		z-index: 2;
@@ -67,10 +68,11 @@
 		color: var(--white);
 		grid-column: 1/3;
 		max-width: 85%;
+		font-weight: 300;
 		//opacity: 0.7;
 		@include _992 {
 			grid-row: 2;
-			max-width: 100%;
+			max-width: 85%;
 			grid-column: 1;
 		}
 	}
@@ -89,7 +91,7 @@
 
 		font-weight: 500;
 		line-height: 118.75%;
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		text-transform: uppercase;
 		color: var(--white);
@@ -148,7 +150,7 @@
 		}
 		& svg {
 			width: 100%; height: 100%;
-			animation: round 30s linear 0s infinite normal forwards;
+			animation: round 20s linear 0s infinite normal forwards;
 			& path {
 				fill: none;
 			}
@@ -168,7 +170,7 @@
 			}
 		}
 
-		&:hover {
+		&._active {
 			transform: scale(1.1);
 		}
 	}
@@ -247,7 +249,7 @@
 
 	&__image {
 		position: relative;
-		width: 100%; padding-top: 108%;
+		width: 100%; padding-top: 100%;
 
 		&::before {
 			content: '';
@@ -260,15 +262,15 @@
 				opacity: 1;
 			}
 			filter: blur(20px);
-			width: 400%; aspect-ratio: 1/0.5;
+			width: 300%; aspect-ratio: 1/0.5;
 			border-radius: 50%;
 			background: radial-gradient(circle, rgba(140,229,181,1) 24%, rgba(255,255,255,0) 44%);
 		}
 		
 		margin-top: 50px;
 		@include _992 {
-			width: 100%;
-			padding-top: 43.25%;
+			width: calc(100% + 170px);
+			padding-top: 48.25%;
 			margin-top: -103px;
 		}
 		& img {

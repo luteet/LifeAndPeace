@@ -1,10 +1,7 @@
 .ambasador {
 
 	margin-bottom: 100px;
-	margin-top: 9px;
-	@include _992 {
-		margin-top: 18px;
-	}
+	
 
 	// .ambasador__bg
 
@@ -61,6 +58,10 @@
 	// .ambasador__header
 
 	&__header {
+		margin-top: 9px;
+		@include _992 {
+			margin-top: 18px;
+		}
 	}
 
 	// .ambasador__time
