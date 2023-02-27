@@ -455,6 +455,7 @@ body.addEventListener('click', function (event) {
 					faqItemContent.style.display = 'none';
 					faqItemContent.style.removeProperty('height')
 					faqItem.classList.remove('_animating');
+					faqItem.classList.remove('_active')
 					faqItemContent.removeEventListener('transitionend', hidden)
 				}
 
@@ -462,7 +463,6 @@ body.addEventListener('click', function (event) {
 
 				setTimeout(() => {
 					faqItemContent.style.height = 0;
-					faqItem.classList.remove('_active')
 				},0)
 
 			} else {
@@ -483,6 +483,7 @@ body.addEventListener('click', function (event) {
 						faqItemActiveContent.style.display = 'none';
 						faqItemActiveContent.style.removeProperty('height')
 						faqItemActive.classList.remove('_animating');
+						faqItemActive.classList.remove('_active')
 						faqItemActiveContent.removeEventListener('transitionend', hidden)
 					}
 
@@ -490,13 +491,11 @@ body.addEventListener('click', function (event) {
 
 					setTimeout(() => {
 						faqItemActiveContent.style.height = 0;
-						faqItemActive.classList.remove('_active')
 					},0)
 				}
 
 
 
-				faqItem.classList.add('_active');
 				faqItemContent.style.removeProperty('height');
 				faqItemContent.style.display = 'block';
 				const height = faqItemContent.offsetHeight;
@@ -507,6 +506,7 @@ body.addEventListener('click', function (event) {
 					faqItemContent.style.removeProperty('transition-property')
 					faqItemContent.style.removeProperty('height');
 					faqItem.classList.remove('_animating');
+					faqItem.classList.add('_active');
 					faqItemContent.removeEventListener('transitionend', visible)
 				}
 

@@ -76,16 +76,16 @@
 				content: '';
 				position: absolute;
 				left: 0; top: 9px;
-				width: 3px; height: 9px;
+				width: 3px; height: calc(100% - 16px);
 				transition: height .5s ease-in-out;
 				background: var(--accent);
 				z-index: 3;
 			}
 		}
 
-		&._active &--body::before {
+		/* &._active &--body::before {
 			height: calc(100% - 9px);
-		}
+		} */
 
 		// .faq__item--placeholder
 
