@@ -51,7 +51,7 @@
 
 		cursor: pointer;
 
-		&._active &--placeholder, &._active._animating &--placeholder {
+		&._hide-placeholder &--placeholder {
 			opacity: 0; visibility: hidden;
 		}
 
@@ -59,9 +59,9 @@
 			display: block;
 		}
 
-		&._animating &--placeholder {
+		/* &._animating &--placeholder {
 			opacity: 0; visibility: hidden;
-		}
+		} */
 
 		// .faq__item--body
 

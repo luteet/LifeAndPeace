@@ -456,6 +456,9 @@ body.addEventListener('click', function (event) {
 					faqItemContent.style.removeProperty('height')
 					faqItem.classList.remove('_animating');
 					faqItem.classList.remove('_active')
+					setTimeout(() => {
+						faqItem.classList.remove('_hide-placeholder');
+					},200)
 					faqItemContent.removeEventListener('transitionend', hidden)
 				}
 
@@ -484,6 +487,9 @@ body.addEventListener('click', function (event) {
 						faqItemActiveContent.style.removeProperty('height')
 						faqItemActive.classList.remove('_animating');
 						faqItemActive.classList.remove('_active')
+						setTimeout(() => {
+							faqItemActive.classList.remove('_hide-placeholder');
+						},200)
 						faqItemActiveContent.removeEventListener('transitionend', hidden)
 					}
 
@@ -495,7 +501,7 @@ body.addEventListener('click', function (event) {
 				}
 
 
-
+				faqItem.classList.add('_hide-placeholder');
 				faqItemContent.style.removeProperty('height');
 				faqItemContent.style.display = 'block';
 				const height = faqItemContent.offsetHeight;
@@ -514,7 +520,7 @@ body.addEventListener('click', function (event) {
 
 				setTimeout(() => {
 					faqItemContent.style.height = height + 'px';
-				},0)
+				},200)
 
 			}
 		}
