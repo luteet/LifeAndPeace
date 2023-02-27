@@ -497,7 +497,7 @@ body.addEventListener('click', function (event) {
 
 					setTimeout(() => {
 						faqItemActiveContent.style.height = 0;
-					},0)
+					},50)
 				}
 
 
@@ -520,7 +520,7 @@ body.addEventListener('click', function (event) {
 
 				setTimeout(() => {
 					faqItemContent.style.height = height + 'px';
-				},200)
+				},400)
 
 			}
 		}
