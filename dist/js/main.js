@@ -375,6 +375,8 @@ body.addEventListener('click', function (event) {
 
 	if (headerNavLink) {
 
+		//if(headerNavLink.classList.contains('_prevent-default')) event.preventDefault();
+
 		const
 			item = headerNavLink.closest('.header__nav--item'),
 			sub = item.querySelector('.header__nav-sub');
@@ -383,6 +385,9 @@ body.addEventListener('click', function (event) {
 			if (!item.classList.contains('_sub-active') && (deviceType() == 'mobile' || deviceType() == 'tablet')) {
 				event.preventDefault();
 				item.classList.add('_sub-active')
+			} else if(item.classList.contains('_sub-active') && headerNavLink.classList.contains('_prevent-default') && (deviceType() == 'mobile' || deviceType() == 'tablet')) {
+				event.preventDefault();
+				item.classList.remove('_sub-active')
 			}
 		}
 
@@ -585,6 +590,8 @@ body.addEventListener('click', function (event) {
 		},200)
 	}
 
+	
+
 })
 
 // =-=-=-=-=-=-=-=-=-=- </click events> -=-=-=-=-=-=-=-=-=-=-
@@ -674,13 +681,10 @@ function scroll() {
 	if(scrollProgress[0] >= (header.offsetHeight * 1.5) && scrollProgress[1] == false) {
 
 		scrollProgress[1] = true;
-		//header.style.setProperty('--pos', '-100%');
 		header.style.setProperty('--opacity', '0');
 
 		setTimeout(function() {
-			//wrapper.style.paddingTop = header.offsetHeight + 'px';
 			header.classList.add('_fixed');
-			//header.style.setProperty('--pos', '0%');
 			setTimeout(() => {
 				header.style.setProperty('--opacity', '1');
 			},100)
@@ -689,34 +693,20 @@ function scroll() {
 	} else if(scrollProgress[0] <= (header.offsetHeight * 1.5) && scrollProgress[1] == true) {
 
 		scrollProgress[1] = false;
-		//header.style.setProperty('--pos', '-100%');
 		header.style.setProperty('--opacity', '0');
 
 		setTimeout(function() {
-			//header.style.setProperty('--pos', '0%');
 			header.style.setProperty('--opacity', '1');
 			header.classList.remove('_fixed');
-			//wrapper.style.removeProperty('padding-top');
 
 		},200);
 
 	}
-	/* if(scrollProgress > header.offsetHeight + (header.offsetHeight / 2) && headerFixedCheck) {
-		headerFixedCheck = false;
-		header.classList.add('_fixed');
-		wrapper.style.paddingTop = header.offsetHeight + 'px';
-	} else if(scrollProgress < header.offsetHeight + (header.offsetHeight / 2) && !headerFixedCheck) {
-		headerFixedCheck = true;
-		header.classList.remove('_fixed');
-		wrapper.style.removeProperty('padding-top');
-	} */
 }
 
 scroll()
 
 window.addEventListener('scroll', scroll)
-
-//window.scroll = scroll;
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </scroll> -=-=-=-=-=-=-=-=-=-=-=-=
 

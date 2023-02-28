@@ -167,7 +167,7 @@
 									</li>
 								</ul>
 							</div>
-							<a href="#" class="header__nav--link">
+							<a href="#" class="header__nav--link _prevent-default">
 								En
 								<svg width="8" height="5">
 									<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
@@ -305,13 +305,10 @@
 					</picture>
 				</div>
 			</div>
-			<div class="homes__decor" aria-hidden="true" data-aos="fade-in" data-aos-delay="100">
-				<picture>
-					<source srcset="img/decor-footer.webp" type="image/webp">
-					<img src="img/decor-footer.png" alt="" width="1440" height="172" loading="lazy">
-				</picture>
-			</div>
 			<div class="homes__video section-container" data-aos="fade-in" data-aos-delay="300">
+				<div class="homes__decor" data-aos-anchor=".homes__image" aria-hidden="true" data-aos="fade-in" data-aos-delay="100">
+					<div class="homes__decor--element" style="background-image: url(img/main/homes/decor-bg.webp);"></div>
+				</div>
 				<div class="homes__video--body video-wrapper">
 					<video src="video/video.mp4" controls preload="auto" width="1308" height="522" class="homes__video--element video-element"></video>
 					<div class="homes__video--preview video-preview">
@@ -332,6 +329,9 @@
 							<img src="img/min-decor.png alt="" width="0" height="0" loading="lazy">
 						</picture>
 					</div>
+				</div>
+				<div class="homes__decor" data-aos-anchor=".homes__image" aria-hidden="true" data-aos="fade-in" data-aos-delay="100">
+					<div class="homes__decor--element" style="background-image: url(img/main/homes/decor.webp);"></div>
 				</div>
 			</div>
 		</section>

@@ -103,7 +103,14 @@
 
 	&__block {
 
-		margin-top: 55px;
+		margin-top: 0px;
+		@include _768 {
+			margin-top: 25px;
+		}
+		
+		@include _992 {
+			margin-top: 55px;
+		}
 		border-bottom: 1px solid var(--light-gray);
 		&:last-child {
 			border-bottom: 0;
@@ -117,7 +124,7 @@
 		&--header {
 			display: flex;
 			justify-content: space-between;
-			flex-direction: column;
+			flex-direction: column-reverse;
 
 			@include _992 {
 				flex-direction: row;
@@ -129,9 +136,13 @@
 		&--info {
 			display: flex;
 			flex-direction: column;
+			padding-top: 50px;
 			@media (min-width: 550px) {
 				flex-direction: row;
 				align-items: center;
+			}
+			@include _992 {
+				padding-top: 0;
 			}
 		}
 
@@ -188,14 +199,17 @@
 
 	&__filter {
 
-		flex-wrap: wrap;
+		display: flex;
+		flex-direction: column;
 		align-items: center;
-
-		padding-top: 10px;
-		display: none;
+		
 		@media (min-width: 550px) {
-			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			padding-top: 10px;
 		}
+
 		@include _992 {
 			padding-top: 0;
 		}
@@ -205,13 +219,19 @@
 		// .projects__filter--item
 
 		&--item {
-			margin: 9.5px;
+			margin: 9.5px; width: 100%;
+			@media (min-width: 550px) {
+				width: auto;
+			}
 		}
 
 		// .projects__filter--select
 
 		&--select {
-			min-width: 218px;
+			min-width: 218px; width: 100%;
+			@media (min-width: 550px) {
+				width: auto;
+			}
 		}
 	}
 }
