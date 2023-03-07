@@ -28,7 +28,7 @@
     "gulp-zip": "^4.2.0",
     "normalize.css": "^8.0.1",
     "sass": "^1.45.0",
-    "stimulus-slimselect": "^0.2.0",
+    "slim-select": "^2.4.2",
     "swiper": "^9.0.5"
   }
 }

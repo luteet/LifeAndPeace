@@ -127,7 +127,7 @@ function stylesLib() {
     return src([
         'node_modules/normalize.css/normalize.css',
         'node_modules/swiper/swiper-bundle.min.css', // Slider
-        'node_modules/slim-select/dist/slimselect.min.css', // Select
+        'node_modules/slim-select/dist/slimselect.css', // Select
         'node_modules/aos/dist/aos.css', // Animating
     ])
     .pipe(concat('_libs.scss'))

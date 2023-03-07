@@ -189,10 +189,30 @@ headerNavItem.forEach(headerNavItem => {
 // =-=-=-=-=-=-=-=-=-=- <custom select> -=-=-=-=-=-=-=-=-=-=-
 
 document.querySelectorAll('select').forEach(select => {
+	let data = [];
+	
+	select.querySelectorAll('option').forEach(option => {
+		data.push({text: option.textContent, data: option.dataset})
+	})
+
 	new SlimSelect({
+
 		select: select,
-		showSearch: false,
-	  })
+		data: data,
+
+		settings: {
+			showSearch: false,
+			hideSelected: true,
+		},
+
+		events: {
+			afterChange: function (val) {
+				if(val[0].data.url) window.location.href = val[0].data.url;
+			}
+		}
+
+	})
+	//console.log(selectObj)
 })
 
 // =-=-=-=-=-=-=-=-=-=- </custom select> -=-=-=-=-=-=-=-=-=-=-
@@ -590,7 +610,12 @@ body.addEventListener('click', function (event) {
 		},200)
 	}
 
-	
+
+	const selectedLink = $('.ss-single a');
+	if(selectedLink) event.preventDefault();
+
+	const selectLink = $('.ss-option');
+	if(selectLink) console.log('click');// window.location.href = selectLink.getAttribute('href');//selectLink.click();
 
 })
 
@@ -617,7 +642,6 @@ function radioInputsChange(radioInput, duration=300) {
 		const block = document.querySelector('#' + radioInput.dataset.id);
 		slideDown(block,duration);
 		setTimeout(() => {
-			//radioInput.classList.remove('_animating')
 			animCheck = false;
 		},duration)
 	} else {
@@ -658,12 +682,15 @@ radioInputs.forEach(radioInput => {
 
 const inputs = document.querySelectorAll('.input, .textarea');
 inputs.forEach(input => {
+
 	input.addEventListener('focus', function () {
 		input.closest('label').classList.add('focus');
 	})
+
 	input.addEventListener('blur', function () {
 		input.closest('label').classList.remove('focus');
 	})
+
 })
 
 // =-=-=-=-=-=-=-=-=-=- </focus event on input> -=-=-=-=-=-=-=-=-=-=-
