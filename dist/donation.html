@@ -208,27 +208,27 @@
 					</h2>
 					<div class="donation-form__radio-row radio-row _min-gap">
 						<label class="donation-form__radio-row--item">
-							<input type="radio" name="amount" required value="$10.00" class="radio-input">
+							<input type="radio" name="amount" required value="10.00" class="radio-input amount-element">
 							<span class="donation-form__radio-row--element radio-btn">$10.00</span>
 						</label>
 						<label class="donation-form__radio-row--item">
-							<input type="radio" name="amount" required value="$25.00" class="radio-input">
+							<input type="radio" name="amount" required value="25.00" class="radio-input amount-element">
 							<span class="donation-form__radio-row--element radio-btn">$25.00</span>
 						</label>
 						<label class="donation-form__radio-row--item">
-							<input type="radio" name="amount" required value="$50.00" class="radio-input">
+							<input type="radio" name="amount" required value="50.00" class="radio-input amount-element">
 							<span class="donation-form__radio-row--element radio-btn">$50.00</span>
 						</label>
 						<label class="donation-form__radio-row--item">
-							<input type="radio" name="amount" required value="$100.00" class="radio-input">
+							<input type="radio" name="amount" required value="100.00" class="radio-input amount-element">
 							<span class="donation-form__radio-row--element radio-btn">$100.00</span>
 						</label>
 						<label class="donation-form__radio-row--item">
-							<input type="radio" name="amount" required value="$250.00" class="radio-input">
+							<input type="radio" name="amount" required value="250.00" class="radio-input amount-element">
 							<span class="donation-form__radio-row--element radio-btn">$250.00</span>
 						</label>
 						<label class="donation-form__radio-row--item">
-							<input type="radio" name="amount" checked required value="custom" data-id="custom-amount-block" class="radio-input">
+							<input type="radio" name="amount" required value="custom" data-id="custom-amount-block" class="radio-input amount-element">
 							<span class="donation-form__radio-row--element radio-btn">Custom</span>
 						</label>
 					</div>
@@ -236,7 +236,7 @@
 						<div class="donation-form__block--wrapper">
 							<label class="donation-form__label">
 								<span>Custom</span>
-								<input type="text" name="custom-amount" placeholder="$100.00" required class="donation-form__input input">
+								<input type="tel" name="custom-amount" placeholder="$100.00" required class="donation-form__input input amount-element">
 							</label>
 						</div>
 					</div>
@@ -253,7 +253,7 @@
 							<span class="donation-form__radio-row--text">Pay pal</span>
 						</label>
 						<label class="donation-form__radio-row--item">
-							<input type="radio" name="payment-method" required value="credit-card" class="radio-input">
+							<input type="radio" name="payment-method" required value="credit-card" data-id="bank-account-block" class="radio-input">
 							<span class="donation-form__radio-row--element radio-element"></span>
 							<span class="donation-form__radio-row--text">Bank account</span>
 						</label>
@@ -262,6 +262,17 @@
 							<span class="donation-form__radio-row--element radio-element"></span>
 							<span class="donation-form__radio-row--text">Crypto</span>
 						</label>
+					</div>
+					<div class="donation-form__block" id="bank-account-block">
+						<div class="donation-form__block--wrapper">
+							<div class="donation-form__select select _full">
+								<select name="crypto" required>
+									<option value="trc20-1" selected>TRC20</option>
+									<option value="trc20-2">TRC20</option>
+									<option value="trc20-3">TRC20</option>
+								</select>
+							</div>
+						</div>
 					</div>
 					<div class="donation-form__block" id="crypto-block">
 						<div class="donation-form__block--wrapper">
@@ -284,7 +295,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="donation-form__decor-line"></div>
+					<!-- <div class="donation-form__decor-line"></div> -->
 					<div class="donation-form__radio-row radio-row">
 						<h3 class="donation-form__radio-row--title">Personal info</h3>
 						<label class="donation-form__radio-row--item">
@@ -327,7 +338,7 @@
 						</button>
 						<div class="donation-form__total">
 							<b>
-								Donation total <mark>$10.00</mark>
+								Donation total <mark class="amount-total" data-currency="$"></mark>
 							</b>
 						</div>
 					</div>

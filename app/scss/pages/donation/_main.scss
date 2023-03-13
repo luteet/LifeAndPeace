@@ -308,6 +308,9 @@
 		@media (min-width: 500px) {
 			width: auto;
 			max-width: 162px;
+			&._full {
+				max-width: 100%;
+			}
 			& select {
 				width: auto;
 			}
@@ -326,9 +329,7 @@
 		grid-column: 1/3; grid-row: 2;
 		
 		@media (min-width: 500px) {
-			
 			grid-template-columns: 107px auto;
-			
 		}
 
 		// .donation-form__crypto--img
@@ -448,6 +449,7 @@
 		& mark {
 			background: transparent;
 			color: var(--accent);
+			word-break: break-all;
 		}
 	}
 }
