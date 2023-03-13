@@ -686,28 +686,32 @@ radioInputs.forEach(radioInput => {
 
 const amountElement = document.querySelectorAll('.amount-element');
 amountElement.forEach(amountElement => {
-	amountElement.addEventListener('change', function () {
-		const form = amountElement.closest('form'),
-			  total = form.querySelectorAll('.amount-total');
-			  
-		total.forEach(total => {
-			
-			if(amountElement.dataset.id === undefined) {
 
-				total.innerHTML = total.dataset.currency + amountElement.value.replace(/[^0-9, ^.]/g,"");
+	if(amountElement.getAttribute('type') == 'radio' || amountElement.getAttribute('type') == 'checkbox') {
+		amountElement.addEventListener('change', function () {
+			const form = amountElement.closest('form'),
+				  total = form.querySelectorAll('.amount-total');
+				  
+			total.forEach(total => {
 				
-			} else {
-
-				const block = document.querySelector('#' + amountElement.dataset.id);
-					  amountInput = block.querySelector('.amount-element');
-	  
-				total.textContent = total.dataset.currency + amountInput.value.replace(/[^0-9, ^.]/g,"");
-			}
-		})
-		
-	})
+				if(amountElement.dataset.id === undefined) {
 	
-	/* if(amountElement.getAttribute('type') == 'text' || amountElement.getAttribute('type') == 'tel' || amountElement.getAttribute('type') == 'number') {
+					total.innerHTML = total.dataset.currency + amountElement.value.replace(/[^0-9, ^.]/g,"");
+	
+				} else {
+	
+					const block = document.querySelector('#' + amountElement.dataset.id);
+						  amountInput = block.querySelector('.amount-element');
+		  
+					total.textContent = total.dataset.currency + amountInput.value.replace(/[^0-9, ^.]/g,"");
+				}
+			})
+			
+		})
+	}
+	
+	
+	if(amountElement.getAttribute('type') == 'text' || amountElement.getAttribute('type') == 'tel' || amountElement.getAttribute('type') == 'number') {
 		amountElement.addEventListener('input', function () {
 
 			const form = amountElement.closest('form'),
@@ -721,7 +725,7 @@ amountElement.forEach(amountElement => {
 			})	
 			
 		})
-	} */
+	}
 
 })
 
