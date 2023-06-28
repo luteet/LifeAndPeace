@@ -163,6 +163,10 @@
 			background: var(--accent);
 		}
 
+		/* &._disabled &--image-wrapper::after {
+			background: var(--dark-gray);
+		} */
+
 		&._completed &--image-wrapper {
 			&::before {
 				content: '';
@@ -174,6 +178,9 @@
 				z-index: 2;
 				opacity: 1;
 				transition: opacity .2s ease-in-out;
+			}
+			&::after {
+				background: var(--light);
 			}
 		}
 
@@ -230,7 +237,7 @@
 				position: absolute;
 				right: 0; bottom: 0;
 				width: 17%; height: 70px;
-				background: var(--light);
+				background: var(--light-green);
 				z-index: 3;
 			}
 			& img {

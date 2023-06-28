@@ -246,7 +246,52 @@ window.onresize = resize;
 // =-=-=-=-=-=-=-=-=-=-=-=- <slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
 const eventElement = document.querySelector('.event');
-let gallerySlider = new Swiper('.gallery__slider', {
+
+if(document.querySelector('.gallery__slider')) {
+
+	const gallerySlider = new Splide('.gallery__slider', {
+		type: "fade",
+		rewind: true,
+		pagination: true,
+		arrows: false,
+		speed: 500,
+		waitForTransition: true,
+		easing: "ease-in-out",
+		
+	});
+
+	let sliderMove = false;
+
+	gallerySlider.on('mounted', function () {
+		const arrows = gallerySlider.root.closest('section').querySelectorAll('.slider-arrow');
+
+		gallerySlider.on('active', function () {
+			setTimeout(() => {
+				sliderMove = false;
+			},500)
+		})
+		
+		arrows[0].addEventListener('click', function () {
+			if(!sliderMove) {
+				sliderMove = true;
+				gallerySlider.go('<')
+			}
+		})
+		arrows[1].addEventListener('click', function () {
+			if(!sliderMove) {
+				sliderMove = true;
+				gallerySlider.go('>')
+			}
+		})
+	})
+
+	gallerySlider.mount();
+
+	
+
+}
+
+/* let gallerySlider = new Swiper('.gallery__slider', {
 
 	effect: "fade",
 	spaceBetween: 24,
@@ -266,7 +311,7 @@ let gallerySlider = new Swiper('.gallery__slider', {
 			},
 		},
 	}
-});
+}); */
 
 let ambasadorsSlider = new Swiper('.ambasadors__slider', {
 	slidesPerView: 1,
@@ -858,3 +903,78 @@ function slideDown (target, duration=300) {
 	  target.style.removeProperty('transition-property');
 	}, duration);
 }
+
+const preloader = document.querySelector('.preloader');
+let preloaderLoaded = false;
+if(preloader) {
+	let counter = 1;
+	const preloaderElements = preloader.querySelectorAll('.preloader-element');
+	
+	let interval = setInterval(() => {
+		preloader.dataset.index = counter;
+		if(counter < preloaderElements.length-1) {
+			counter++;
+		} else {
+			counter = 0;
+		}
+		
+	},500)
+
+	window.addEventListener('load', function () {
+		setTimeout(() => {
+			preloader.classList.add('_hidden');
+			setTimeout(() => {
+				clearInterval(interval)
+				preloader.remove();
+				preloaderLoaded = true;
+				if(moveCheck) {
+					body.classList.add('cursor-active');
+				}
+			},1000)
+		},1000)
+	})
+	
+}
+
+var cursor = document.querySelector('.cursor');
+var cursorinner = document.querySelector('.cursor2');
+var a = document.querySelectorAll('a');
+let moveCheck = false;
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
+  if(!moveCheck && preloaderLoaded) {
+	moveCheck = true;
+	body.classList.add('cursor-active');
+	/* setTimeout(() => {
+		
+	},300) */
+  }
+});
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursorinner.style.left = x + 'px';
+  cursorinner.style.top = y + 'px';
+});
+
+document.addEventListener('mousedown', function(){
+  cursor.classList.add('click');
+  cursorinner.classList.add('cursorinnerhover')
+});
+
+document.addEventListener('mouseup', function(){
+  cursor.classList.remove('click')
+  cursorinner.classList.remove('cursorinnerhover')
+});
+
+a.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    cursor.classList.add('hover');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hover');
+  });
+})

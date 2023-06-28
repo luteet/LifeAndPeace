@@ -14,77 +14,83 @@
 		<section class="donation section-start section-container" data-aos="fade-in" data-aos-delay="300">
 			<div class="donation__body">
 				<div class="donation__bg" data-aos="fade-in" data-aos-delay="400">
-					<img src="img/donation/decor.svg" width="0" height="0" loading="lazy" alt="" class="donation__bg--decor">
-					<img src="img/donation/decor.svg" width="0" height="0" loading="lazy" alt="" class="donation__bg--decor">
+					<img src="{% static 'img/donation/decor.svg' %}" width="0" height="0" loading="lazy" alt=""
+						 class="donation__bg--decor">
+					<img src="{% static 'img/donation/decor.svg' %}" width="0" height="0" loading="lazy" alt=""
+						 class="donation__bg--decor">
 				</div>
-				<form action="#" class="donation__form donation-form" data-aos="fade-in" data-aos-delay="500">
+				<form action="{% url 'donation' %}"  method="POST" class="donation__form donation-form" data-aos="fade-in" data-aos-delay="500">
+					{% csrf_token %}
 					<h2 class="donation-form__title section-title">
 						Donation
 					</h2>
 					<div class="donation-form__radio-row radio-row _min-gap">
-						<label class="donation-form__radio-row--item">
-							<input type="radio" name="amount" required value="10.00" class="radio-input amount-element">
-							<span class="donation-form__radio-row--element radio-btn">$10.00</span>
-						</label>
-						<label class="donation-form__radio-row--item">
-							<input type="radio" name="amount" required value="25.00" class="radio-input amount-element">
-							<span class="donation-form__radio-row--element radio-btn">$25.00</span>
-						</label>
-						<label class="donation-form__radio-row--item">
-							<input type="radio" name="amount" required value="50.00" class="radio-input amount-element">
-							<span class="donation-form__radio-row--element radio-btn">$50.00</span>
-						</label>
-						<label class="donation-form__radio-row--item">
-							<input type="radio" name="amount" required value="100.00" class="radio-input amount-element">
-							<span class="donation-form__radio-row--element radio-btn">$100.00</span>
-						</label>
-						<label class="donation-form__radio-row--item">
-							<input type="radio" name="amount" required value="250.00" class="radio-input amount-element">
-							<span class="donation-form__radio-row--element radio-btn">$250.00</span>
-						</label>
-						<label class="donation-form__radio-row--item">
-							<input type="radio" name="amount" required value="custom" data-id="custom-amount-block" class="radio-input amount-element">
-							<span class="donation-form__radio-row--element radio-btn">Custom</span>
-						</label>
-					</div>
-					<div class="donation-form__block" id="custom-amount-block">
-						<div class="donation-form__block--wrapper">
-							<label class="donation-form__label">
-								<span>Custom</span>
-								<input type="tel" name="custom-amount" placeholder="$100.00" data-currency="$" required class="donation-form__input input amount-element">
+							<label class="donation-form__radio-row--item">
+								<input type="radio" name="amount" value="10.00" class="radio-input amount-element">
+								<span class="donation-form__radio-row--element radio-btn">$10.00</span>
+							</label>
+							<label class="donation-form__radio-row--item">
+								<input type="radio" name="amount" value="25.00" class="radio-input amount-element">
+								<span class="donation-form__radio-row--element radio-btn">$25.00</span>
+							</label>
+							<label class="donation-form__radio-row--item">
+								<input type="radio" name="amount" value="50.00" class="radio-input amount-element">
+								<span class="donation-form__radio-row--element radio-btn">$50.00</span>
+							</label>
+							<label class="donation-form__radio-row--item">
+								<input type="radio" name="amount"  value="100.00" class="radio-input amount-element">
+								<span class="donation-form__radio-row--element radio-btn">$100.00</span>
+							</label>
+							<label class="donation-form__radio-row--item">
+								<input type="radio" name="amount" value="250.00" class="radio-input amount-element">
+								<span class="donation-form__radio-row--element radio-btn">$250.00</span>
+							</label>
+							<label class="donation-form__radio-row--item">
+								<input type="radio" name="amount_custom"  value="custom" data-id="custom-amount-block" class="radio-input amount-element">
+								<span class="donation-form__radio-row--element radio-btn">Custom</span>
 							</label>
 						</div>
-					</div>
-					<div class="donation-form__radio-row radio-row">
-						<h3 class="donation-form__radio-row--title">Select payment method</h3>
-						<label class="donation-form__radio-row--item">
-							<input type="radio" name="payment-method" required value="credit-card" class="radio-input">
-							<span class="donation-form__radio-row--element radio-element"></span>
-							<span class="donation-form__radio-row--text">Credit card</span>
-						</label>
-						<label class="donation-form__radio-row--item">
-							<input type="radio" name="payment-method" required value="credit-card" class="radio-input">
-							<span class="donation-form__radio-row--element radio-element"></span>
-							<span class="donation-form__radio-row--text">Pay pal</span>
-						</label>
-						<label class="donation-form__radio-row--item">
-							<input type="radio" name="payment-method" required value="credit-card" data-id="bank-account-block" class="radio-input">
-							<span class="donation-form__radio-row--element radio-element"></span>
-							<span class="donation-form__radio-row--text">Bank account</span>
-						</label>
-						<label class="donation-form__radio-row--item">
-							<input type="radio" name="payment-method" checked required value="credit-card" data-id="crypto-block" class="radio-input">
-							<span class="donation-form__radio-row--element radio-element"></span>
-							<span class="donation-form__radio-row--text">Crypto</span>
-						</label>
-					</div>
+						<div class="donation-form__block" id="custom-amount-block">
+							<div class="donation-form__block--wrapper">
+								<label class="donation-form__label">
+									<span>Custom</span>
+									<input type="text" name="amount_custom" data-currency="$" placeholder="$100.00"
+										   class="donation-form__input input amount-element">
+								</label>
+							</div>
+						</div>
+						<div class="donation-form__radio-row radio-row">
+							<h3 class="donation-form__radio-row--title">Select payment method</h3>
+							<label class="donation-form__radio-row--item">
+								<input type="radio" name="payment_method" required value="strip" class="radio-input">
+								<span class="donation-form__radio-row--element radio-element"></span>
+								<span class="donation-form__radio-row--text">Credit card</span>
+							</label>
+							<label class="donation-form__radio-row--item">
+								<input type="radio" name="payment_method" required value="pay-pal" class="radio-input">
+								<span class="donation-form__radio-row--element radio-element"></span>
+								<span class="donation-form__radio-row--text">Pay pal</span>
+							</label>
+							<label class="donation-form__radio-row--item">
+								<input type="radio" name="payment_method" required value="bank-account"
+									   data-id="bank-account-block" class="radio-input">
+								<span class="donation-form__radio-row--element radio-element"></span>
+								<span class="donation-form__radio-row--text">Bank account</span>
+							</label>
+							<label class="donation-form__radio-row--item">
+								<input type="radio" name="payment_method" checked required value="crypto"
+									   data-id="crypto-block" class="radio-input">
+								<span class="donation-form__radio-row--element radio-element"></span>
+								<span class="donation-form__radio-row--text">Crypto</span>
+							</label>
+						</div>
 					<div class="donation-form__block" id="bank-account-block">
 						<div class="donation-form__block--wrapper">
 							<div class="donation-form__select select _full">
 								<select name="crypto" required>
-									<option value="trc20-1" selected>TRC20</option>
-									<option value="trc20-2">TRC20</option>
-									<option value="trc20-3">TRC20</option>
+									<option value="trc20-1" selected>{{ page.additional_1 }}</option>
+									<option value="trc20-2">{{ page.additional_2 }}</option>
+									<option value="trc20-3"{{ page.additional_3 }}></option>
 								</select>
 							</div>
 						</div>
@@ -99,9 +105,11 @@
 								</select>
 							</div>
 							<div class="donation-form__crypto">
-								<img src="img/donation/qr-code.svg" width="87" height="87" alt="" class="donation-form__crypto--img">
-								<textarea id="crypto-address" readonly rows="2" class="donation-form__crypto--address">JFMV4594934NFVFVJDF9439390fKSKjfmeo3229JFD</textarea>
-								<button class="donation-form__crypto--copy-btn copy-btn" type="button" data-clipboard-target="#crypto-address">
+								<img src="{{ page.additional_photo.url }}" width="87" height="87" alt=""
+									 class="donation-form__crypto--img">
+								<textarea id="crypto-address" readonly rows="2" class="donation-form__crypto--address">{{ page.description|safe }}</textarea>
+								<button class="donation-form__crypto--copy-btn copy-btn" type="button"
+										data-clipboard-target="#crypto-address">
 									<svg width="14" height="14">
 										<use xlink:href="img/sprites.svg#copy"></use>
 									</svg>
@@ -119,7 +127,8 @@
 							<span class="donation-form__radio-row--text">Anonymous donation</span>
 						</label>
 						<label class="donation-form__radio-row--item">
-							<input type="radio" name="type-donation" required value="public" checked class="radio-input" data-id="public-form">
+							<input type="radio" name="type-donation" required value="public" checked class="radio-input"
+								   data-id="public-form">
 							<span class="donation-form__radio-row--element radio-element"></span>
 							<span class="donation-form__radio-row--text">Public donation</span>
 						</label>
@@ -128,19 +137,23 @@
 						<div class="donation-form__block--wrapper">
 							<label class="donation-form__label">
 								<span>First name</span>
-								<input type="text" name="first-name" placeholder="Name" required class="donation-form__input input">
+								<input type="text" name="first_name" placeholder="Name"
+									   class="donation-form__input input">
 							</label>
 							<label class="donation-form__label">
 								<span>Last name</span>
-								<input type="text" name="last-name" placeholder="Last name" required class="donation-form__input input">
+								<input type="text" name="last_name" placeholder="Last name"
+									   class="donation-form__input input">
 							</label>
 							<label class="donation-form__label">
 								<span>Email</span>
-								<input type="email" name="email" placeholder="Email" required class="donation-form__input input">
+								<input type="email" name="email" placeholder="Email"
+									   class="donation-form__input input">
 							</label>
 							<label class="donation-form__label">
 								<span>Phone</span>
-								<input type="tel" name="phone" placeholder="Phone" required class="donation-form__input input">
+								<input type="tel" name="phone" placeholder="Phone"
+									   class="donation-form__input input">
 							</label>
 						</div>
 					</div>
@@ -153,12 +166,14 @@
 						</button>
 						<div class="donation-form__total">
 							<b>
-								Donation total <mark class="amount-total" data-currency="$"></mark>
+								Donation total
+								<mark class="amount-total" data-currency="$"></mark>
 							</b>
 						</div>
 					</div>
 				</form>
 			</div>
+	
 		</section>
 	</main>
 

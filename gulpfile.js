@@ -52,6 +52,7 @@ function images() {
 function scriptsLib() {
     return src([
         'node_modules/swiper/swiper-bundle.min.js', // Slider
+        'node_modules/@splidejs/splide/dist/js/splide.min.js', // Слайдер | npm i @splidejs/splide --save-dev | https://splidejs.com/guides/getting-started/
         'node_modules/clipboard/dist/clipboard.min.js', // Copy from input
         'node_modules/aos/dist/aos.js', // Animating
         'node_modules/slim-select/dist/slimselect.min.js', // Select
@@ -127,6 +128,7 @@ function stylesLib() {
     return src([
         'node_modules/normalize.css/normalize.css',
         'node_modules/swiper/swiper-bundle.min.css', // Slider
+        'node_modules/@splidejs/splide/dist/css/splide.min.css', // Слайдер
         'node_modules/slim-select/dist/slimselect.css', // Select
         'node_modules/aos/dist/aos.css', // Animating
     ])

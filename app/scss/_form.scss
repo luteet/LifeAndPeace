@@ -42,7 +42,7 @@
 
 .select select {
 	min-width: 218px;
-	cursor: pointer;
+	//cursor: pointer;
 	appearance: none;
 	color: var(--dark-gray);
 	padding: 6px 12px 6px 0;
@@ -177,7 +177,7 @@
 	display: inline-block;
 	background: #F5F5F5;
 	transition: background .2s ease-in-out;
-	cursor: pointer;
+	//cursor: pointer;
 
 	&:hover {
 		background: #e4e4e4;

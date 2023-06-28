@@ -45,6 +45,24 @@
 			margin: 0 115px;
 		}
 
+		& .splide__pagination {
+			@include _992 {
+				display: none;
+			}
+			bottom: -10px;
+
+			& .splide__pagination__page {
+				opacity: 1;
+				transition: background .2s ease;
+				background: #3D3D3D;
+			}
+
+			& .splide__pagination__page.is-active {
+				transform: none;
+				background: var(--accent);
+			}
+		}
+
 		&--decor {
 			
 			@include _992 {
@@ -86,6 +104,7 @@
 		// .gallery__slider--wrapper
 
 		&--wrapper {
+			background: #fff;
 		}
 
 		// .gallery__slider--slide
