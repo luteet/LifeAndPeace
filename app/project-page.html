@@ -34,12 +34,16 @@
 							<use xlink:href="img/sprites.svg#btn-arrow"></use>
 						</svg>
 					</a>
-					<a href="#" class="project-page-intro__btn btn _dark _decor-reverse">
+					<input type="text" id="share_to_copy" value="Lorem ipsum dolor sit amet">
+					<button onclick="triggerExample()" class="project-page-intro__btn btn _dark _decor-reverse">
 						Share
 						<svg width="24" height="24">
 							<use xlink:href="img/sprites.svg#btn-arrow"></use>
 						</svg>
-					</a>
+						<div class="project-page-intro__notice">
+							Copied successfully
+						</div>
+					</button>
 					<a href="#" class="project-page-intro__btn btn _transparent">
 						Report pdf
 						<svg width="24" height="24">
@@ -410,5 +414,24 @@
 			</ul>
 		</section>
 	</main>
+
+<script>
+	const element = document.querySelector('#share_to_copy');
+	const successNotice = document.querySelector('.project-page-intro__notice')
+	const thisPageLink = window.location.href
+
+	element.value = thisPageLink
+
+	function triggerExample() {
+		element.select();
+		element.setSelectionRange(0, 99999);
+		document.execCommand('copy');
+
+		successNotice.classList.add('_active')
+		setTimeout(() => {
+			successNotice.classList.remove('_active')
+		}, 2350)
+	}
+</script>
 
 @@include("html/_footer.html")
