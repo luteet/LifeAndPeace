@@ -906,6 +906,8 @@ function slideDown (target, duration=300) {
 
 const preloader = document.querySelector('.preloader');
 let preloaderLoaded = false;
+let moveCheck = false;
+
 if(preloader) {
 	let counter = 1;
 	const preloaderElements = preloader.querySelectorAll('.preloader-element');
@@ -918,7 +920,7 @@ if(preloader) {
 			counter = 0;
 		}
 		
-	},500)
+	},550)
 
 	window.addEventListener('load', function () {
 		setTimeout(() => {
@@ -934,12 +936,24 @@ if(preloader) {
 		},1000)
 	})
 	
+} else {
+	window.addEventListener('load', function () {
+		
+		setTimeout(() => {
+			preloaderLoaded = true;
+			setTimeout(() => {
+				if(moveCheck) {
+					body.classList.add('cursor-active');
+				}
+			},1000)
+		},1000)
+	})
 }
 
 var cursor = document.querySelector('.cursor');
 var cursorinner = document.querySelector('.cursor2');
 var a = document.querySelectorAll('a');
-let moveCheck = false;
+
 document.addEventListener('mousemove', function(e){
   var x = e.clientX;
   var y = e.clientY;
