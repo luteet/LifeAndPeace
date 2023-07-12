@@ -192,7 +192,7 @@ document.querySelectorAll('select').forEach(select => {
 	let data = [];
 	
 	select.querySelectorAll('option').forEach(option => {
-		data.push({text: option.textContent, data: option.dataset})
+		data.push({text: option.textContent, data: option.dataset, value: option.value})
 	})
 
 	new SlimSelect({
@@ -207,6 +207,10 @@ document.querySelectorAll('select').forEach(select => {
 
 		events: {
 			afterChange: function (val) {
+				if(select.dataset.inputId) {
+					const input = document.querySelector(`#${select.dataset.inputId}`);
+					input.textContent = val[0]['value'];
+				}
 				if(val[0].data.url) window.location.href = val[0].data.url;
 			}
 		}
