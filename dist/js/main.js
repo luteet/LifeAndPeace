@@ -192,12 +192,17 @@ document.querySelectorAll('select').forEach(select => {
 	let data = [];
 
 	if(select.dataset.inputId) {
-		const input = document.querySelector(`#${select.dataset.inputId}`);
+		const input = document.querySelector(`#${select.dataset.inputId}`),
+		qrCode = document.querySelector(`#${select.dataset.inputId}`).parentElement.querySelector('.donation-form__crypto--img');
+
 		input.textContent = select.querySelectorAll('option')[select.selectedIndex]['value']
+		if(qrCode) {
+			qrCode.setAttribute('src', select.querySelectorAll('option')[select.selectedIndex].dataset.qrCode);
+		}
 	}
 	
 	select.querySelectorAll('option').forEach(option => {
-		data.push({text: option.textContent, data: option.dataset, value: option.value})
+		data.push({text: option.textContent, data: option.dataset, value: option.value, qr_code: option.dataset.qrCode})
 	})
 
 	new SlimSelect({
@@ -213,8 +218,12 @@ document.querySelectorAll('select').forEach(select => {
 		events: {
 			afterChange: function (val) {
 				if(select.dataset.inputId) {
-					const input = document.querySelector(`#${select.dataset.inputId}`);
+					const input = document.querySelector(`#${select.dataset.inputId}`),
+					qrCode = document.querySelector(`#${select.dataset.inputId}`).parentElement.querySelector('.donation-form__crypto--img');
 					input.textContent = val[0]['value'];
+					if(val[0].data.qrCode) {
+						qrCode.setAttribute('src', val[0].data.qrCode)
+					}
 				}
 				if(val[0].data.url) window.location.href = val[0].data.url;
 			}
