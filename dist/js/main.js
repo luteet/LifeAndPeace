@@ -190,6 +190,11 @@ headerNavItem.forEach(headerNavItem => {
 
 document.querySelectorAll('select').forEach(select => {
 	let data = [];
+
+	if(select.dataset.inputId) {
+		const input = document.querySelector(`#${select.dataset.inputId}`);
+		input.textContent = select.querySelectorAll('option')[select.selectedIndex]['value']
+	}
 	
 	select.querySelectorAll('option').forEach(option => {
 		data.push({text: option.textContent, data: option.dataset, value: option.value})
